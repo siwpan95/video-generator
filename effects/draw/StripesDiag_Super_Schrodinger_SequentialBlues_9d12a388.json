@@ -1,0 +1,31 @@
+{
+  "name": "回声之谜",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - 2*c + avg_n) + f2*(c**2 + avg_n**2 - w1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3126,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

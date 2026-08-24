@@ -1,0 +1,31 @@
+{
+  "name": "TanWave_Super_ReactionDiffusion_Threshold3_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tan(x*10)/(1+abs(tan(x*10)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*c*(w1 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 21617,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

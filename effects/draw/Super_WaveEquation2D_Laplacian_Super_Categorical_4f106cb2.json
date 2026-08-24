@@ -1,0 +1,31 @@
+{
+  "name": "震荡初现",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*f1*sqrt((x-p1)**2 + (y-p2)**2)) * exp(-((x-p1)**2 + (y-p2)**2)/w1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.5*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(sin(2*pi*v*f1 + p1)*0.5 + 0.5, 0, 1)",
+    "green": "clip(sin(2*pi*v*f2 + p2)*0.5 + 0.5, 0, 1)",
+    "blue": "clip(sin(2*pi*v*f3 + p3)*0.5 + 0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52584,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

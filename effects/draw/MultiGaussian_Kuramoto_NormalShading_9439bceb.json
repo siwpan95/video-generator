@@ -1,0 +1,31 @@
+{
+  "name": "进化回响",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.3)**2 + (y-0.3)**2) / 0.02) + exp(-((x-0.7)**2 + (y-0.7)**2) / 0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*cos(2*pi*v), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v), 0, 1)",
+    "blue": "clip(1 - v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 21985,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

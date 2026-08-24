@@ -1,0 +1,31 @@
+{
+  "name": "潮汐之花_2",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.25)**2+(y-0.25)**2<0.01 or (x-0.75)**2+(y-0.25)**2<0.01 or (x-0.25)**2+(y-0.75)**2<0.01 or (x-0.75)**2+(y-0.75)**2<0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 52715,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

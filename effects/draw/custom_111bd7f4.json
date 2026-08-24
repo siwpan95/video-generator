@@ -1,0 +1,38 @@
+{
+  "name": "FitzHugh-Nagumo 神经激发",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.2)**2+(y-0.5)**2)/0.003) * 0.8"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.2*(avg_n - c) + 0.1*c*(c-0.2)*(1-c) - 0.05*(c - 0.2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v*0.3",
+    "blue": "1.0 - v"
+  },
+  "tick": {
+    "fps": 25,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 137
+}

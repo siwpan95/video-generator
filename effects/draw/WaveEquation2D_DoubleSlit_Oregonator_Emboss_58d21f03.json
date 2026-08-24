@@ -1,0 +1,31 @@
+{
+  "name": "黄昏余辉",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.5*c*(1 - c)*(c - 0.3)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 52254,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

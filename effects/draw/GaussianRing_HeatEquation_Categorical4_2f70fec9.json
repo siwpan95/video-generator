@@ -1,0 +1,30 @@
+{
+  "name": "GaussianRing_HeatEquation_Categorical4_motion_trail_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 20672,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

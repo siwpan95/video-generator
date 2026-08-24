@@ -1,0 +1,30 @@
+{
+  "name": "Cateye_HeatEquation_Super_Attractor_vignette_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2/0.04 + (y-0.5)**2/0.01 < 1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5 + 0.5*sin(2*pi*v*f1 + p1)",
+    "green": "0.5 + 0.5*sin(2*pi*v*f2 + p2)",
+    "blue": "0.5 + 0.5*cos(2*pi*v*f3 + p3)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20678,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

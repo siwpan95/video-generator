@@ -1,0 +1,31 @@
+{
+  "name": "Super_Quasicrystal_CMLChaotic_Super_SinePalette_invert_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(cos(f1*atan2(y-p2, x-p1)) > w1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v*f1)*g1",
+    "green": "0.5+0.5*sin(2*pi*v*f2+pi/3)*g2",
+    "blue": "0.5+0.5*sin(2*pi*v*f3+2*pi/3)*g3"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50251,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

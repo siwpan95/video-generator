@@ -1,0 +1,31 @@
+{
+  "name": "分形碎片",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*pi)*sin(y*f2*pi)"
+    }
+  },
+  "evolution": {
+    "rule": "0.5*c + 0.5*avg_n + 0.1*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 21842,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "StandingWave_LorenzMap_SequentialBlues_edge_600x400",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 30949,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

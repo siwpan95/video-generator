@@ -1,0 +1,25 @@
+{
+  "name": "SoundEffectsPlus",
+  "site": "soundeffectsplus.com",
+  "description": "100% free sound effects, no login, WAV/MP3 downloads via zip",
+  "base_url": "https://www.soundeffectsplus.com",
+  "categories": [
+    {"url": "category/animals-and-insects/", "label": "Animals and Insects"},
+    {"url": "category/background-ambience/", "label": "Background Ambience"},
+    {"url": "category/appliances-and-devices/", "label": "Appliances and Devices"},
+    {"url": "category/cartoon-and-comical/", "label": "Cartoon and Comical"},
+    {"url": "category/horror/", "label": "Horror"},
+    {"url": "category/house-and-office/", "label": "House and Office"},
+    {"url": "category/human-and-foley/", "label": "Human and Foley"},
+    {"url": "category/game-and-interface/", "label": "Game and Interface"},
+    {"url": "category/musical-effects/", "label": "Musical Effects"},
+    {"url": "category/nature-and-water/", "label": "Nature and Water"},
+    {"url": "category/objects-and-impacts/", "label": "Objects and Impacts"},
+    {"url": "category/science-fiction/", "label": "Science Fiction"},
+    {"url": "category/sports/", "label": "Sports"},
+    {"url": "category/tools-and-machines/", "label": "Tools and Machines"},
+    {"url": "category/transportation/", "label": "Transportation"},
+    {"url": "category/weapons-and-explosions/", "label": "Weapons and Explosions"}
+  ],
+  "max_pages_per_category": 8
+}

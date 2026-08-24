@@ -1,0 +1,31 @@
+{
+  "name": "PointSource_SmallWorldSync_Inverted_bloom_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2 + (y-0.5)**2 < 0.001) else 0.01"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 20759,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

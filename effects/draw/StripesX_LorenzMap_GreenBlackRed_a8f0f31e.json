@@ -1,0 +1,31 @@
+{
+  "name": "漂移之云",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(y*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 2993,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "WhiteNoise_GameOfLife_LorenzPalette_bloom_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n >= 2 and sum_n <= 3) or (c <= 0.5 and sum_n == 3) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 31476,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

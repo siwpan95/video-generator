@@ -1,0 +1,31 @@
+{
+  "name": "Super_Interference_ExcitableThreshold_Super_Thermal",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(f1*pi*sqrt((x-p1)**2+(y-p2)**2)) * sin(f2*pi*sqrt((x-p3)**2+(y-p4)**2)))**2"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 2679,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

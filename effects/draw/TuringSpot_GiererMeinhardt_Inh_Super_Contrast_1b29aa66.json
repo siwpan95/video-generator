@@ -1,0 +1,31 @@
+{
+  "name": "TuringSpot_GiererMeinhardt_Inh_Super_Contrast_invert_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x)*sin(14*y) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((v-0.5)*c1+0.5, 0, 1)",
+    "green": "clip((v-0.5)*c2+0.5, 0, 1)",
+    "blue": "clip((v-0.5)*c3+0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 20160,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "PureRandom_TuringActivation_RosslerPalette_vignette_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.01*sin(c*20)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50473,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

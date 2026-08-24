@@ -1,0 +1,33 @@
+{
+    "base_url": "https://www.audiomicro.com",
+    "categories": [
+        "/free-sound-effects/free-amusement-and-games",
+        "/free-sound-effects/free-animal-sound-effects",
+        "/free-sound-effects/free-appliance-sound-effects",
+        "/free-sound-effects/free-cartoons-and-comic-effects",
+        "/free-sound-effects/free-crowd-sounds",
+        "/free-sound-effects/free-electronics",
+        "/free-sound-effects/free-emergency",
+        "/free-sound-effects/free-exteriors",
+        "/free-sound-effects/free-foley",
+        "/free-sound-effects/free-guns-and-weapons",
+        "/free-sound-effects/free-horror-and-halloween-sound-effects",
+        "/free-sound-effects/free-household",
+        "/free-sound-effects/free-human",
+        "/free-sound-effects/free-industrial-and-machinery",
+        "/free-sound-effects/free-musical-instrument-and-sound-effects",
+        "/free-sound-effects/free-natural-ambience-sound-effects",
+        "/free-sound-effects/free-nature-and-weather",
+        "/free-sound-effects/free-object-sound-effects",
+        "/free-sound-effects/free-office-and-classroom",
+        "/free-sound-effects/free-other-miscellaneous-sounds",
+        "/free-sound-effects/free-sound-design-elements",
+        "/free-sound-effects/free-sports",
+        "/free-sound-effects/free-stone-and-wood-sound-effects",
+        "/free-sound-effects/free-tools",
+        "/free-sound-effects/free-transport-and-vehicles",
+        "/free-sound-effects/free-voice-prompts-and-spoken-phrases",
+        "/free-sound-effects/free-water-sound-effects"
+    ],
+    "pages_per_category": 3
+}

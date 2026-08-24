@@ -1,0 +1,51 @@
+{
+  "id": "draw_triangle_rainbow_slow",
+  "name": "绘制·三角形·rainbow_slow",
+  "full_name": "2143. 绘制·三角形·rainbow_slow",
+  "category": "绘制",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "drawing",
+        "commands": [
+          {
+            "shape": "polygon",
+            "points": [
+              [
+                "50%",
+                "15%"
+              ],
+              [
+                "90%",
+                "85%"
+              ],
+              [
+                "10%",
+                "85%"
+              ]
+            ],
+            "color": null,
+            "fill": false
+          }
+        ],
+        "color": {
+          "type": "rainbow",
+          "speed": 0.05,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "PlaneWave_HenonTrajectory_LogPalette_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(2*pi*(x*cos(0.3) + y*sin(0.3)))"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50158,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

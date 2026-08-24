@@ -1,0 +1,31 @@
+{
+  "name": "VortexLattice_Super_SmoothLife2_Autumn_bloom_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "atan2(sin(2*pi*4*y), sin(2*pi*4*x)) / (2*pi) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-f1*(avg_n - f2))) * (1 - c) + c * (1 - 1/(1+exp(-f1*(avg_n - f3))))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 20913,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

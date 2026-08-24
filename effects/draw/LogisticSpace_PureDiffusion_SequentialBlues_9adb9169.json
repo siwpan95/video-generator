@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_GrayScott_Diffusion_SequentialBlues_invert_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 50027,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

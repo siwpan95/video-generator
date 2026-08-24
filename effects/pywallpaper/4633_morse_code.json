@@ -1,0 +1,36 @@
+{
+  "id": "morse_code",
+  "name": "莫尔斯码",
+  "full_name": "4633. 莫尔斯码",
+  "category": "信息",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "pulse",
+        "count": 6,
+        "radius": 60,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.2
+          ],
+          "speed": 0.1,
+          "sat": 0.6,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "beat",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

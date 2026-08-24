@@ -1,0 +1,31 @@
+{
+  "name": "Super_Voronoi_Super_Threshold_Posterize_vignette_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(amin([(x-p1)**2+(y-p2)**2, (x-p3)**2+(y-p4)**2, (x-p5)**2+(y-p6)**2, (x-p7)**2+(y-p8)**2], axis=0) < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 30093,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

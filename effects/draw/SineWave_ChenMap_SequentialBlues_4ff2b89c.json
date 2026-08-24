@@ -1,0 +1,31 @@
+{
+  "name": "CosineWave_ChenMap_SequentialBlues_vignette_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20383,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

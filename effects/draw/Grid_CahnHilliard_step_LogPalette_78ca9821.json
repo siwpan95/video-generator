@@ -1,0 +1,31 @@
+{
+  "name": "震荡之谜",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c**3 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 2916,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

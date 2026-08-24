@@ -1,0 +1,31 @@
+{
+  "name": "WhiteNoise_GrayScott_Diffusion_Super_Contrast_invert_200x150",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((v-0.5)*c1+0.5, 0, 1)",
+    "green": "clip((v-0.5)*c2+0.5, 0, 1)",
+    "blue": "clip((v-0.5)*c3+0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 50080,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

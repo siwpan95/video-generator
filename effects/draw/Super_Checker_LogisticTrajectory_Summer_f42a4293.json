@@ -1,0 +1,30 @@
+{
+  "name": "Super_Checker_LogisticTrajectory_Summer_motion_trail_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*pi)*sin(y*f2*pi)"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 20499,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

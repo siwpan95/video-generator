@@ -1,0 +1,16 @@
+{
+  "id": "builtin_text_rain",
+  "name": "TextRain_Matrix",
+  "category": "文本雨",
+  "tags": ["text", "text_rain", "rain", "matrix", "字符"],
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "density": 0.6,
+        "speed": 130.0,
+        "color": [0, 255, 120]
+      }
+    ]
+  }
+}

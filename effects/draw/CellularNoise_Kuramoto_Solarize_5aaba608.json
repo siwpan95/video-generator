@@ -1,0 +1,31 @@
+{
+  "name": "涟漪初现_2",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() > 0.9 else 0.1"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v if v > 0.5 else v",
+    "green": "1-v if v > 0.5 else v",
+    "blue": "1-v if v > 0.5 else v"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 52627,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

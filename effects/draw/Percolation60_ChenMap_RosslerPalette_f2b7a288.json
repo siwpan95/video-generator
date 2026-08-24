@@ -1,0 +1,31 @@
+{
+  "name": "Percolation60_ChenMap_RosslerPalette_motion_trail_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.6 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20368,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "涟漪永恒",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*30)*cos(y*f2*30) + 0.3*sin(x*f1*60)*cos(y*f2*60)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 22167,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "涟漪之海",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*clip(3.8*c*(1-c), 0, 1) + f1*clip(3.8*avg_n*(1-avg_n), 0, 1) + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 22227,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

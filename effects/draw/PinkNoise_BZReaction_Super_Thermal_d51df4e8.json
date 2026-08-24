@@ -1,0 +1,31 @@
+{
+  "name": "PinkNoise_BZReaction_Super_Thermal",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 2203,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

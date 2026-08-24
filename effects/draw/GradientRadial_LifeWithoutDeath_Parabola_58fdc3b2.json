@@ -1,0 +1,31 @@
+{
+  "name": "GradRadialSQ_LifeWithoutDeath_Parabola_invert_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 3 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 31053,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

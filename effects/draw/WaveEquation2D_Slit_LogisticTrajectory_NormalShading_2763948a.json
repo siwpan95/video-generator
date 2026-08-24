@@ -1,0 +1,30 @@
+{
+  "name": "WaveEquation2D_Slit_LogisticTrajectory_NormalShading_motion_trail_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * exp(-((y-0.5)**2)/0.01) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*cos(2*pi*v), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v), 0, 1)",
+    "blue": "clip(1 - v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 20488,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

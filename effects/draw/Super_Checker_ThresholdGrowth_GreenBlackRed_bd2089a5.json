@@ -1,0 +1,31 @@
+{
+  "name": "潮汐之歌",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*pi)*sin(y*f2*pi)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 22095,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

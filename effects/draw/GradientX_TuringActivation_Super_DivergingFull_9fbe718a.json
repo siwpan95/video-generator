@@ -1,0 +1,31 @@
+{
+  "name": "GradientX_TuringActivation_Super_DivergingFull_bloom_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "x"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.01*sin(c*20)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*(v - 0.5) + 0.5 if v > 0.5 else 0.5 - f2*(0.5 - v), 0, 1)",
+    "green": "clip(1 - f3*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(f4*(0.5 - v) + 0.5 if v < 0.5 else 0.5 - f5*(v - 0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31342,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "PenroseApprox_LorenzMap_Categorical4_bloom_600x400",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 30560,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

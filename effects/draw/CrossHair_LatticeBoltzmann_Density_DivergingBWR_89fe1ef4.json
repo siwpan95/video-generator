@@ -1,0 +1,28 @@
+{
+  "name": "漩涡之谜",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.01 or abs(y-0.5) < 0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*2 if v < 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 2880
+}

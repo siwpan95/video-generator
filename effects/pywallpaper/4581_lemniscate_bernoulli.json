@@ -1,0 +1,39 @@
+{
+  "id": "lemniscate_bernoulli",
+  "name": "Bernoulli双纽线",
+  "full_name": "4581. Bernoulli双纽线",
+  "category": "公式",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "curve",
+        "preset": "lemniscate",
+        "steps": 180,
+        "layers": 4,
+        "scale": 140,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.7
+          ],
+          "speed": 0.1,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

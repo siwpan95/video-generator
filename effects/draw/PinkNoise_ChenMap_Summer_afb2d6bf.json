@@ -1,0 +1,31 @@
+{
+  "name": "PinkNoise_ChenMap_Summer",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3455,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

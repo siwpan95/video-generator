@@ -1,0 +1,32 @@
+{
+  "id": "fluid_magma_flow",
+  "name": "岩浆流",
+  "full_name": "4617. 岩浆流",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 2e-05,
+        "diffusion": 3e-05,
+        "force": 5.0,
+        "color_map": "fire",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

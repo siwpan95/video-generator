@@ -1,0 +1,31 @@
+{
+  "name": "Super_Fractal_PureDiffusion_Rainbow_motion_trail_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(f1*pi*x)*sin(f2*pi*x)*sin(f3*pi*x) * sin(f1*pi*y)*sin(f2*pi*y)*sin(f3*pi*y)) > w1 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*sin(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31384,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

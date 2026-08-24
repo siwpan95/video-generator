@@ -1,0 +1,30 @@
+{
+  "name": "梦境之花",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*30)*cos(y*f2*30) + 0.3*sin(x*f1*60)*cos(y*f2*60)"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(sin(2*pi*v*f1 + p1)*0.5 + 0.5, 0, 1)",
+    "green": "clip(sin(2*pi*v*f2 + p2)*0.5 + 0.5, 0, 1)",
+    "blue": "clip(sin(2*pi*v*f3 + p3)*0.5 + 0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 3202,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

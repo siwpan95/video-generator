@@ -1,0 +1,27 @@
+{
+  "name": "高斯_反应扩散_绿黑红",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.04)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "id": 190
+}

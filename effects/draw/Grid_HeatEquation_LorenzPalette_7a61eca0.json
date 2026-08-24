@@ -1,0 +1,30 @@
+{
+  "name": "Grid_HeatEquation_LorenzPalette_vignette_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 20660,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

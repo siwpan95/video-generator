@@ -1,0 +1,48 @@
+{
+  "id": "rain_日文_50_yellow_t8",
+  "name": "文字雨·日文·50列·yellow",
+  "full_name": "3756. 文字雨·日文·50列·yellow",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "chars": "01アイウエオカキクケコサシスセソ",
+        "count": 50,
+        "font_size": 14,
+        "speed": {
+          "min": 40,
+          "max": 100
+        },
+        "trail_length": 8,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "color": {
+          "type": "solid",
+          "value": [
+            240,
+            220,
+            40
+          ]
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "brightness",
+          "scale": [
+            0.3,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

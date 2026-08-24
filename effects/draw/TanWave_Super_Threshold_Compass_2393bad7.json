@@ -1,0 +1,31 @@
+{
+  "name": "TanWave_Super_Threshold_Compass_invert_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tan(x*10)/(1+abs(tan(x*10)))"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30043,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

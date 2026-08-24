@@ -1,0 +1,30 @@
+{
+  "name": "Lissajous_SmoothLife_Super_Perceptual_bloom_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(3*x*20)*sin(2*y*20) > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-10*(avg_n - 0.3)))",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 30673,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "crystal_prism",
+  "name": "水晶棱镜",
+  "full_name": "084. 水晶棱镜",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 12,
+            "radius": 60,
+            "line": true,
+            "line_width": 2,
+            "element_size": 4
+          },
+          {
+            "count": 12,
+            "radius": 110,
+            "line": true,
+            "line_width": 2,
+            "element_size": 4
+          },
+          {
+            "count": 12,
+            "radius": 170,
+            "line": true,
+            "line_width": 2,
+            "element_size": 4
+          },
+          {
+            "count": 12,
+            "radius": 250,
+            "line": true,
+            "line_width": 2,
+            "element_size": 4
+          },
+          {
+            "count": 12,
+            "radius": 340,
+            "line": true,
+            "line_width": 2,
+            "element_size": 4
+          }
+        ],
+        "rotation_speed": 0.5,
+        "color": {
+          "type": "rainbow",
+          "speed": 0.05,
+          "sat": 0.4,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            40
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

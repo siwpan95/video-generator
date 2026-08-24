@@ -1,0 +1,28 @@
+{
+  "name": "Pseudo-Mandelbrot",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "initial": {
+      "type": "formula",
+      "expression": "0.0"
+    }
+  },
+  "evolution": {
+    "rule": "(c*c + (x-0.5)*3.5 + (y-0.5)*2.0) % 1.0",
+    "variables": [
+      "c",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1 - v*v",
+    "blue": "0.5+0.5*sin(v*50)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 49
+}

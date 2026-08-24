@@ -1,0 +1,31 @@
+{
+  "name": "CircularWave_LorenzMap_BlueWhiteRed_edge_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 30554,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Percolation60_ChenMap_Categorical8_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.6 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*8)/8, 0, 1)",
+    "green": "clip(int(v*8 + 4)/8 % 1, 0, 1)",
+    "blue": "clip(1 - int(v*8)/8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 20367,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

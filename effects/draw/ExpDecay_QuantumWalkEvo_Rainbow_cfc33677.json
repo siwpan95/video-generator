@@ -1,0 +1,31 @@
+{
+  "name": "潮汐之梦",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "0.5*c + 0.5*avg_n + 0.1*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*sin(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 3363,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

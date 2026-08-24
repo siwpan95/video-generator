@@ -1,0 +1,31 @@
+{
+  "name": "Diagonal_FitzHughNagumo_Binary_vignette_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 30940,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

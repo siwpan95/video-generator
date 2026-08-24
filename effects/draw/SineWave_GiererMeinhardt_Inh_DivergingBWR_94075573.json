@@ -1,0 +1,31 @@
+{
+  "name": "星尘之谜",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*2 if v < 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 21994,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

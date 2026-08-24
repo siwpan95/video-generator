@@ -1,0 +1,28 @@
+{
+  "name": "CenterCross_SmallWorldSync_Threshold3_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.02 or abs(y-0.5) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 20710
+}

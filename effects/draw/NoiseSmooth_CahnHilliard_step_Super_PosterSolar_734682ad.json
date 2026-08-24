@@ -1,0 +1,28 @@
+{
+  "name": "CahnHilliard_CahnHilliard_step_Super_PosterSolar_none_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c**3 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)",
+    "green": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)",
+    "blue": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50901
+}

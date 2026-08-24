@@ -1,0 +1,31 @@
+{
+  "name": "脉冲之云_2",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2/0.04 + (y-0.5)**2/0.01 < 1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 31972,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

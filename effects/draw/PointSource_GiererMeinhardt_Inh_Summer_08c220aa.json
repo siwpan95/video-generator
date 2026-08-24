@@ -1,0 +1,31 @@
+{
+  "name": "混沌深渊",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2 + (y-0.5)**2 < 0.001) else 0.01"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 31983,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

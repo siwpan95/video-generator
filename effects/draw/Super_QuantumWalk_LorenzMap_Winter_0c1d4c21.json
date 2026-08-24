@@ -1,0 +1,31 @@
+{
+  "name": "Super_QuantumWalk_LorenzMap_Winter_motion_trail_80x80_c1200",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*f1 + y*f2) + p1) * sin(2*pi*(x*f3 - y*f4) + p2)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 52045,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

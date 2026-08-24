@@ -1,0 +1,32 @@
+{
+  "id": "fire",
+  "name": "火焰",
+  "full_name": "009. 火焰",
+  "category": "纹理",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "texture",
+        "mode": "fire",
+        "cell_size": 4,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.95,
+            1.0
+          ],
+          "speed": 0.02,
+          "sat": 1.0,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

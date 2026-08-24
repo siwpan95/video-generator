@@ -1,0 +1,28 @@
+{
+  "name": "Super_Wave_Super_NetworkKuramoto_SequentialBlues_none_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*(x*cos(p1)+y*sin(p1))*20 + w1)*cos(f2*(x*sin(p1)-y*cos(p1))*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 30615
+}

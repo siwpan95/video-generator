@@ -1,0 +1,28 @@
+{
+  "name": "WaveEquation2D_LifeWithoutDeath_Binary",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*5*sqrt((x-0.5)**2 + (y-0.5)**2)) * exp(-((x-0.5)**2 + (y-0.5)**2)/0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 3 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 3461
+}

@@ -1,0 +1,28 @@
+{
+  "name": "RadialGradient2_GiererMeinhardt_Inh_BlueWhiteRed_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 20171
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Stripes45_SmallWorldSync_SequentialYlGn_motion_trail_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*25) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 51087,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

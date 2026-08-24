@@ -1,0 +1,31 @@
+{
+  "name": "拓扑之光_1",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*6) + int(y*6)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 31595,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

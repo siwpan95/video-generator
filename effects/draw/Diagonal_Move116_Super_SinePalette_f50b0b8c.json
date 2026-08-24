@@ -1,0 +1,31 @@
+{
+  "name": "谐振维度_1",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n in [1, 4, 5]) or (c <= 0.5 and sum_n in [3, 6]) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v*f1)*g1",
+    "green": "0.5+0.5*sin(2*pi*v*f2+pi/3)*g2",
+    "blue": "0.5+0.5*sin(2*pi*v*f3+2*pi/3)*g3"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 52623,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

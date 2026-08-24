@@ -1,0 +1,31 @@
+{
+  "name": "Concentric_Schrodinger_Imag_Super_Perceptual_motion_trail_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - c) - 0.1*c*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 31403,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

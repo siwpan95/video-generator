@@ -1,0 +1,37 @@
+{
+  "name": "多次谐波_湍流",
+  "version": "1.0",
+  "description": "多频率正弦波时空叠加产生湍流纹理。t参数引入时间演化，产生流动效果",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5*(sin(x*30)+sin(y*35)+sin((x+y)*25)+sin((x-y)*28))/4 + 0.5"
+    }
+  },
+  "evolution": {
+    "rule": "(c + sin(x*30+t*0.08) + sin(y*35+t*0.05) + sin((x+y)*25+t*0.1) + sin((x-y)*28+t*0.06)) / 8 + 0.5",
+    "variables": [
+      "c",
+      "x",
+      "y",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*15)",
+    "green": "0.5 + 0.5*sin(v*15 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*15 + 4.189)"
+  },
+  "tick": {
+    "fps": 24,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 250
+  },
+  "id": 107
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Super_Shape2D_NavierStokes_Simple_Threshold3_invert_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - f1*c*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 30435,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

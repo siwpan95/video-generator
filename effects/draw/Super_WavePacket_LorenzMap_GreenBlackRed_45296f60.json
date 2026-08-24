@@ -1,0 +1,31 @@
+{
+  "name": "Super_WavePacket_LorenzMap_GreenBlackRed_motion_trail_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2)/(0.04+w1))*sin(f1*20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 50997,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

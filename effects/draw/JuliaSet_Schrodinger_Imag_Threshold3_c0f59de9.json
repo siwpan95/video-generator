@@ -1,0 +1,31 @@
+{
+  "name": "JuliaSet_Schrodinger_Imag_Threshold3_motion_trail_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - c) - 0.1*c*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 31543,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

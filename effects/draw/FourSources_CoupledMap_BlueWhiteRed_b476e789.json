@@ -1,0 +1,31 @@
+{
+  "name": "雷暴之变_2",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.25)**2+(y-0.25)**2<0.01 or (x-0.75)**2+(y-0.25)**2<0.01 or (x-0.25)**2+(y-0.75)**2<0.01 or (x-0.75)**2+(y-0.75)**2<0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.1)*c + 0.1*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 52741,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

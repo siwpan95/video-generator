@@ -1,0 +1,31 @@
+{
+  "name": "极光初现",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*f1*sqrt((x-p1)**2 + (y-p2)**2)) * exp(-((x-p1)**2 + (y-p2)**2)/w1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 22344,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

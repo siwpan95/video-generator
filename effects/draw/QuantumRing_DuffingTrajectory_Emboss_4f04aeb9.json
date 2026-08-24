@@ -1,0 +1,32 @@
+{
+  "name": "光辉之谜_2",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*5*sqrt((x-0.5)**2 + (y-0.5)**2)) * sin(2*pi*10*atan2(y-0.5, x-0.5))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 0.2*c + c**3) + 0.5*sin(t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 52415,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

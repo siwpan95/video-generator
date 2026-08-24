@@ -1,0 +1,27 @@
+{
+  "name": "对角线_扩散_热力",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "id": 111
+}

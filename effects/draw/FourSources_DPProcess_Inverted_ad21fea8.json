@@ -1,0 +1,31 @@
+{
+  "name": "中子图腾",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.25)**2+(y-0.25)**2<0.01 or (x-0.75)**2+(y-0.25)**2<0.01 or (x-0.25)**2+(y-0.75)**2<0.01 or (x-0.75)**2+(y-0.75)**2<0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and random() < 0.8) or (c <= 0.5 and sum_n >= 0.5 and random() < 0.4) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 31657,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

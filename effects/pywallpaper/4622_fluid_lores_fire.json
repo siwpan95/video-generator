@@ -1,0 +1,32 @@
+{
+  "id": "fluid_lores_fire",
+  "name": "低分辨率火焰",
+  "full_name": "4622. 低分辨率火焰",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          32,
+          32
+        ],
+        "viscosity": 8e-06,
+        "diffusion": 6e-05,
+        "force": 6.0,
+        "color_map": "fire",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

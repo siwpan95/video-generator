@@ -1,0 +1,31 @@
+{
+  "name": "NoiseSmooth2_Super_Stochastic_Spring_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= f1 and random() < f2) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50862,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "StripesDiag_BS12345_S_LorenzPalette_motion_trail_150x150_c0",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n >= 1 and sum_n <= 5) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 51985,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

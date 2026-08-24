@@ -1,0 +1,31 @@
+{
+  "name": "GaussianRing_NetworkDiffusion_BlueWhiteRed_edge_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31228,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

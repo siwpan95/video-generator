@@ -1,0 +1,31 @@
+{
+  "name": "TanWave_Super_PhaseSep_Solarize_edge_200x150",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tan(x*10)/(1+abs(tan(x*10)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v if v > 0.5 else v",
+    "green": "1-v if v > 0.5 else v",
+    "blue": "1-v if v > 0.5 else v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 30867,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

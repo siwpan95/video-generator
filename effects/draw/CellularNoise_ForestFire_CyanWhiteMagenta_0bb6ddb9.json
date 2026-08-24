@@ -1,0 +1,28 @@
+{
+  "name": "CellularNoise_ForestFire_CyanWhiteMagenta_none_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() > 0.9 else 0.1"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 30456
+}

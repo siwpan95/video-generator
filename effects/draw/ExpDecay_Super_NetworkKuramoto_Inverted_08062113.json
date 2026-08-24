@@ -1,0 +1,31 @@
+{
+  "name": "ExpDecay_Super_NetworkKuramoto_Inverted_edge_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 30620,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

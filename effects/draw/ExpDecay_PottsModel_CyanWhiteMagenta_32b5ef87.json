@@ -1,0 +1,30 @@
+{
+  "name": "螺旋之舞_1",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 31923,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

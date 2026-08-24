@@ -1,0 +1,31 @@
+{
+  "name": "JuliaSet_ChenMap_Super_Categorical_motion_trail_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(sin(2*pi*v*f1 + p1)*0.5 + 0.5, 0, 1)",
+    "green": "clip(sin(2*pi*v*f2 + p2)*0.5 + 0.5, 0, 1)",
+    "blue": "clip(sin(2*pi*v*f3 + p3)*0.5 + 0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 20462,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

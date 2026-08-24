@@ -1,0 +1,31 @@
+{
+  "name": "StripesY_Super_ReactionDiffusion_JetSimple_bloom_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(y*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*c*(w1 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 21635,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

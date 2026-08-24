@@ -1,0 +1,28 @@
+{
+  "name": "激发之森",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*5*sqrt((x-0.5)**2 + (y-0.5)**2)) * exp(-((x-0.5)**2 + (y-0.5)**2)/0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3374
+}

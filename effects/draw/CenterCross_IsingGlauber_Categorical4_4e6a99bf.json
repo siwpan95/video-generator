@@ -1,0 +1,31 @@
+{
+  "name": "纠缠之光_2",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.02 or abs(y-0.5) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 52794,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

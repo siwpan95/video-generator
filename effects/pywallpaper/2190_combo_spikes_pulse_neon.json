@@ -1,0 +1,76 @@
+{
+  "id": "combo_spikes_pulse_neon",
+  "name": "组合·尖峰+脉冲·neon",
+  "full_name": "2190. 组合·尖峰+脉冲·neon",
+  "category": "组合",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 48,
+        "center": {
+          "x": "35%",
+          "y": "45%"
+        },
+        "inner_radius": 60,
+        "outer_radius": 200,
+        "line_width": 2,
+        "rotation_speed": 0.3,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.58,
+            0.88
+          ],
+          "speed": 0.12,
+          "sat": 0.95,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      },
+      {
+        "type": "pulse",
+        "mode": "ripple",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "max_radius": 350,
+        "speed": 2.0,
+        "count": 1,
+        "trigger": "audio",
+        "trigger_threshold": 0.25,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.58,
+            0.88
+          ],
+          "speed": 0.12,
+          "sat": 0.95,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

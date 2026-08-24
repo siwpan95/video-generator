@@ -1,0 +1,31 @@
+{
+  "name": "FourSources_Super_NetworkKuramoto_GreenBlackRed_edge_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.25)**2+(y-0.25)**2<0.01 or (x-0.75)**2+(y-0.25)**2<0.01 or (x-0.25)**2+(y-0.75)**2<0.01 or (x-0.75)**2+(y-0.75)**2<0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 30647,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

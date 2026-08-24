@@ -1,0 +1,31 @@
+{
+  "name": "Super_Noise_CMLChaotic_Compass",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 2847,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

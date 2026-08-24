@@ -1,0 +1,28 @@
+{
+  "name": "Super_Gradient2D_HenonTrajectory_Super_Gradient_none_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(p1 + w1*abs(x-p2) + w2*abs(y-p3), 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(a1 + b1*v, 0, 1)",
+    "green": "clip(a2 + b2*v, 0, 1)",
+    "blue": "clip(a3 + b3*v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50172
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Diamond_Lenia_Grayscale_edge_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) + abs(y-0.5) < 0.2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(1/(1+exp(-20*(avg_n - 0.15))) - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 31443,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

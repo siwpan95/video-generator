@@ -1,0 +1,31 @@
+{
+  "name": "风暴之谜_1",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 1) else (c * 0.9)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 31960,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "GaussianRing_Schrodinger_Real_Parabola_edge_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 2*c + avg_n - c) + 0.1*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50293,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

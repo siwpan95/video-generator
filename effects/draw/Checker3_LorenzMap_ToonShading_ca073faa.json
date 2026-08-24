@@ -1,0 +1,31 @@
+{
+  "name": "Checker3_LorenzMap_ToonShading_bloom_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*6) + int(y*6)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 30528,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

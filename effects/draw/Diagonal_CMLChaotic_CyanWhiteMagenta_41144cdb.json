@@ -1,0 +1,31 @@
+{
+  "name": "记忆回响_1",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 32045,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

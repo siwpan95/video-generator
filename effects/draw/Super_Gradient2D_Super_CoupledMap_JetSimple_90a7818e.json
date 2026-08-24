@@ -1,0 +1,31 @@
+{
+  "name": "雷暴彼岸_1",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(p1 + w1*abs(x-p2) + w2*abs(y-p3), 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*c + f1*avg_n + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 52621,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

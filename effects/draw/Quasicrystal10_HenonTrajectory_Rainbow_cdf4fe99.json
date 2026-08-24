@@ -1,0 +1,31 @@
+{
+  "name": "Quasicrystal10_HenonTrajectory_Rainbow_vignette_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(cos(10*atan2(y-0.5, x-0.5)) > 0.2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*sin(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 50170,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

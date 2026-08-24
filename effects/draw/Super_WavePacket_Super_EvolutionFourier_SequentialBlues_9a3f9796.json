@@ -1,0 +1,31 @@
+{
+  "name": "震荡维度",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2)/(0.04+w1))*sin(f1*20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*sin(c*20)/(1 + w1*abs(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 31714,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

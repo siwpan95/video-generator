@@ -1,0 +1,28 @@
+{
+  "name": "Percolation60_ChenMap_Super_Perceptual_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.6 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20372
+}

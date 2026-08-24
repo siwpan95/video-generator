@@ -1,0 +1,31 @@
+{
+  "name": "脉冲回响_1",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*2 if v < 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 52556,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

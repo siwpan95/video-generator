@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_DoubleSlit_ChenMap_SequentialYlGn_invert_180x180_c1000",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 52193,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

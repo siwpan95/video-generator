@@ -1,0 +1,31 @@
+{
+  "name": "星云之森",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(1/(1+exp(-20*(avg_n - 0.15))) - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 22270,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

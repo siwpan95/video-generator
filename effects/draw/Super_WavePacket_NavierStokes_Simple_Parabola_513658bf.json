@@ -1,0 +1,28 @@
+{
+  "name": "Super_WavePacket_NavierStokes_Simple_Parabola_none_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2)/(0.04+w1))*sin(f1*20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - f1*c*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 30391
+}

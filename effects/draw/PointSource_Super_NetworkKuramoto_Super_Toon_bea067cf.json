@@ -1,0 +1,31 @@
+{
+  "name": "PointSource_Super_NetworkKuramoto_Super_Toon_invert_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2 + (y-0.5)**2 < 0.001) else 0.01"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(p1 + (1-p1)*int(v*f1)/f1, 0, 1)",
+    "green": "clip(p2 + (1-p2)*int(v*f1)/f1, 0, 1)",
+    "blue": "clip(p3 + (1-p3)*int(v*f1)/f1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 51292,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

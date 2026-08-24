@@ -1,0 +1,31 @@
+{
+  "name": "WhiteNoise_Super_GiererMeinhardt_Summer_motion_trail_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*((avg_n**2)/(w1**2 + avg_n**2) - c + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 20230,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

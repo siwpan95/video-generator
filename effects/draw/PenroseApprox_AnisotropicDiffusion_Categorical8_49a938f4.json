@@ -1,0 +1,31 @@
+{
+  "name": "波函数余辉",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*8)/8, 0, 1)",
+    "green": "clip(int(v*8 + 4)/8 % 1, 0, 1)",
+    "blue": "clip(1 - int(v*8)/8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 3092,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

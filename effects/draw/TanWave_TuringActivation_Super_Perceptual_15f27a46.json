@@ -1,0 +1,31 @@
+{
+  "name": "TanWave_TuringActivation_Super_Perceptual_motion_trail_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tan(x*10)/(1+abs(tan(x*10)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.01*sin(c*20)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 50525,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

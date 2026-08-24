@@ -1,0 +1,30 @@
+{
+  "name": "BurningShip_HeatEquation_Super_Effect_invert_64x64_c5000",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x*3-1.5) + abs(y*3-1.5) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v + f1*sin(20*v*pi + p1), 0, 1)",
+    "green": "clip(v + f2*sin(20*v*pi + p2), 0, 1)",
+    "blue": "clip(v + f3*sin(20*v*pi + p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 51897,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

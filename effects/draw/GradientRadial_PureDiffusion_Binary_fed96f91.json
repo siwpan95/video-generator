@@ -1,0 +1,31 @@
+{
+  "name": "GradientRadial_GrayScott_Diffusion_Binary_motion_trail_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 50107,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

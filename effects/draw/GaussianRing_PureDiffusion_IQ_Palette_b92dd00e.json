@@ -1,0 +1,27 @@
+{
+  "name": "高斯环_反应扩散_IQ",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5+0.5*cos(2*pi*(v*0.9+0.1))",
+    "green": "0.5+0.5*cos(2*pi*(v*0.7+0.3))",
+    "blue": "0.5+0.5*cos(2*pi*(v*0.5+0.5))"
+  },
+  "id": 191
+}

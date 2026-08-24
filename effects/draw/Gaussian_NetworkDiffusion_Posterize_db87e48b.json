@@ -1,0 +1,31 @@
+{
+  "name": "Gaussian_NetworkDiffusion_Posterize_invert_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.04)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 51616,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

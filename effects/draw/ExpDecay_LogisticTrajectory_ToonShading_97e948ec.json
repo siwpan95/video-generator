@@ -1,0 +1,30 @@
+{
+  "name": "ExpDecay_LogisticTrajectory_ToonShading",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 3429,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

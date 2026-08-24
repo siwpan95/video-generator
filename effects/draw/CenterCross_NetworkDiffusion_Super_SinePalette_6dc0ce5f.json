@@ -1,0 +1,31 @@
+{
+  "name": "CenterCross_NetworkDiffusion_Super_SinePalette_bloom_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.02 or abs(y-0.5) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v*f1)*g1",
+    "green": "0.5+0.5*sin(2*pi*v*f2+pi/3)*g2",
+    "blue": "0.5+0.5*sin(2*pi*v*f3+2*pi/3)*g3"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 51661,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "量子之花",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.5*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*sin(2*pi*v*0.8), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v*0.8 + 2*pi/3), 0, 1)",
+    "blue": "clip(v**0.8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 2922,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

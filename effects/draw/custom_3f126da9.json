@@ -1,0 +1,39 @@
+{
+  "name": "超离散_max加代数",
+  "version": "1.0",
+  "description": "超离散系统用max-plus代数规则。max运算产生非光滑但结构化图案，类似交通流模型",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random() if random() > 0.9 else 0"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "maximum(avg_n, c) - 0.01*minimum(c, 1.0)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v*v",
+    "blue": "0.3 + 0.7*v"
+  },
+  "tick": {
+    "fps": 30,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 148
+}

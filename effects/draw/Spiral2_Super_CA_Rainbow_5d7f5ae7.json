@@ -1,0 +1,28 @@
+{
+  "name": "量子之森_2",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*atan2(y-0.5, x-0.5) + 5*sqrt((x-0.5)**2 + (y-0.5)**2)) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n >= f1 and sum_n <= f2) or (c <= 0.5 and sum_n >= f3 and sum_n <= f4) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*sin(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31888
+}

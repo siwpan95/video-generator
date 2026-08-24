@@ -1,0 +1,31 @@
+{
+  "name": "熔岩之浪_1",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((v-0.5)*c1+0.5, 0, 1)",
+    "green": "clip((v-0.5)*c2+0.5, 0, 1)",
+    "blue": "clip((v-0.5)*c3+0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 31902,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

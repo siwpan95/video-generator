@@ -1,0 +1,30 @@
+{
+  "name": "电浆图腾_1",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if (sin(v*50) > 0) else 0.3",
+    "green": "1 if (sin(v*50) > 0) else 0.3",
+    "blue": "1 if (sin(v*50) > 0) else 0.3"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 32088,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Diagonal_SmallWorldSync_Super_ClassicMap_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*v + p1, 0, 1)",
+    "green": "clip(f2*v*(1-v)*4 + p2, 0, 1)",
+    "blue": "clip(f3*(1-v) + p3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 20749,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

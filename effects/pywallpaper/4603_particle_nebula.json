@@ -1,0 +1,109 @@
+{
+  "id": "particle_nebula",
+  "name": "粒子星云",
+  "full_name": "4603. 粒子星云",
+  "category": "粒子系统",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [
+              0.35,
+              0.5
+            ],
+            "rate": 8,
+            "lifetime": [
+              3.0,
+              6.0
+            ],
+            "speed": [
+              10,
+              40
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              255,
+              100,
+              200
+            ],
+            "size": [
+              3,
+              8
+            ]
+          },
+          {
+            "position": [
+              0.65,
+              0.5
+            ],
+            "rate": 8,
+            "lifetime": [
+              3.0,
+              6.0
+            ],
+            "speed": [
+              10,
+              40
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              100,
+              200,
+              255
+            ],
+            "size": [
+              3,
+              8
+            ]
+          }
+        ],
+        "forces": [
+          {
+            "type": "attract",
+            "position": [
+              0.35,
+              0.5
+            ],
+            "strength": 100
+          },
+          {
+            "type": "attract",
+            "position": [
+              0.65,
+              0.5
+            ],
+            "strength": 100
+          }
+        ],
+        "particle_type": "circle",
+        "max_particles": 800,
+        "audio_modulation": {
+          "rate": {
+            "source": "rms",
+            "scale": [
+              0.5,
+              2.0
+            ]
+          },
+          "color_hue": {
+            "source": "band_energy",
+            "scale": [
+              0,
+              0.3
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "分形之海",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*5*sqrt((x-0.5)**2 + (y-0.5)**2)) * exp(-((x-0.5)**2 + (y-0.5)**2)/0.01) + 0.15*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip((v-0.5)*c1+0.5, 0, 1)",
+    "green": "clip((v-0.5)*c2+0.5, 0, 1)",
+    "blue": "clip((v-0.5)*c3+0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 2883,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_Slit_Super_GiererMeinhardt_LogPalette_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * exp(-((y-0.5)**2)/0.01) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*((avg_n**2)/(w1**2 + avg_n**2) - c + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 20263,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

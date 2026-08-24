@@ -1,0 +1,31 @@
+{
+  "name": "WhiteNoise_CoupledMap_Cool_edge_240x180_c1200",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.1)*c + 0.1*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 51969,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

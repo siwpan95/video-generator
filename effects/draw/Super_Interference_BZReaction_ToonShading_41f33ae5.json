@@ -1,0 +1,31 @@
+{
+  "name": "Super_Interference_BZReaction_ToonShading_bloom_180x180_c1500",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(f1*pi*sqrt((x-p1)**2+(y-p2)**2)) * sin(f2*pi*sqrt((x-p3)**2+(y-p4)**2)))**2"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 51833,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

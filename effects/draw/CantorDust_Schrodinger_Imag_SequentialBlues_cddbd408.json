@@ -1,0 +1,31 @@
+{
+  "name": "拓扑深渊",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (cos(3*pi*x)*cos(9*pi*x)*cos(27*pi*x) > 0 and cos(3*pi*y)*cos(9*pi*y)*cos(27*pi*y) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - c) - 0.1*c*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 52843,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

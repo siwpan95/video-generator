@@ -1,0 +1,28 @@
+{
+  "name": "FourSources_CahnHilliard_step_Super_Effect",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.25)**2+(y-0.25)**2<0.01 or (x-0.75)**2+(y-0.25)**2<0.01 or (x-0.25)**2+(y-0.75)**2<0.01 or (x-0.75)**2+(y-0.75)**2<0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c**3 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v + f1*sin(20*v*pi + p1), 0, 1)",
+    "green": "clip(v + f2*sin(20*v*pi + p2), 0, 1)",
+    "blue": "clip(v + f3*sin(20*v*pi + p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 1245
+}

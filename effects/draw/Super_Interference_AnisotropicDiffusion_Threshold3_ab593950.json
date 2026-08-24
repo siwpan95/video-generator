@@ -1,0 +1,31 @@
+{
+  "name": "霜花之歌_1",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(f1*pi*sqrt((x-p1)**2+(y-p2)**2)) * sin(f2*pi*sqrt((x-p3)**2+(y-p4)**2)))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 22178,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

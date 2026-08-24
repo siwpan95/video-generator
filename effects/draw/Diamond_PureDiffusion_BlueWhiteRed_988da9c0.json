@@ -1,0 +1,31 @@
+{
+  "name": "Diamond_GrayScott_Diffusion_BlueWhiteRed_bloom_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) + abs(y-0.5) < 0.2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50036,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

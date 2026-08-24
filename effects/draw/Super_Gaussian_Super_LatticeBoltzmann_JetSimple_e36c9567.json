@@ -1,0 +1,32 @@
+{
+  "name": "突变之谜_3",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-p1)**2 + (y-p2)**2) / (0.1*(1+w1)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52681,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Checker5_SmallWorldSync_Super_PosterSolar_bloom_200x150_c5000",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*10) + int(y*10)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)",
+    "green": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)",
+    "blue": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 52027,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

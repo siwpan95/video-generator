@@ -1,0 +1,31 @@
+{
+  "name": "Lissajous_IsingGlauber_Compass_vignette_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(3*x*20)*sin(2*y*20) > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 31371,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

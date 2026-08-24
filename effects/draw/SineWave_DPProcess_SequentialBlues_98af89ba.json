@@ -1,0 +1,31 @@
+{
+  "name": "SineWave_DPProcess_SequentialBlues",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and random() < 0.8) or (c <= 0.5 and sum_n >= 0.5 and random() < 0.4) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 1873,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

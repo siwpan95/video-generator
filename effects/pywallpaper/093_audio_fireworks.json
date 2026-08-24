@@ -1,0 +1,54 @@
+{
+  "id": "audio_fireworks",
+  "name": "音频烟花",
+  "full_name": "093. 音频烟花",
+  "category": "粒子",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particles",
+        "count": 60,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "particle": {
+          "size": {
+            "min": 2,
+            "max": 6
+          },
+          "speed": {
+            "min": 50,
+            "max": 200
+          },
+          "lifetime": {
+            "min": 1,
+            "max": 3
+          },
+          "behavior": "drift"
+        },
+        "color": {
+          "type": "rainbow",
+          "speed": 0.3,
+          "sat": 0.9,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "rms",
+          "target": "particle_size",
+          "scale": [
+            0.5,
+            5.0
+          ],
+          "smoothing": 0.5
+        }
+      }
+    ]
+  }
+}

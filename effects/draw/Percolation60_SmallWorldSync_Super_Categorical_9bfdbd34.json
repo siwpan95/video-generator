@@ -1,0 +1,31 @@
+{
+  "name": "Percolation60_SmallWorldSync_Super_Categorical_bloom_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.6 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(sin(2*pi*v*f1 + p1)*0.5 + 0.5, 0, 1)",
+    "green": "clip(sin(2*pi*v*f2 + p2)*0.5 + 0.5, 0, 1)",
+    "blue": "clip(sin(2*pi*v*f3 + p3)*0.5 + 0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 20739,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

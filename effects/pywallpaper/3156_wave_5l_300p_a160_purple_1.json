@@ -1,0 +1,47 @@
+{
+  "id": "wave_5l_300p_a160_purple_1",
+  "name": "波形·5线·300点·purple",
+  "full_name": "3156. 波形·5线·300点·purple",
+  "category": "波浪",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "waveform",
+        "lines": 5,
+        "points": 300,
+        "amplitude": 160,
+        "frequency": 0.04,
+        "line_width": 2,
+        "position": {
+          "x": 0,
+          "y": "50%"
+        },
+        "size": {
+          "width": "100%",
+          "height": "60%"
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.68,
+            0.82
+          ],
+          "speed": 0.07,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "y",
+          "scale": [
+            0.0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

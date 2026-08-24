@@ -1,0 +1,32 @@
+{
+  "name": "HexGrid_Super_LatticeBoltzmann_RosslerPalette_motion_trail_512x384_c1500",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*34.64) + sin(y*40) > 1.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 51880,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

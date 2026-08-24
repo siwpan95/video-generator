@@ -1,0 +1,31 @@
+{
+  "name": "StripesY_Super_NetworkKuramoto_Cool_vignette_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(y*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 51317,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

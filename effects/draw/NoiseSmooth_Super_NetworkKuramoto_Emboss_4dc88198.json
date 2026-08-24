@@ -1,0 +1,31 @@
+{
+  "name": "CahnHilliard_Super_NetworkKuramoto_Emboss_bloom_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 30665,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_FitzHughNagumo_Summer_vignette_320x240_c200",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 52034,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

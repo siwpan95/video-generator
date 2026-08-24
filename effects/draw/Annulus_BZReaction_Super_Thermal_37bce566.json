@@ -1,0 +1,28 @@
+{
+  "name": "Annulus_BZReaction_Super_Thermal",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (0.2 < (x-0.5)**2 + (y-0.5)**2 < 0.25) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 2619
+}

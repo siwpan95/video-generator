@@ -1,0 +1,28 @@
+{
+  "name": "Percolation30_Super_Lorenz_CyanWhiteMagenta_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.3 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(p1*(avg_n - c) - c*avg_n + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20793
+}

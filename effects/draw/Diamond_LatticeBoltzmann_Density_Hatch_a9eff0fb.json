@@ -1,0 +1,31 @@
+{
+  "name": "Diamond_LatticeBoltzmann_Density_Hatch_vignette_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) + abs(y-0.5) < 0.2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if (sin(v*50) > 0) else 0.3",
+    "green": "1 if (sin(v*50) > 0) else 0.3",
+    "blue": "1 if (sin(v*50) > 0) else 0.3"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 50119,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

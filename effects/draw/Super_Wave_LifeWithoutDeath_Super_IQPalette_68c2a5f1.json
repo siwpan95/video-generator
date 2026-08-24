@@ -1,0 +1,31 @@
+{
+  "name": "纠缠图腾_1",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*(x*cos(p1)+y*sin(p1))*20 + w1)*cos(f2*(x*sin(p1)-y*cos(p1))*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 3 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*p1+d1))",
+    "green": "0.5+0.5*cos(2*pi*(v*p2+d2))",
+    "blue": "0.5+0.5*cos(2*pi*(v*p3+d3))"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 32131,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

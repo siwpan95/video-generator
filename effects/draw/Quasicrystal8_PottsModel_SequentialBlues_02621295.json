@@ -1,0 +1,30 @@
+{
+  "name": "螺旋之山",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(cos(8*atan2(y-0.5, x-0.5)) > 0.3) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 22060,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

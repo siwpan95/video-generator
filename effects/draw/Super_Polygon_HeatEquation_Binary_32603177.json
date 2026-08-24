@@ -1,0 +1,30 @@
+{
+  "name": "潮汐终章",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "((x-p1)**2 + (y-p2)**2 < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 22102,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "CellularNoise_LorenzMap_ToonShading_edge_200x150_c0",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() > 0.9 else 0.1"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 51893,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "SingleSlit_TuringActivation_CyanWhiteMagenta_edge_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(pi*10*sqrt((x-0.5)**2 + (y-0.5)**2)) / (pi*10*sqrt((x-0.5)**2 + (y-0.5)**2) + 0.001))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.01*sin(c*20)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 50484,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

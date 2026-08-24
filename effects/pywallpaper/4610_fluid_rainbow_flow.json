@@ -1,0 +1,32 @@
+{
+  "id": "fluid_rainbow_flow",
+  "name": "彩虹流",
+  "full_name": "4610. 彩虹流",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 3e-06,
+        "diffusion": 8e-05,
+        "force": 5.0,
+        "color_map": "rainbow",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

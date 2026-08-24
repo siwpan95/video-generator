@@ -1,0 +1,31 @@
+{
+  "name": "Super_SineField_CMLChaotic_JetSimple",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*20)*cos(y*f2*20)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 1812,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

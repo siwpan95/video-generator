@@ -1,0 +1,31 @@
+{
+  "name": "StandingWave_ForestFire_Phase",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v)",
+    "green": "0.5+0.5*cos(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 2365,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

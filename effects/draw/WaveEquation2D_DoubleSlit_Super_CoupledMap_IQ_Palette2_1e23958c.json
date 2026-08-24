@@ -1,0 +1,31 @@
+{
+  "name": "霜花之梦_1",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*c + f1*avg_n + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v*(1-v)*4*v*(1-v)*4",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 22242,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

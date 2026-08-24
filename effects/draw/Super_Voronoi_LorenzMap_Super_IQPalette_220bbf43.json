@@ -1,0 +1,31 @@
+{
+  "name": "光辉之海",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(amin([(x-p1)**2+(y-p2)**2, (x-p3)**2+(y-p4)**2, (x-p5)**2+(y-p6)**2, (x-p7)**2+(y-p8)**2], axis=0) < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*p1+d1))",
+    "green": "0.5+0.5*cos(2*pi*(v*p2+d2))",
+    "blue": "0.5+0.5*cos(2*pi*(v*p3+d3))"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 3229,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

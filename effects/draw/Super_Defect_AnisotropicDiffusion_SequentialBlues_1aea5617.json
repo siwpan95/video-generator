@@ -1,0 +1,31 @@
+{
+  "name": "Super_Defect_AnisotropicDiffusion_SequentialBlues",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-p2, x-p1) / (2*pi) % 1 + w1*(x-p1) + w2*(y-p2)) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 1710,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

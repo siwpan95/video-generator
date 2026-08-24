@@ -1,0 +1,30 @@
+{
+  "name": "突变终章",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(v*2 if v < 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 31993,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

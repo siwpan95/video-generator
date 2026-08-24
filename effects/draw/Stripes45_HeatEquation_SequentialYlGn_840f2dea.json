@@ -1,0 +1,30 @@
+{
+  "name": "Stripes45_HeatEquation_SequentialYlGn_vignette_512x384_c100",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*25) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 52188,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

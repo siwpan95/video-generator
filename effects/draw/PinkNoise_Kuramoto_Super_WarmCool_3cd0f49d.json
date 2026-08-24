@@ -1,0 +1,31 @@
+{
+  "name": "激发彼岸",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 32164,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

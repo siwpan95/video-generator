@@ -1,0 +1,26 @@
+{
+  "name": "Logistic_Logistic_分岔2",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*(1-v)*4",
+    "green": "v*(1-v)*4*v*(1-v)*4",
+    "blue": "v"
+  },
+  "id": 42
+}

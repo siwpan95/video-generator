@@ -1,0 +1,31 @@
+{
+  "name": "GaussianRing_ChenMap_Cool_bloom_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 20439,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

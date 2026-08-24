@@ -1,0 +1,27 @@
+{
+  "name": "超级公式_波包耦合正弦色",
+  "version": "1.0",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2)/(0.04+0.5))*sin(1.0*20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 1.0)*c + 1.0*avg_n + 1.0*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5+0.5*sin(2*pi*v*1.0)*1.0",
+    "green": "0.5+0.5*sin(2*pi*v*1.0+pi/3)*1.0",
+    "blue": "0.5+0.5*sin(2*pi*v*1.0+2*pi/3)*1.0"
+  },
+  "id": 164
+}

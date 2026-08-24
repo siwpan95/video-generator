@@ -1,0 +1,28 @@
+{
+  "name": "湍流之歌",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if (sin(v*50) > 0) else 0.3",
+    "green": "1 if (sin(v*50) > 0) else 0.3",
+    "blue": "1 if (sin(v*50) > 0) else 0.3"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 22054
+}

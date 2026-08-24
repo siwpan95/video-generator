@@ -1,0 +1,28 @@
+{
+  "name": "WaveEquation2D_ForestFire_Hatch_none_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*5*sqrt((x-0.5)**2 + (y-0.5)**2)) * exp(-((x-0.5)**2 + (y-0.5)**2)/0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if (sin(v*50) > 0) else 0.3",
+    "green": "1 if (sin(v*50) > 0) else 0.3",
+    "blue": "1 if (sin(v*50) > 0) else 0.3"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 30476
+}

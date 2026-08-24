@@ -1,0 +1,31 @@
+{
+  "name": "彩虹终章_1",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52679,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

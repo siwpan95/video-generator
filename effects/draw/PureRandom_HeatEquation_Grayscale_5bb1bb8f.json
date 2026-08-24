@@ -1,0 +1,30 @@
+{
+  "name": "突变永恒",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 3353,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

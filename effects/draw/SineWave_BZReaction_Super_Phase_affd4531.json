@@ -1,0 +1,31 @@
+{
+  "name": "波动之歌_1",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v*f1+p1)",
+    "green": "0.5+0.5*cos(2*pi*v*f2+p2)",
+    "blue": "0.5+0.5*cos(2*pi*v*f3+p3)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 31848,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

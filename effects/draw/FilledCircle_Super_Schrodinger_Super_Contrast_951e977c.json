@@ -1,0 +1,31 @@
+{
+  "name": "天堂消散",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2 + (y-0.5)**2 < 0.16) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - 2*c + avg_n) + f2*(c**2 + avg_n**2 - w1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((v-0.5)*c1+0.5, 0, 1)",
+    "green": "clip((v-0.5)*c2+0.5, 0, 1)",
+    "blue": "clip((v-0.5)*c3+0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 31738,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

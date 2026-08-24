@@ -1,0 +1,31 @@
+{
+  "name": "Super_Shape2D_GrayScott_Diffusion_Super_Attractor_vignette_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5 + 0.5*sin(2*pi*v*f1 + p1)",
+    "green": "0.5 + 0.5*sin(2*pi*v*f2 + p2)",
+    "blue": "0.5 + 0.5*cos(2*pi*v*f3 + p3)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50040,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

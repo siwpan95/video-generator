@@ -1,0 +1,31 @@
+{
+  "name": "Diagonal_CMLChaotic_Inverted_invert_600x400",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50241,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

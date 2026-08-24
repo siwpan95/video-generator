@@ -1,0 +1,31 @@
+{
+  "name": "中子之歌",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x*3-1.5) + abs(y*3-1.5) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 31809,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

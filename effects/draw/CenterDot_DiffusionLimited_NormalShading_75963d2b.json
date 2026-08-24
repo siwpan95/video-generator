@@ -1,0 +1,31 @@
+{
+  "name": "相变消散",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.03 and abs(y-0.5) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= 0.5 and random() < 0.1) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*cos(2*pi*v), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v), 0, 1)",
+    "blue": "clip(1 - v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 21909,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

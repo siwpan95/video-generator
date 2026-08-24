@@ -1,0 +1,31 @@
+{
+  "name": "波动消散",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(-c - avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 21739,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

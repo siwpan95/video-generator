@@ -1,0 +1,31 @@
+{
+  "name": "螺旋碎片",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(-c - avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v)",
+    "green": "0.5+0.5*cos(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 22317,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

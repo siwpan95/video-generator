@@ -1,0 +1,31 @@
+{
+  "name": "NoiseSmooth_Super_CoupledMap_Super_Perceptual_v91",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*c + f1*avg_n + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 3471,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

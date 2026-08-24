@@ -1,0 +1,30 @@
+{
+  "name": "竞争扩散_双斑点",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.35)**2+(y-0.5)**2)/0.01) + exp(-((x-0.65)**2+(y-0.5)**2)/0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.3*(avg_n - c) - 0.1*c*(1-c)*(c-0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.9 + (1-v)*0.05",
+    "green": "v*0.3 + (1-v)*0.05",
+    "blue": "v*0.1 + (1-v)*0.3"
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 139
+}

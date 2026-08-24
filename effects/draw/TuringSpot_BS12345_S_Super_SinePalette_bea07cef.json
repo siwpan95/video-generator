@@ -1,0 +1,31 @@
+{
+  "name": "幻境之旋",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x)*sin(14*y) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n >= 1 and sum_n <= 5) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v*f1)*g1",
+    "green": "0.5+0.5*sin(2*pi*v*f2+pi/3)*g2",
+    "blue": "0.5+0.5*sin(2*pi*v*f3+2*pi/3)*g3"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 21959,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

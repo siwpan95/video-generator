@@ -1,0 +1,41 @@
+{
+  "name": "孤子状局部脉冲",
+  "version": "1.0",
+  "description": "非线性方程产生局部化脉冲结构，类似孤子但非精确可积系统。脉冲在扩散中保持形状",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.3)**2+(y-0.5)**2)/0.01) + exp(-((x-0.7)**2+(y-0.5)**2)/0.01)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.05*(avg_n - c) - 0.02*c*(1 - c)*(c - 0.5) + 0.005*sin(12.566*x)*sin(12.566*y)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.2 + 0.8*v",
+    "green": "0.1 + 0.9*v*v",
+    "blue": "0.3 + 0.7*sin(v*15)"
+  },
+  "tick": {
+    "fps": 24,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 108
+}

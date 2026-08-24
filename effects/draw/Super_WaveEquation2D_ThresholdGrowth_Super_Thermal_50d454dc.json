@@ -1,0 +1,31 @@
+{
+  "name": "Super_WaveEquation2D_ThresholdGrowth_Super_Thermal_invert_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*f1*sqrt((x-p1)**2 + (y-p2)**2)) * exp(-((x-p1)**2 + (y-p2)**2)/w1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31437,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

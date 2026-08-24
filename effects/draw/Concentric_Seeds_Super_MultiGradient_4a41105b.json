@@ -1,0 +1,31 @@
+{
+  "name": "相变瞬间",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n == 2) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1 + p1 if v < w1 else (v-1)*f2 + p2, 0, 1)",
+    "green": "clip(v*f3 + p3 if v < w1 else (v-1)*f4 + p4, 0, 1)",
+    "blue": "clip(v*f5 + p5 if v < w1 else (v-1)*f6 + p6, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 31726,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

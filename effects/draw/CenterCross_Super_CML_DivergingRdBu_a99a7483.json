@@ -1,0 +1,31 @@
+{
+  "name": "CenterCross_Super_CML_DivergingRdBu_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.02 or abs(y-0.5) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*clip(3.8*c*(1-c), 0, 1) + f1*clip(3.8*avg_n*(1-avg_n), 0, 1) + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip(v*2 if v < 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 51415,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "GradientCorner_ChenMap_Posterize_vignette_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) * abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 30922,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Grid_HeatEquation_LorenzPalette_edge_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 20661,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

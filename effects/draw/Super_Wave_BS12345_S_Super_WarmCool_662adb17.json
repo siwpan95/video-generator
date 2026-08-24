@@ -1,0 +1,31 @@
+{
+  "name": "Super_Wave_BS12345_S_Super_WarmCool_edge_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*(x*cos(p1)+y*sin(p1))*20 + w1)*cos(f2*(x*sin(p1)-y*cos(p1))*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n >= 1 and sum_n <= 5) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 31469,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

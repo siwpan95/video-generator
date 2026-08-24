@@ -1,0 +1,31 @@
+{
+  "name": "电浆之海",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "0.5*c + 0.5*avg_n + 0.1*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 2945,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

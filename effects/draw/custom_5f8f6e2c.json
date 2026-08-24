@@ -1,0 +1,40 @@
+{
+  "name": "捕食者-猎物 空间模拟",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random() if random() < 0.3 else 0"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.15*(avg_n - c) + 0.05*c*(1-c)*(c-0.5) + 0.03*sin(x*15+t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "1 - abs(v - 0.5)*2",
+    "blue": "1 - v"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 116
+}

@@ -1,0 +1,32 @@
+{
+  "name": "星尘绽放",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (0.2 < (x-0.5)**2 + (y-0.5)**2 < 0.25) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 52730,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

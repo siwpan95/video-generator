@@ -1,0 +1,31 @@
+{
+  "name": "Gaussian_BZReaction_Super_WarmCool_v68",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.04)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3448,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

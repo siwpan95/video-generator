@@ -1,0 +1,39 @@
+{
+  "name": "Gray-Scott_迷宫",
+  "version": "1.0",
+  "description": "Gray-Scott反应扩散产生迷宫图案。较高扩散率使斑点连通，形成迷宫状结构",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.4 + 0.6*random() if random() > 0.92 else 0.01"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.25*(avg_n - c) + 0.015*c*(1-c) - 0.012*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.1 + 0.9*v",
+    "green": "0.05 + 0.5*v + 0.35*v*v",
+    "blue": "0.02 + 0.2*v"
+  },
+  "tick": {
+    "fps": 18,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 28
+}

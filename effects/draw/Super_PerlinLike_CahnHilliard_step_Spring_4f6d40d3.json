@@ -1,0 +1,31 @@
+{
+  "name": "Super_PerlinLike_CahnHilliard_step_Spring_v166",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*30)*cos(y*f2*30) + 0.3*sin(x*f1*60)*cos(y*f2*60)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c**3 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 3546,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

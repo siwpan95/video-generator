@@ -1,0 +1,31 @@
+{
+  "name": "Grid_HenonTrajectory_Parabola_motion_trail_160x160_c1000",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 52073,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Burgers_激波",
+  "version": "1.0",
+  "description": "Burgers方程简化。非线性对流 + 扩散，产生激波（shock wave）——陡峭的传播锋面，扩散项平滑激波前沿",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.8 * exp(-(x-0.3)**2/0.02) + 0.2 * exp(-(x-0.7)**2/0.02)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.15*(avg_n - c) - 0.3*c*(sum_n - 8*avg_n)/8 + 0.02*sin(y*20)*c",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.7 + 0.3*sin(v*25)",
+    "green": "0.2 + 0.8*v*(1-v)",
+    "blue": "0.7 - 0.7*v + 0.3*cos(v*20)"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 5
+}

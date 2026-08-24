@@ -1,0 +1,31 @@
+{
+  "name": "脉动深渊",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.5*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(p1 + (1-p1)*int(v*f1)/f1, 0, 1)",
+    "green": "clip(p2 + (1-p2)*int(v*f1)/f1, 0, 1)",
+    "blue": "clip(p3 + (1-p3)*int(v*f1)/f1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31883,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

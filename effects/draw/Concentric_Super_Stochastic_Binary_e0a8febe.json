@@ -1,0 +1,31 @@
+{
+  "name": "Concentric_Super_Stochastic_Binary_vignette_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= f1 and random() < f2) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50839,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

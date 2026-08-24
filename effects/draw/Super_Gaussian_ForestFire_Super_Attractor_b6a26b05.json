@@ -1,0 +1,31 @@
+{
+  "name": "Super_Gaussian_ForestFire_Super_Attractor",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-p1)**2 + (y-p2)**2) / (0.1*(1+w1)))"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5 + 0.5*sin(2*pi*v*f1 + p1)",
+    "green": "0.5 + 0.5*sin(2*pi*v*f2 + p2)",
+    "blue": "0.5 + 0.5*cos(2*pi*v*f3 + p3)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 2347,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

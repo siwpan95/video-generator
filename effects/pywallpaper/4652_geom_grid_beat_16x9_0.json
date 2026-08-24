@@ -1,0 +1,37 @@
+{
+  "id": "geom_grid_beat_16x9_0",
+  "name": "16x9_矩形节拍网格",
+  "full_name": "4652. 16x9_矩形节拍网格",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "grid",
+        "cols": 16,
+        "rows": 9,
+        "cell_size": 40,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.7
+          ],
+          "speed": 0.1,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "beat",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

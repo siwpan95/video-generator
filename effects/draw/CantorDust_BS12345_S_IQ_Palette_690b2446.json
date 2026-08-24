@@ -1,0 +1,31 @@
+{
+  "name": "CantorDust_BS12345_S_IQ_Palette",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (cos(3*pi*x)*cos(9*pi*x)*cos(27*pi*x) > 0 and cos(3*pi*y)*cos(9*pi*y)*cos(27*pi*y) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n >= 1 and sum_n <= 5) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*0.9+0.1))",
+    "green": "0.5+0.5*cos(2*pi*(v*0.7+0.3))",
+    "blue": "0.5+0.5*cos(2*pi*(v*0.5+0.5))"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 2377,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

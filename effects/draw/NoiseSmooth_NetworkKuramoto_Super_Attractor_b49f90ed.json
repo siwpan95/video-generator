@@ -1,0 +1,31 @@
+{
+  "name": "脉冲消散_1",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(sin(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5 + 0.5*sin(2*pi*v*f1 + p1)",
+    "green": "0.5 + 0.5*sin(2*pi*v*f2 + p2)",
+    "blue": "0.5 + 0.5*cos(2*pi*v*f3 + p3)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 22130,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

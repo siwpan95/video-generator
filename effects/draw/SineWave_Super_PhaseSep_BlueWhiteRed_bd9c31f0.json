@@ -1,0 +1,31 @@
+{
+  "name": "SineWave_Super_PhaseSep_BlueWhiteRed_motion_trail_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 51537,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

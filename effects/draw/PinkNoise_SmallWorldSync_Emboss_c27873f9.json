@@ -1,0 +1,31 @@
+{
+  "name": "螺旋之舞_2",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52774,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

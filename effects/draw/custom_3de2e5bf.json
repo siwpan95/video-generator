@@ -1,0 +1,39 @@
+{
+  "name": "驻波场 × 非线性快速扩散 × 相分离色",
+  "version": "1.0",
+  "description": "四方向驻波干涉初始态 + 幂律非线性快速扩散（多孔介质启发） + 红蓝相分离配色。驻波节点线在非线性扩散下产生尖锐的子区域边界，双相着色清晰显示分离过程",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.25*(sin(x*31.42)+sin(y*31.42)+sin((x+y)*22.21)+sin((x-y)*22.21))"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.15*(avg_n - c) * (1.0 + 0.8*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "1.0 - v",
+    "green": "0.2 + 0.6*abs(0.5 - v)*2",
+    "blue": "v"
+  },
+  "tick": {
+    "fps": 24,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 63
+}

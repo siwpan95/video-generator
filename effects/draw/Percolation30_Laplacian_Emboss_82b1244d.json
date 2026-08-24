@@ -1,0 +1,28 @@
+{
+  "name": "Percolation30_Laplacian_Emboss_none_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.3 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.5*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31277
+}

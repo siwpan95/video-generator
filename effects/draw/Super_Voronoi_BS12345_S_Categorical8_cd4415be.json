@@ -1,0 +1,31 @@
+{
+  "name": "Super_Voronoi_BS12345_S_Categorical8",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(amin([(x-p1)**2+(y-p2)**2, (x-p3)**2+(y-p4)**2, (x-p5)**2+(y-p6)**2, (x-p7)**2+(y-p8)**2], axis=0) < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n >= 1 and sum_n <= 5) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*8)/8, 0, 1)",
+    "green": "clip(int(v*8 + 4)/8 % 1, 0, 1)",
+    "blue": "clip(1 - int(v*8)/8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 2691,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

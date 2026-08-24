@@ -1,0 +1,31 @@
+{
+  "name": "潮汐之山_1",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 22338,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

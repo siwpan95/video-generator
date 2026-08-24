@@ -1,0 +1,31 @@
+{
+  "name": "GradientX_AnisotropicDiffusion_Categorical8_invert_64x64_c100",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "x"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*8)/8, 0, 1)",
+    "green": "clip(int(v*8 + 4)/8 % 1, 0, 1)",
+    "blue": "clip(1 - int(v*8)/8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 51879,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

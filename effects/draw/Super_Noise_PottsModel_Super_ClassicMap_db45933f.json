@@ -1,0 +1,30 @@
+{
+  "name": "激发之旋_1",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*v + p1, 0, 1)",
+    "green": "clip(f2*v*(1-v)*4 + p2, 0, 1)",
+    "blue": "clip(f3*(1-v) + p3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 21807,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

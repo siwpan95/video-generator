@@ -1,0 +1,31 @@
+{
+  "name": "星云之变_2",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*v + p1, 0, 1)",
+    "green": "clip(f2*v*(1-v)*4 + p2, 0, 1)",
+    "blue": "clip(f3*(1-v) + p3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 52265,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

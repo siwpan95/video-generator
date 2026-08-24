@@ -1,0 +1,28 @@
+{
+  "name": "GradientY_LatticeBoltzmann_Density_Cool_none_100x100_c1000",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "y"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 52117
+}

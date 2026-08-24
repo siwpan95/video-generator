@@ -1,0 +1,31 @@
+{
+  "name": "Super_Gaussian_CoupledMap_Winter_vignette_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-p1)**2 + (y-p2)**2) / (0.1*(1+w1)))"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.1)*c + 0.1*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 30887,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

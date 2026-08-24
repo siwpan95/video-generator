@@ -1,0 +1,30 @@
+{
+  "name": "相变之歌",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.25*sin(30*sqrt((x-0.3)**2 + (y-0.5)**2)) + 0.25*sin(30*sqrt((x-0.7)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52266,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

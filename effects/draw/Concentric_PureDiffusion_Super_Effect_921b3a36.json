@@ -1,0 +1,31 @@
+{
+  "name": "混沌之歌",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v + f1*sin(20*v*pi + p1), 0, 1)",
+    "green": "clip(v + f2*sin(20*v*pi + p2), 0, 1)",
+    "blue": "clip(v + f3*sin(20*v*pi + p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 3304,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

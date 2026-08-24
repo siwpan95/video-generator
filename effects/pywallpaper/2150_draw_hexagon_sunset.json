@@ -1,0 +1,67 @@
+{
+  "id": "draw_hexagon_sunset",
+  "name": "绘制·六边形·sunset",
+  "full_name": "2150. 绘制·六边形·sunset",
+  "category": "绘制",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "drawing",
+        "commands": [
+          {
+            "shape": "polygon",
+            "points": [
+              [
+                "50%",
+                "15%"
+              ],
+              [
+                "80%",
+                "32%"
+              ],
+              [
+                "80%",
+                "68%"
+              ],
+              [
+                "50%",
+                "85%"
+              ],
+              [
+                "20%",
+                "68%"
+              ],
+              [
+                "20%",
+                "32%"
+              ]
+            ],
+            "color": null,
+            "fill": false
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.05,
+            0.18
+          ],
+          "speed": 0.06,
+          "sat": 0.85,
+          "val": 0.95
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "波动之谜",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*x)*sin(10*y) > 0.5 and random() > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*c + f1*avg_n + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 21673
+}

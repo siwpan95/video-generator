@@ -1,0 +1,27 @@
+{
+  "name": "随机_Ising_反色",
+  "version": "1.0",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "id": 182
+}

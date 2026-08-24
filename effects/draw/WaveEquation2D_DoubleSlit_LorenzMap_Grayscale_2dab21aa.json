@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_DoubleSlit_LorenzMap_Grayscale_edge_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 30542,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

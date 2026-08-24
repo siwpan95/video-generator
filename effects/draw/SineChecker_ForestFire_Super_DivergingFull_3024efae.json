@@ -1,0 +1,31 @@
+{
+  "name": "SineChecker_ForestFire_Super_DivergingFull_vignette_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*(v - 0.5) + 0.5 if v > 0.5 else 0.5 - f2*(0.5 - v), 0, 1)",
+    "green": "clip(1 - f3*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(f4*(0.5 - v) + 0.5 if v < 0.5 else 0.5 - f5*(v - 0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 20851,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

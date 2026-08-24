@@ -1,0 +1,31 @@
+{
+  "name": "WhiteNoise_StochasticGrowth_Super_Thermal_edge_200x150",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 1 and random() < 0.4 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 31372,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

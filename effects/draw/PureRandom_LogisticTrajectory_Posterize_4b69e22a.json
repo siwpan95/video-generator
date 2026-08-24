@@ -1,0 +1,26 @@
+{
+  "name": "随机_Logistic_海报化",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "id": 183
+}

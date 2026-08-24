@@ -1,0 +1,31 @@
+{
+  "name": "Super_WaveEquation2D_2x2_Super_WarmCool_v46",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*f1*sqrt((x-p1)**2 + (y-p2)**2)) * exp(-((x-p1)**2 + (y-p2)**2)/w1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n in [1, 2, 5]) or (c <= 0.5 and sum_n in [3, 6]) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 3426,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

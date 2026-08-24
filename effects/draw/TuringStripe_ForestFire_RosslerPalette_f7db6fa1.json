@@ -1,0 +1,31 @@
+{
+  "name": "漩涡之歌_1",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 21919,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

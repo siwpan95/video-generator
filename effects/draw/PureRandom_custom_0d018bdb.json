@@ -1,0 +1,40 @@
+{
+  "name": "三态循环_竞争",
+  "version": "1.0",
+  "description": "三态循环竞争（石头剪刀布启发）。单变量在三个吸引域间循环跳变，结合空间扩散产生移动的竞争漩涡和螺旋",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.15*(avg_n - c) + 0.05*sin(c*9.425 + t*0.1) + 0.02*sin(c*18.85 - t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*10)",
+    "green": "0.5 + 0.5*sin(v*10 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*10 + 4.189)"
+  },
+  "tick": {
+    "fps": 22,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 74
+}

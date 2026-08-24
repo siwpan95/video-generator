@@ -1,0 +1,48 @@
+{
+  "id": "circle_dots_48_180_neon",
+  "name": "圆点阵·48点·半径180·neon",
+  "full_name": "3431. 圆点阵·48点·半径180·neon",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 48,
+            "radius": 180,
+            "line": false,
+            "fill": true
+          }
+        ],
+        "element_size": 3,
+        "rotation_speed": 0.3,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.58,
+            0.88
+          ],
+          "speed": 0.12,
+          "sat": 0.95,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            50
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

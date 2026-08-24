@@ -1,0 +1,28 @@
+{
+  "name": "SineChecker_2x2_Super_Thermal_none_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n in [1, 2, 5]) or (c <= 0.5 and sum_n in [3, 6]) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 30210
+}

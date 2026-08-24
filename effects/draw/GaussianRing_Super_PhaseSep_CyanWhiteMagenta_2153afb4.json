@@ -1,0 +1,31 @@
+{
+  "name": "潮汐永恒",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3324,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

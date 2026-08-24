@@ -1,0 +1,31 @@
+{
+  "name": "GradientRadial_NetworkKuramoto_Autumn_edge_600x400_c100",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(sin(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 52187,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

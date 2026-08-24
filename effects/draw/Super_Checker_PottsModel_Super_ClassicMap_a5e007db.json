@@ -1,0 +1,30 @@
+{
+  "name": "Super_Checker_PottsModel_Super_ClassicMap_bloom_200x150",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*pi)*sin(y*f2*pi)"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*v + p1, 0, 1)",
+    "green": "clip(f2*v*(1-v)*4 + p2, 0, 1)",
+    "blue": "clip(f3*(1-v) + p3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 31214,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

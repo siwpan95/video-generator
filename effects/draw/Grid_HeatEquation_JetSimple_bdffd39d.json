@@ -1,0 +1,30 @@
+{
+  "name": "Grid_HeatEquation_JetSimple_invert_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 31101,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

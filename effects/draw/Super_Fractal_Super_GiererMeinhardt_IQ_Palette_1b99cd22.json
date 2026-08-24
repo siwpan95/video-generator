@@ -1,0 +1,31 @@
+{
+  "name": "星尘瞬间",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(f1*pi*x)*sin(f2*pi*x)*sin(f3*pi*x) * sin(f1*pi*y)*sin(f2*pi*y)*sin(f3*pi*y)) > w1 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*((avg_n**2)/(w1**2 + avg_n**2) - c + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*0.9+0.1))",
+    "green": "0.5+0.5*cos(2*pi*(v*0.7+0.3))",
+    "blue": "0.5+0.5*cos(2*pi*(v*0.5+0.5))"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31834,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

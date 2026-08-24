@@ -1,0 +1,37 @@
+{
+  "id": "cellular_64x36_green_2",
+  "name": "元胞·64x36·green",
+  "full_name": "4141. 元胞·64x36·green",
+  "category": "生命游戏",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "cellular",
+        "cols": 64,
+        "rows": 36,
+        "rule": "conway",
+        "audio_birth": true,
+        "update_interval": 0.2,
+        "color": {
+          "type": "solid",
+          "value": [
+            0,
+            230,
+            80
+          ]
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

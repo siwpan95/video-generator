@@ -1,0 +1,28 @@
+{
+  "name": "SierpinskiTrigger_IsingGlauber_JetSimple_none_180x180_c500",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*511*pi)*sin(y*511*pi) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 51794
+}

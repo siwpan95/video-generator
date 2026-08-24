@@ -1,0 +1,31 @@
+{
+  "name": "Stripes45_XYModel_Inverted_edge_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*25) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 31273,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

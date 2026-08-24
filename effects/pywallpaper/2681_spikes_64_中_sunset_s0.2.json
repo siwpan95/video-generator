@@ -1,0 +1,43 @@
+{
+  "id": "spikes_64_中_sunset_s0.2",
+  "name": "尖峰·64条·中半径·sunset",
+  "full_name": "2681. 尖峰·64条·中半径·sunset",
+  "category": "圆形",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 64,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 40,
+        "outer_radius": 280,
+        "line_width": 3,
+        "rotation_speed": 0.2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.05,
+            0.18
+          ],
+          "speed": 0.06,
+          "sat": 0.85,
+          "val": 0.95
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

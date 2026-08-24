@@ -1,0 +1,31 @@
+{
+  "name": "Super_Fractal_Super_Threshold_Cool_motion_trail_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(f1*pi*x)*sin(f2*pi*x)*sin(f3*pi*x) * sin(f1*pi*y)*sin(f2*pi*y)*sin(f3*pi*y)) > w1 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 30076,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

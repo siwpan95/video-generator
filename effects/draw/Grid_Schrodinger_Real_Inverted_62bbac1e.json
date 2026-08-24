@@ -1,0 +1,31 @@
+{
+  "name": "风暴之变_1",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 2*c + avg_n - c) + 0.1*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 31881,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

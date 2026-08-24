@@ -1,0 +1,28 @@
+{
+  "name": "SineChecker_ForestFire_ToonShading_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20850
+}

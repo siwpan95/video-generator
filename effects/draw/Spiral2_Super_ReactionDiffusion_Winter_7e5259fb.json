@@ -1,0 +1,31 @@
+{
+  "name": "费米之谜",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*atan2(y-0.5, x-0.5) + 5*sqrt((x-0.5)**2 + (y-0.5)**2)) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*c*(w1 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52551,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

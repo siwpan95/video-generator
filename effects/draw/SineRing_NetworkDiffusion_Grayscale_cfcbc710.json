@@ -1,0 +1,31 @@
+{
+  "name": "CircularWave_NetworkDiffusion_Grayscale_edge_256x192_c300",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52003,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

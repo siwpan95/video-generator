@@ -1,0 +1,31 @@
+{
+  "name": "混沌碎片_1",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 31672,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

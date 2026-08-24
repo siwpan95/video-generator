@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_DoubleSlit_ExcitableThreshold_SinePalette_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*sin(6*pi*v)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50712,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,41 @@
+[
+    {
+        "id": "starfield",
+        "name": "星空",
+        "class": "StarFieldTheme",
+        "description": "星空飘移背景",
+        "params": {
+            "stars_count": 200,
+            "speed_range": [0.1, 0.5],
+            "brightness_range": [0.3, 1.0]
+        }
+    },
+    {
+        "id": "gradient",
+        "name": "渐变",
+        "class": "GradientTheme",
+        "description": "渐变流动背景",
+        "params": {
+            "hue_speed": 0.02,
+            "hue_range": 0.3,
+            "base_brightness": 0.05
+        }
+    },
+    {
+        "id": "aurora",
+        "name": "极光",
+        "class": "AuroraTheme",
+        "description": "极光效果背景",
+        "params": {
+            "waves_count": 5,
+            "hue_range": [0.3, 0.7],
+            "amplitude_range": [20, 50]
+        }
+    },
+    {
+        "id": "empty",
+        "name": "无",
+        "class": "EmptyTheme",
+        "description": "微光呼吸（极暗中央辉光）"
+    }
+]

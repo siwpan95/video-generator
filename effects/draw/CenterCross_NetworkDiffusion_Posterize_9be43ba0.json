@@ -1,0 +1,31 @@
+{
+  "name": "CenterCross_NetworkDiffusion_Posterize_edge_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.02 or abs(y-0.5) < 0.02) else 0 + 0.01*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 51650,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

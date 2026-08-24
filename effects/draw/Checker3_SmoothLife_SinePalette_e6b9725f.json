@@ -1,0 +1,30 @@
+{
+  "name": "等离子维度",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*6) + int(y*6)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-10*(avg_n - 0.3)))",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*sin(6*pi*v)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 31722,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

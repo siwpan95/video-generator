@@ -1,0 +1,31 @@
+{
+  "name": "Super_Wave_Kuramoto_Autumn_edge_512x384_c800",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*(x*cos(p1)+y*sin(p1))*20 + w1)*cos(f2*(x*sin(p1)-y*cos(p1))*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 51843,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

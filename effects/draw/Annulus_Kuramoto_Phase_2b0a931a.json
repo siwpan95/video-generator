@@ -1,0 +1,31 @@
+{
+  "name": "螺旋之变_1",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (0.2 < (x-0.5)**2 + (y-0.5)**2 < 0.25) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v)",
+    "green": "0.5+0.5*cos(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 22144,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

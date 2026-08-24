@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_DoubleSlit_CMLChaotic_Hot",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 1208,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

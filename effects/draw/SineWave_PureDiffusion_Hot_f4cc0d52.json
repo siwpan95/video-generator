@@ -1,0 +1,28 @@
+{
+  "name": "回声碎片_1",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52384
+}

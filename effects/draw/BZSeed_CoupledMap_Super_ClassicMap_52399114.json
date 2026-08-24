@@ -1,0 +1,31 @@
+{
+  "name": "极光余辉",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*x)*sin(10*y) > 0.5 and random() > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.1)*c + 0.1*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*v + p1, 0, 1)",
+    "green": "clip(f2*v*(1-v)*4 + p2, 0, 1)",
+    "blue": "clip(f3*(1-v) + p3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 3082,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

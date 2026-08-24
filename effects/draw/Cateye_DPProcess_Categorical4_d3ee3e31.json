@@ -1,0 +1,31 @@
+{
+  "name": "Cateye_DPProcess_Categorical4",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2/0.04 + (y-0.5)**2/0.01 < 1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and random() < 0.8) or (c <= 0.5 and sum_n >= 0.5 and random() < 0.4) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 2317,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

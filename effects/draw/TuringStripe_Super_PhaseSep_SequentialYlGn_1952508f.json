@@ -1,0 +1,31 @@
+{
+  "name": "霜花深渊",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52245,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

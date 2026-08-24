@@ -1,0 +1,31 @@
+{
+  "name": "量子之海",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*3 + y*2)) * cos(2*pi*(x*2 - y*3))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.01*sin(c*20)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 21746,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

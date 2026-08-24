@@ -1,0 +1,31 @@
+{
+  "name": "TuringStripe_ExcitableThreshold_SequentialBlues_vignette_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31207,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

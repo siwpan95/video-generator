@@ -1,0 +1,28 @@
+{
+  "name": "Super_Shape2D_GrayScott_Diffusion_Categorical4_none_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50043
+}

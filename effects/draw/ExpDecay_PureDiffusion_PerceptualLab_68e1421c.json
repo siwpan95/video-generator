@@ -1,0 +1,31 @@
+{
+  "name": "迷宫碎片",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*sin(2*pi*v*0.8), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v*0.8 + 2*pi/3), 0, 1)",
+    "blue": "clip(v**0.8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 32099,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

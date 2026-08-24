@@ -1,0 +1,31 @@
+{
+  "name": "ExpDecay_Super_NetworkKuramoto_Winter_bloom_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 30622,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

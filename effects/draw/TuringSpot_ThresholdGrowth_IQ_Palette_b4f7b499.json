@@ -1,0 +1,27 @@
+{
+  "name": "Turing_阈值生长_IQ",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x)*sin(14*y) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5+0.5*cos(2*pi*(v*0.9+0.1))",
+    "green": "0.5+0.5*cos(2*pi*(v*0.7+0.3))",
+    "blue": "0.5+0.5*cos(2*pi*(v*0.5+0.5))"
+  },
+  "id": 68
+}

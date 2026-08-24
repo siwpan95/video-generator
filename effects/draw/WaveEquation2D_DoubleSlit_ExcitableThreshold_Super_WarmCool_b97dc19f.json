@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_DoubleSlit_ExcitableThreshold_Super_WarmCool_bloom_600x400",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * (exp(-((y-0.3)**2)/0.01) + exp(-((y-0.7)**2)/0.01)) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 50706,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

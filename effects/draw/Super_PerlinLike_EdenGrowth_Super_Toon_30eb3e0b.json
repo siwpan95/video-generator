@@ -1,0 +1,31 @@
+{
+  "name": "Super_PerlinLike_EdenGrowth_Super_Toon",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*30)*cos(y*f2*30) + 0.3*sin(x*f1*60)*cos(y*f2*60)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= 0.5 and random() < 0.3) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(p1 + (1-p1)*int(v*f1)/f1, 0, 1)",
+    "green": "clip(p2 + (1-p2)*int(v*f1)/f1, 0, 1)",
+    "blue": "clip(p3 + (1-p3)*int(v*f1)/f1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 2137,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

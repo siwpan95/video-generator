@@ -1,0 +1,31 @@
+{
+  "name": "震荡之浪",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)*cos(y*20) + 0.3*sin(x*40)*cos(y*40)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 2*c + avg_n - c) + 0.1*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 32104,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

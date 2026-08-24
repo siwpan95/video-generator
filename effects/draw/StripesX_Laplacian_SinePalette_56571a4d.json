@@ -1,0 +1,31 @@
+{
+  "name": "StripesY_Laplacian_SinePalette_motion_trail_80x80_c300",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(y*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.5*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*sin(6*pi*v)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 51949,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

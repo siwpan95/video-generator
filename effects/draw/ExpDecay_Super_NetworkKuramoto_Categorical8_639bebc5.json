@@ -1,0 +1,31 @@
+{
+  "name": "ExpDecay_Super_NetworkKuramoto_Categorical8_edge_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*8)/8, 0, 1)",
+    "green": "clip(int(v*8 + 4)/8 % 1, 0, 1)",
+    "blue": "clip(1 - int(v*8)/8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30617,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

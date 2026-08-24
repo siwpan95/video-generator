@@ -1,0 +1,31 @@
+{
+  "name": "Diagonal_Super_NetworkKuramoto_Super_Effect_bloom_600x400",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v + f1*sin(20*v*pi + p1), 0, 1)",
+    "green": "clip(v + f2*sin(20*v*pi + p2), 0, 1)",
+    "blue": "clip(v + f3*sin(20*v*pi + p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 30626,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

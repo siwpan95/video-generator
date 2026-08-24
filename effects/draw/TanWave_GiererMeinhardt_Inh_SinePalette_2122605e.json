@@ -1,0 +1,28 @@
+{
+  "name": "冰晶之歌",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tan(x*10)/(1+abs(tan(x*10)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*sin(6*pi*v)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 21694
+}

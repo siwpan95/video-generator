@@ -1,0 +1,43 @@
+{
+  "name": "Kuramoto-Sivashinsky_混沌",
+  "version": "1.0",
+  "description": "Kuramoto-Sivashinsky方程简化。四阶扩散（长波不稳定）+ 二阶反扩散 + 非线性对流，产生时空混沌——看似湍流的蜂窝状混沌图案。火焰锋面/粘性流启发",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.1*(sin(x*18)*cos(y*22) + random()*0.05)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 2
+  },
+  "evolution": {
+    "rule": "c + 0.25*(avg_n - c) - 0.12*sin(6.283*c) + 0.04*(sum_n - 24*avg_n)/24 + 0.015*sin(x*20+t*0.1)*cos(y*20-t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n",
+      "x",
+      "y",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.3 + 0.7*sin(v*10)",
+    "green": "0.4 + 0.6*sin(v*8 + 1.5)",
+    "blue": "0.6 + 0.4*cos(v*12)"
+  },
+  "tick": {
+    "fps": 15,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 35
+}

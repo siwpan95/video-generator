@@ -1,0 +1,28 @@
+{
+  "name": "Grid_ChenMap_SequentialYlGn_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*30) * sin(y*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20401
+}

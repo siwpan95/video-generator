@@ -1,0 +1,31 @@
+{
+  "name": "Super_Gradient2D_Super_NetworkKuramoto_Threshold3_vignette_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(p1 + w1*abs(x-p2) + w2*abs(y-p3), 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30592,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

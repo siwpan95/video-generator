@@ -1,0 +1,31 @@
+{
+  "name": "Super_Interference_DiffusionLimited_LogPalette_edge_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(f1*pi*sqrt((x-p1)**2+(y-p2)**2)) * sin(f2*pi*sqrt((x-p3)**2+(y-p4)**2)))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= 0.5 and random() < 0.1) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 31404,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

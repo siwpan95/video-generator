@@ -1,0 +1,31 @@
+{
+  "name": "StandingWave_Super_Threshold_Super_DivergingFull_edge_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*(v - 0.5) + 0.5 if v > 0.5 else 0.5 - f2*(0.5 - v), 0, 1)",
+    "green": "clip(1 - f3*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(f4*(0.5 - v) + 0.5 if v < 0.5 else 0.5 - f5*(v - 0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 30117,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

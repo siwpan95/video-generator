@@ -1,0 +1,31 @@
+{
+  "name": "Super_Checker_LifeWithoutDeath_Threshold3_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*pi)*sin(y*f2*pi)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 3 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "green": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)",
+    "blue": "1 if v > 0.66 else (0.5 if v > 0.33 else 0)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 20304,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "星云之光",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 22206
+}

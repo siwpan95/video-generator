@@ -1,0 +1,31 @@
+{
+  "name": "光辉之变",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and random() < 0.8) or (c <= 0.5 and sum_n >= 0.5 and random() < 0.4) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v + f1*sin(20*v*pi + p1), 0, 1)",
+    "green": "clip(v + f2*sin(20*v*pi + p2), 0, 1)",
+    "blue": "clip(v + f3*sin(20*v*pi + p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 21815,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

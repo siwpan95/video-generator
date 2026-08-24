@@ -1,0 +1,28 @@
+{
+  "name": "BZSeed_Kuramoto_PerceptualMono_none_600x400_c200",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*x)*sin(10*y) > 0.5 and random() > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 51975
+}

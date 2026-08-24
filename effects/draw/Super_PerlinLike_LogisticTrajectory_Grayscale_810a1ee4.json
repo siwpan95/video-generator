@@ -1,0 +1,30 @@
+{
+  "name": "Super_PerlinLike_LogisticTrajectory_Grayscale_motion_trail_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*30)*cos(y*f2*30) + 0.3*sin(x*f1*60)*cos(y*f2*60)"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 21511,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

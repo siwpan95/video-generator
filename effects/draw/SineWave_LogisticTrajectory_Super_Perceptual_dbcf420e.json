@@ -1,0 +1,30 @@
+{
+  "name": "CosineWave_LogisticTrajectory_Super_Perceptual_invert_200x150_c2000",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 51990,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

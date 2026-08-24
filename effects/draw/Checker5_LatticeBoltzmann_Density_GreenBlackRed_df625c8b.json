@@ -1,0 +1,31 @@
+{
+  "name": "Checker5_LatticeBoltzmann_Density_GreenBlackRed_edge_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*10) + int(y*10)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50150,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

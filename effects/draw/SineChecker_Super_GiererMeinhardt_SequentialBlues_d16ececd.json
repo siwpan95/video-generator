@@ -1,0 +1,28 @@
+{
+  "name": "干涉轮回",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*((avg_n**2)/(w1**2 + avg_n**2) - c + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 31863
+}

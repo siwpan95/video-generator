@@ -1,0 +1,31 @@
+{
+  "name": "Super_SineField_GrayScott_Diffusion_PerceptualMono_bloom_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*20)*cos(y*f2*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 31426,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "NoiseFractal_Super_CML_BlueWhiteRed_edge_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*10)*sin(y*10)*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*clip(3.8*c*(1-c), 0, 1) + f1*clip(3.8*avg_n*(1-avg_n), 0, 1) + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "2*v*(1-v)",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 51464,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

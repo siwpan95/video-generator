@@ -1,0 +1,31 @@
+{
+  "name": "分形之浪_2",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-y) < 0.03) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*cos(2*pi*v), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v), 0, 1)",
+    "blue": "clip(1 - v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52504,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "DomainWall2_Super_NetworkKuramoto_JetSimple_invert_180x180_c600",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tanh(20*(x-0.5)) * tanh(20*(y-0.5))"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 51871,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

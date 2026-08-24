@@ -1,0 +1,37 @@
+{
+  "id": "ripple",
+  "name": "水波涟漪",
+  "full_name": "039. 水波涟漪",
+  "category": "波浪",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "pulse",
+        "mode": "ripple",
+        "max_radius": 200,
+        "speed": 1.5,
+        "count": 2,
+        "trigger": "audio",
+        "trigger_threshold": 0.4,
+        "line_width": 1,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.1,
+          "sat": 0.6,
+          "val": 0.8
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

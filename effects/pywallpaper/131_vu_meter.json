@@ -1,0 +1,85 @@
+{
+  "id": "vu_meter",
+  "name": "VU仪",
+  "full_name": "131. VU仪",
+  "category": "信息",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "gauge",
+        "radius": 300,
+        "arc": {
+          "start": 225,
+          "end": 315,
+          "width": 8
+        },
+        "segments": [
+          {
+            "from": -20,
+            "to": -2,
+            "color": [
+              30,
+              170,
+              80
+            ]
+          },
+          {
+            "from": -2,
+            "to": 0,
+            "color": [
+              220,
+              200,
+              20
+            ]
+          },
+          {
+            "from": 0,
+            "to": 3,
+            "color": [
+              220,
+              60,
+              40
+            ]
+          }
+        ],
+        "ticks": {
+          "step": 1,
+          "major_step": 5,
+          "length": 12,
+          "color": [
+            140,
+            140,
+            155
+          ],
+          "major_color": [
+            220,
+            220,
+            230
+          ],
+          "major_width": 3
+        },
+        "needle": {
+          "length_ratio": 0.82,
+          "width": 3,
+          "color": [
+            200,
+            210,
+            220
+          ]
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        },
+        "label": "VU"
+      }
+    ]
+  }
+}

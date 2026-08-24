@@ -1,0 +1,31 @@
+{
+  "name": "ExpDecay_Super_NetworkKuramoto_Summer_motion_trail_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 30624,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

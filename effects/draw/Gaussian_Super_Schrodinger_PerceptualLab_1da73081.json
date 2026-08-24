@@ -1,0 +1,31 @@
+{
+  "name": "Gaussian_Super_Schrodinger_PerceptualLab_bloom_100x100_c600",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.04)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - 2*c + avg_n) + f2*(c**2 + avg_n**2 - w1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*sin(2*pi*v*0.8), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v*0.8 + 2*pi/3), 0, 1)",
+    "blue": "clip(v**0.8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 51782,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

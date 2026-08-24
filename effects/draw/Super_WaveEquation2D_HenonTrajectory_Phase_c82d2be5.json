@@ -1,0 +1,28 @@
+{
+  "name": "Super_WaveEquation2D_HenonTrajectory_Phase_none_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*f1*sqrt((x-p1)**2 + (y-p2)**2)) * exp(-((x-p1)**2 + (y-p2)**2)/w1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v)",
+    "green": "0.5+0.5*cos(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 31428
+}

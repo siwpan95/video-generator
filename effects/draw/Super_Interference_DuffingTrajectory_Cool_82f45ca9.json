@@ -1,0 +1,32 @@
+{
+  "name": "Super_Interference_DuffingTrajectory_Cool_edge_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(f1*pi*sqrt((x-p1)**2+(y-p2)**2)) * sin(f2*pi*sqrt((x-p3)**2+(y-p4)**2)))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 0.2*c + c**3) + 0.5*sin(t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 50627,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

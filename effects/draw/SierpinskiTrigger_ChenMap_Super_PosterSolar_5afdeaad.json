@@ -1,0 +1,28 @@
+{
+  "name": "SierpinskiTrigger_ChenMap_Super_PosterSolar_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*511*pi)*sin(y*511*pi) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)",
+    "green": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)",
+    "blue": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(1-v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 20483
+}

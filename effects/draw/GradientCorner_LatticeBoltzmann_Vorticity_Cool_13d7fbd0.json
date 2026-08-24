@@ -1,0 +1,32 @@
+{
+  "name": "光辉之梦_1",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) * abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + f1*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 22040,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Super_Gaussian_ChenMap_Super_Contrast_invert_320x240_c300",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-p1)**2 + (y-p2)**2) / (0.1*(1+w1)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((v-0.5)*c1+0.5, 0, 1)",
+    "green": "clip((v-0.5)*c2+0.5, 0, 1)",
+    "blue": "clip((v-0.5)*c3+0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52033,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

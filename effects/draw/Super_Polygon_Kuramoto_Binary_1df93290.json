@@ -1,0 +1,31 @@
+{
+  "name": "回声之影_1",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "((x-p1)**2 + (y-p2)**2 < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 52274,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

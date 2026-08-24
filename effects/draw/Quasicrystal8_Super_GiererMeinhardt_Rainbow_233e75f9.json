@@ -1,0 +1,28 @@
+{
+  "name": "散射之海",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(cos(8*atan2(y-0.5, x-0.5)) > 0.3) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*((avg_n**2)/(w1**2 + avg_n**2) - c + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*sin(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 52252
+}

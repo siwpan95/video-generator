@@ -1,0 +1,31 @@
+{
+  "name": "WaveEquation2D_Slit_Super_Threshold_Parabola_edge_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * exp(-((y-0.5)**2)/0.01) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30003,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

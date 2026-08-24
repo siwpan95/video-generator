@@ -1,0 +1,31 @@
+{
+  "name": "ExpDecay_Schrodinger_Real_Winter_invert_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 2*c + avg_n - c) + 0.1*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 50366,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "PenroseApprox_HeatEquation_Compass_motion_trail_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 31237,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

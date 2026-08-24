@@ -1,0 +1,32 @@
+{
+  "id": "fluid_smoke_gentle",
+  "name": "轻烟",
+  "full_name": "4612. 轻烟",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 1e-05,
+        "diffusion": 2e-05,
+        "force": 2.0,
+        "color_map": "grayscale",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

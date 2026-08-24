@@ -1,0 +1,30 @@
+{
+  "name": "WaveEquation2D_Slit_SmoothLife_Posterize_edge_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * exp(-((y-0.5)**2)/0.01) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-10*(avg_n - 0.3)))",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 30731,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

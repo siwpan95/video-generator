@@ -1,0 +1,31 @@
+{
+  "name": "Checker5_ForestFire_Hatch_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*10) + int(y*10)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1 if (sin(v*50) > 0) else 0.3",
+    "green": "1 if (sin(v*50) > 0) else 0.3",
+    "blue": "1 if (sin(v*50) > 0) else 0.3"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 30511,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

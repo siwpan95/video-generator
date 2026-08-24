@@ -1,0 +1,31 @@
+{
+  "name": "GradientCorner_ChenMap_LorenzPalette_motion_trail_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) * abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 31136,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

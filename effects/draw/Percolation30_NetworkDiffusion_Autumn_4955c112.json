@@ -1,0 +1,31 @@
+{
+  "name": "炼狱彼岸",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.3 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 52635,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

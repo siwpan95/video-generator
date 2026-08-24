@@ -1,0 +1,30 @@
+{
+  "name": "WavSource",
+  "site": "wavsource.com",
+  "description": "Free WAV sound effects, simple static site with direct downloads",
+  "base_url": "https://www.wavsource.com",
+  "categories": [
+    "sounds.shtml",
+    "people/people.shtml",
+    "tv/tv.shtml",
+    "movies/movies.shtml",
+    "cartoons/cartoons.shtml",
+    "video_games/video_games.shtml",
+    "soundfx/animals.shtml",
+    "soundfx/beeps.shtml",
+    "soundfx/cartoon.shtml",
+    "soundfx/doors.shtml",
+    "soundfx/explosion.shtml",
+    "soundfx/fight.shtml",
+    "soundfx/funny.shtml",
+    "soundfx/human.shtml",
+    "soundfx/machines.shtml",
+    "soundfx/misc.shtml",
+    "soundfx/music.shtml",
+    "soundfx/office.shtml",
+    "soundfx/sci-fi.shtml",
+    "soundfx/sports.shtml",
+    "soundfx/transportation.shtml",
+    "soundfx/weapons.shtml"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "NoiseSmooth2_GameOfLife_Inverted_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n >= 2 and sum_n <= 3) or (c <= 0.5 and sum_n == 3) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 20534,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

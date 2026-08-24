@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_PhaseSeparation_Emboss_bloom_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.2*(avg_n - c) - 0.1*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 31343,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

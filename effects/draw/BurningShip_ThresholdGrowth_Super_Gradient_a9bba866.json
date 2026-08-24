@@ -1,0 +1,31 @@
+{
+  "name": "分形之浪_1",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x*3-1.5) + abs(y*3-1.5) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(a1 + b1*v, 0, 1)",
+    "green": "clip(a2 + b2*v, 0, 1)",
+    "blue": "clip(a3 + b3*v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 22179,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

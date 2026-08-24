@@ -1,0 +1,31 @@
+{
+  "name": "CosineWave_Super_PhaseSep_GreenBlackRed_invert_600x400",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 30878,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

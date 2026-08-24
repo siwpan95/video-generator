@@ -1,0 +1,31 @@
+{
+  "name": "PenroseApprox_Meinhardt_Emboss_vignette_300x200_c300",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*(avg_n - c) + 0.1*(c - c**2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v + 0.2*sin(20*v)",
+    "green": "v + 0.1*sin(20*v)",
+    "blue": "v - 0.1*sin(20*v)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 51814,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

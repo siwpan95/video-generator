@@ -1,0 +1,32 @@
+{
+  "name": "谐振之谜_1",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + f1*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*2 if v < 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 52689,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

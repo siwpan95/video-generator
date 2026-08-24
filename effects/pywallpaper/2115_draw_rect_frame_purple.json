@@ -1,0 +1,45 @@
+{
+  "id": "draw_rect_frame_purple",
+  "name": "绘制·方框·purple",
+  "full_name": "2115. 绘制·方框·purple",
+  "category": "绘制",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "drawing",
+        "commands": [
+          {
+            "shape": "rect",
+            "x1": "25%",
+            "y1": "25%",
+            "x2": "75%",
+            "y2": "75%",
+            "color": null,
+            "fill": false
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.68,
+            0.82
+          ],
+          "speed": 0.07,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

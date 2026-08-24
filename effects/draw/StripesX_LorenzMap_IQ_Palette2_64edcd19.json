@@ -1,0 +1,31 @@
+{
+  "name": "StripesX_LorenzMap_IQ_Palette2_motion_trail_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v*(1-v)*4*v*(1-v)*4",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50943,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

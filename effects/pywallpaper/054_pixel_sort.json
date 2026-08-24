@@ -1,0 +1,36 @@
+{
+  "id": "pixel_sort",
+  "name": "像素排序",
+  "full_name": "054. 像素排序",
+  "category": "纹理",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "texture",
+        "mode": "pixel",
+        "cell_size": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            0.5
+          ],
+          "speed": 0.05,
+          "sat": 0.5,
+          "val": 0.8
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

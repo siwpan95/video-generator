@@ -1,0 +1,31 @@
+{
+  "name": "震荡之影",
+  "grid": {
+    "width": 80,
+    "height": 60,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 3127,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

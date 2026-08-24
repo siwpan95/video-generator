@@ -1,0 +1,20 @@
+{
+  "name": "SoundGator",
+  "site": "soundgator.com",
+  "description": "Free sound effects, no registration, direct mp3 downloads",
+  "base_url": "https://www.soundgator.com",
+  "categories": [
+    "https://www.soundgator.com/category/buttons/",
+    "https://www.soundgator.com/category/interface/",
+    "https://www.soundgator.com/category/transitions/",
+    "https://www.soundgator.com/category/domestic/",
+    "https://www.soundgator.com/category/machines/",
+    "https://www.soundgator.com/category/transportation/",
+    "https://www.soundgator.com/category/human/",
+    "https://www.soundgator.com/category/miscellaneous/",
+    "https://www.soundgator.com/category/urban/",
+    "https://www.soundgator.com/category/industrial/",
+    "https://www.soundgator.com/category/nature/",
+    "https://www.soundgator.com/category/voice/"
+  ]
+}

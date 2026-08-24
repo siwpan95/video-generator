@@ -1,0 +1,31 @@
+{
+  "name": "Super_Noise_Super_Stochastic_Super_DivergingFull_bloom_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= f1 and random() < f2) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*(v - 0.5) + 0.5 if v > 0.5 else 0.5 - f2*(0.5 - v), 0, 1)",
+    "green": "clip(1 - f3*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(f4*(0.5 - v) + 0.5 if v < 0.5 else 0.5 - f5*(v - 0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 50853,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

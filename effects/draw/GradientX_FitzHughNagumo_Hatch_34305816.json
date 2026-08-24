@@ -1,0 +1,31 @@
+{
+  "name": "极夜深渊",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "x"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if (sin(v*50) > 0) else 0.3",
+    "green": "1 if (sin(v*50) > 0) else 0.3",
+    "blue": "1 if (sin(v*50) > 0) else 0.3"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52645,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

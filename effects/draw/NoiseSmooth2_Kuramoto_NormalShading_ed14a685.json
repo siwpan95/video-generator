@@ -1,0 +1,31 @@
+{
+  "name": "NoiseSmooth2_Kuramoto_NormalShading_v84",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*cos(2*pi*v), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v), 0, 1)",
+    "blue": "clip(1 - v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3464,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

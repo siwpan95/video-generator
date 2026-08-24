@@ -1,0 +1,31 @@
+{
+  "name": "坍缩之谜",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x)*sin(14*y) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c) + 0.001*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 3163,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "rain_字母_60_white_t8_2",
+  "name": "文字雨·字母·60列·white",
+  "full_name": "1574. 文字雨·字母·60列·white",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "chars": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "count": 60,
+        "font_size": 16,
+        "speed": {
+          "min": 80,
+          "max": 200
+        },
+        "trail_length": 8,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "color": {
+          "type": "solid",
+          "value": [
+            220,
+            220,
+            240
+          ]
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "brightness",
+          "scale": [
+            0.3,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

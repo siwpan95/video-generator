@@ -1,0 +1,43 @@
+{
+  "id": "tan_curve",
+  "name": "正切曲线",
+  "full_name": "4576. 正切曲线",
+  "category": "数学",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "formula",
+        "formula": {
+          "x": "t*0.6",
+          "y": "tan(t*1.5)*0.3",
+          "t_min": "pi/6",
+          "t_max": "pi*5/6",
+          "t_step": 0.003
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.15
+          ],
+          "speed": 0.12,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "line_width": 2,
+        "close_threshold": 4,
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "波函数余辉_2",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*(x*cos(p1)+y*sin(p1))*20 + w1)*cos(f2*(x*sin(p1)-y*cos(p1))*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(sin(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*sin(6*pi*v)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 52662,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

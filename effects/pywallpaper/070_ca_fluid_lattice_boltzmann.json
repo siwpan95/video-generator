@@ -1,0 +1,40 @@
+{
+  "name": "CA流体-Lattice Boltzmann",
+  "description": "使用Lattice Boltzmann方法模拟流体密度演化",
+  "version": "1.0",
+  "author": "draw集成",
+  "tags": [
+    "流体",
+    "物理",
+    "CA",
+    "LB"
+  ],
+  "primitive": {
+    "type": "ca",
+    "recipe_name": "LatticeBoltzmann_Density",
+    "audio_modulated_params": [
+      "f1",
+      "f2"
+    ]
+  },
+  "params": {
+    "width": 320,
+    "height": 180,
+    "wrap": true,
+    "init_mode": "noise",
+    "init_density": 0.5,
+    "f1": 0.1,
+    "f2": 0.01,
+    "color_map": "viridis",
+    "decay": 0.995
+  },
+  "formula": {
+    "enabled": true,
+    "variables": [
+      "c",
+      "avg_n"
+    ],
+    "expression": "c + f1*(avg_n - c) - f2*(c - 0.5)"
+  },
+  "category": "(无分类)"
+}

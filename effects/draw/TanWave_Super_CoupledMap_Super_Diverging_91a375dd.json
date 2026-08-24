@@ -1,0 +1,31 @@
+{
+  "name": "TanWave_Super_CoupledMap_Super_Diverging_vignette_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tan(x*10)/(1+abs(tan(x*10)))"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*c + f1*avg_n + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + f1*(v-0.5), 0, 1)",
+    "green": "clip(1 - f2*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(0.5 - f3*(v-0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 31569,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

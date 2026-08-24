@@ -1,0 +1,28 @@
+{
+  "name": "GradientRadial_ExcitableThreshold_LogPalette_none_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50741
+}

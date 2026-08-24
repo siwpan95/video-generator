@@ -1,0 +1,36 @@
+{
+  "name": "Mandelbrot_三次迭代",
+  "version": "1.0",
+  "description": "Mandelbrot集合的三次变体（z→z³+c），产生三叶草状分形图案",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.0"
+    }
+  },
+  "evolution": {
+    "rule": "((c*c*c + (x-0.5)*3.5 + (y-0.5)*2.0) % 2.0 - 1.0) * 0.5",
+    "variables": [
+      "c",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*18)",
+    "green": "0.5 + 0.5*sin(v*18 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*18 + 4.189)"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 44
+}

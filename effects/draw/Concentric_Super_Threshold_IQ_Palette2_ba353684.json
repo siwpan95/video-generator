@@ -1,0 +1,31 @@
+{
+  "name": "RingSource_Super_Threshold_IQ_Palette2_edge_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v*(1-v)*4*v*(1-v)*4",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 30063,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

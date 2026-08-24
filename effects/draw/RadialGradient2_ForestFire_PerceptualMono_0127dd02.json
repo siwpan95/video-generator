@@ -1,0 +1,31 @@
+{
+  "name": "RadialGradient2_ForestFire_PerceptualMono_invert_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 20863,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "DomainWall2_ForestFire_Spring_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tanh(20*(x-0.5)) * tanh(20*(y-0.5))"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 20886
+}

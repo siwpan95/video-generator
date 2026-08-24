@@ -1,0 +1,31 @@
+{
+  "name": "极夜之光",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.5*c*(1 - c)*(c - 0.3)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + f1*(v-0.5), 0, 1)",
+    "green": "clip(1 - f2*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(0.5 - f3*(v-0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 22320,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

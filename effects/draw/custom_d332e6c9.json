@@ -1,0 +1,39 @@
+{
+  "name": "Lenia_简化",
+  "version": "1.0",
+  "description": "Lenia连续细胞自动机简化版。环形核卷积 + 高斯型生长函数，产生自组织的有机生命形态，运动、分裂、脉冲",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2+(y-0.5)**2)/0.01) + 0.1*exp(-((x-0.3)**2+(y-0.4)**2)/0.005)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 2
+  },
+  "evolution": {
+    "rule": "c + 0.15 * (2.0*exp(-((avg_n-0.25)/0.08)**2) - 1.0) * c * (1 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.7 + 0.3*sin(v*15)",
+    "green": "v*0.8 + 0.2*cos(v*12+1.5)",
+    "blue": "v*0.6 + 0.4*cos(v*10+3.0)"
+  },
+  "tick": {
+    "fps": 18,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 38
+}

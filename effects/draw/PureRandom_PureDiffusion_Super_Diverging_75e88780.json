@@ -1,0 +1,31 @@
+{
+  "name": "WhiteNoise_GrayScott_Diffusion_Super_Diverging_bloom_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + f1*(v-0.5), 0, 1)",
+    "green": "clip(1 - f2*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(0.5 - f3*(v-0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 50084,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

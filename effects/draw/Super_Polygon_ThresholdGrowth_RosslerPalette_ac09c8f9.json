@@ -1,0 +1,31 @@
+{
+  "name": "拓扑之花",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "((x-p1)**2 + (y-p2)**2 < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 22120,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

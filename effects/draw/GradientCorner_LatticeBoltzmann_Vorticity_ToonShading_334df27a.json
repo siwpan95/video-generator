@@ -1,0 +1,32 @@
+{
+  "name": "扩散之云",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) * abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + f1*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 31877,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

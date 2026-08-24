@@ -1,0 +1,31 @@
+{
+  "name": "Super_Voronoi_ChenMap_Categorical4_vignette_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(amin([(x-p1)**2+(y-p2)**2, (x-p3)**2+(y-p4)**2, (x-p5)**2+(y-p6)**2, (x-p7)**2+(y-p8)**2], axis=0) < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 20423,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

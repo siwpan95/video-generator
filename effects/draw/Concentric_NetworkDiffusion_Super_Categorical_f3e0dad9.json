@@ -1,0 +1,31 @@
+{
+  "name": "时光之山_1",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3) < 0.02) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(sin(2*pi*v*f1 + p1)*0.5 + 0.5, 0, 1)",
+    "green": "clip(sin(2*pi*v*f2 + p2)*0.5 + 0.5, 0, 1)",
+    "blue": "clip(sin(2*pi*v*f3 + p3)*0.5 + 0.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 21962,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "combo3_spikes_circle_map_particles_neon",
+  "name": "三重组合·尖峰+环+粒子·neon",
+  "full_name": "4456. 三重组合·尖峰+环+粒子·neon",
+  "category": "组合",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 48,
+        "center": {
+          "x": "50%",
+          "y": "45%"
+        },
+        "inner_radius": 60,
+        "outer_radius": 160,
+        "line_width": 2,
+        "rotation_speed": 0.3,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      },
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 48,
+            "radius": 100,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            40
+          ],
+          "smoothing": 0.85
+        }
+      },
+      {
+        "type": "particles",
+        "count": 60,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "particle": {
+          "size": {
+            "min": 2,
+            "max": 6
+          },
+          "speed": {
+            "min": 15,
+            "max": 60
+          },
+          "lifetime": {
+            "min": 3,
+            "max": 7
+          },
+          "behavior": "drift"
+        },
+        "connect": {
+          "enabled": true,
+          "max_distance": 100,
+          "line_width": 1
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.58,
+            0.88
+          ],
+          "speed": 0.12,
+          "sat": 0.95,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "particle_size",
+          "scale": [
+            0.5,
+            2.5
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "潮汐轮回_2",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1-v if v > 0.5 else v",
+    "green": "1-v if v > 0.5 else v",
+    "blue": "1-v if v > 0.5 else v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 31985,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

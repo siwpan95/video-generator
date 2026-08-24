@@ -1,0 +1,31 @@
+{
+  "name": "谐振之旋_1",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (cos(3*pi*x)*cos(9*pi*x)*cos(27*pi*x) > 0 and cos(3*pi*y)*cos(9*pi*y)*cos(27*pi*y) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 22324,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

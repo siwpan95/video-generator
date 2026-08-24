@@ -1,0 +1,30 @@
+{
+  "name": "BZSeed_HeatEquation_ToonShading_vignette_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*x)*sin(10*y) > 0.5 and random() > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 20648,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

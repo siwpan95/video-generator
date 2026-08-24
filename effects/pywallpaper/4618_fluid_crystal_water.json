@@ -1,0 +1,32 @@
+{
+  "id": "fluid_crystal_water",
+  "name": "水晶水",
+  "full_name": "4618. 水晶水",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 8e-06,
+        "diffusion": 6e-05,
+        "force": 4.0,
+        "color_map": "ocean",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

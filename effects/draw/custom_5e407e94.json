@@ -1,0 +1,36 @@
+{
+  "name": "Kagome_几何",
+  "version": "1.0",
+  "description": "笼目格子(Kagome)图案，由三角形和六边形组成。用多方向正弦叠加产生笼目倒格子图案",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(18.85*x)*sin(18.85*y) + 0.3*sin(18.85*(x+y)/2)*sin(18.85*(x-y)/2)"
+    }
+  },
+  "evolution": {
+    "rule": "0.6*c + 0.4*(0.5 + 0.5*sin(18.85*x)*sin(18.85*y) + 0.3*sin(18.85*(x+y)/2)*sin(18.85*(x-y)/2))",
+    "variables": [
+      "c",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*25)",
+    "green": "0.5 + 0.5*sin(v*25 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*25 + 4.189)"
+  },
+  "tick": {
+    "fps": 15,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 34
+}

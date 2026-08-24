@@ -1,0 +1,31 @@
+{
+  "name": "QuantumWalk_CMLChaotic_JetSimple",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*3 + y*2)) * cos(2*pi*(x*2 - y*3))"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 250
+  },
+  "id": 2543,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

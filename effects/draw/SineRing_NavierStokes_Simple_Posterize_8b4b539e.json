@@ -1,0 +1,31 @@
+{
+  "name": "SineRing_NavierStokes_Simple_Posterize_motion_trail_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - f1*c*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 51117,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

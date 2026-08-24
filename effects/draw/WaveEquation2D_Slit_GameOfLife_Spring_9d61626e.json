@@ -1,0 +1,31 @@
+{
+  "name": "扩散之梦",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * exp(-((y-0.5)**2)/0.01) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n >= 2 and sum_n <= 3) or (c <= 0.5 and sum_n == 3) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 3194,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "RadialGradient2_AnisotropicDiffusion_Posterize_vignette_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.25*int(v*4)",
+    "green": "0.25*int(v*4)",
+    "blue": "0.25*int(v*4)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 21447,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

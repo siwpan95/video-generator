@@ -1,0 +1,31 @@
+{
+  "name": "GradRadialSQ_BZReaction_SequentialYlGn_invert_512x384_c300",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52111,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "PenroseApprox_DiffusionLimited_IQ_Palette",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= 0.5 and random() < 0.1) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*0.9+0.1))",
+    "green": "0.5+0.5*cos(2*pi*(v*0.7+0.3))",
+    "blue": "0.5+0.5*cos(2*pi*(v*0.5+0.5))"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 1386,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

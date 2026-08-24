@@ -1,0 +1,18 @@
+{
+  "id": "builtin_noise_worley",
+  "name": "Noise_Worley",
+  "category": "几何图形",
+  "tags": ["noise", "worley", "cellular", "voronoi", "cell"],
+  "params": {
+    "layers": [
+      {
+        "type": "noise",
+        "noise_type": "worley",
+        "cell": 64.0,
+        "scale": 8.0,
+        "mode": "glow",
+        "color": {"type": "cool_warm", "speed": 0.01}
+      }
+    ]
+  }
+}

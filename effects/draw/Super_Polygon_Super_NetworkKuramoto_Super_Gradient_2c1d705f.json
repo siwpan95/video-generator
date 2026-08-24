@@ -1,0 +1,31 @@
+{
+  "name": "Super_Polygon_Super_NetworkKuramoto_Super_Gradient_invert_200x150",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "((x-p1)**2 + (y-p2)**2 < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(a1 + b1*v, 0, 1)",
+    "green": "clip(a2 + b2*v, 0, 1)",
+    "blue": "clip(a3 + b3*v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 30578,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

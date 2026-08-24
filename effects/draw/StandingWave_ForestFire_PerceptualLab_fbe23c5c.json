@@ -1,0 +1,31 @@
+{
+  "name": "StandingWave_ForestFire_PerceptualLab",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*sin(2*pi*v*0.8), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v*0.8 + 2*pi/3), 0, 1)",
+    "blue": "clip(v**0.8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 250
+  },
+  "id": 2485,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

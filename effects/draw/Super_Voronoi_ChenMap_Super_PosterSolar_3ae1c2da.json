@@ -1,0 +1,31 @@
+{
+  "name": "Super_Voronoi_ChenMap_Super_PosterSolar_edge_200x150",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(amin([(x-p1)**2+(y-p2)**2, (x-p3)**2+(y-p4)**2, (x-p5)**2+(y-p6)**2, (x-p7)**2+(y-p8)**2], axis=0) < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)",
+    "green": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)",
+    "blue": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 20419,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Quasicrystal8_GameOfLife_SequentialBlues",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(cos(8*atan2(y-0.5, x-0.5)) > 0.3) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5 and sum_n >= 2 and sum_n <= 3) or (c <= 0.5 and sum_n == 3) else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 1573,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

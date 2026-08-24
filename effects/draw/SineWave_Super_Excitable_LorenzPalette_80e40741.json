@@ -1,0 +1,28 @@
+{
+  "name": "SineWave_Super_Excitable_LorenzPalette_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= w1 and sum_n > f1) else (c * (1 - f2) + p1)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 21562
+}

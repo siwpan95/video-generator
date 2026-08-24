@@ -1,0 +1,28 @@
+{
+  "name": "激发余辉",
+  "grid": {
+    "width": 80,
+    "height": 60,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v*f1+p1)",
+    "green": "0.5+0.5*cos(2*pi*v*f2+p2)",
+    "blue": "0.5+0.5*cos(2*pi*v*f3+p3)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 3021
+}

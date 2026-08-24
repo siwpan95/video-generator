@@ -1,0 +1,6 @@
+# video_generator dependencies (auto-generated 2026-08-20)
+asteval
+librosa
+numba
+numpy
+Pillow

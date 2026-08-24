@@ -1,0 +1,40 @@
+{
+  "id": "hypercube",
+  "name": "超立方体",
+  "full_name": "042. 超立方体",
+  "category": "3D",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "wireframe_3d",
+        "geometry": "hypercube",
+        "scale": 120,
+        "rotation": {
+          "x_speed": 0.5,
+          "y_speed": 0.7
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.1,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

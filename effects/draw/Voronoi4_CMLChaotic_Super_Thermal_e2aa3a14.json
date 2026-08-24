@@ -1,0 +1,31 @@
+{
+  "name": "Voronoi4_CMLChaotic_Super_Thermal_vignette_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (min(abs(x-0.2)+abs(y-0.2), abs(x-0.8)+abs(y-0.2), abs(x-0.2)+abs(y-0.8), abs(x-0.8)+abs(y-0.8)) < 0.1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31580,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

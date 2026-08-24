@@ -1,0 +1,32 @@
+{
+  "name": "StandingWave_Super_LatticeBoltzmann_PerceptualMono_edge_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 31480,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

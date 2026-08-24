@@ -1,0 +1,31 @@
+{
+  "name": "GradientRadial_ExcitableThreshold_Super_Phase_bloom_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v*f1+p1)",
+    "green": "0.5+0.5*cos(2*pi*v*f2+p2)",
+    "blue": "0.5+0.5*cos(2*pi*v*f3+p3)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50735,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

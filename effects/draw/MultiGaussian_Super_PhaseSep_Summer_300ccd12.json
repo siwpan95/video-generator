@@ -1,0 +1,28 @@
+{
+  "name": "MultiGaussian_Super_PhaseSep_Summer_none_400x300_c1000",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.3)**2 + (y-0.3)**2) / 0.02) + exp(-((x-0.7)**2 + (y-0.7)**2) / 0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 51848
+}

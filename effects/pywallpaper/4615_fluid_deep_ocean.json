@@ -1,0 +1,32 @@
+{
+  "id": "fluid_deep_ocean",
+  "name": "深海",
+  "full_name": "4615. 深海",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 0.0001,
+        "diffusion": 5e-05,
+        "force": 2.0,
+        "color_map": "ocean",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

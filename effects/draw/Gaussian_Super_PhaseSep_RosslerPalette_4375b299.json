@@ -1,0 +1,31 @@
+{
+  "name": "Gaussian_Super_PhaseSep_RosslerPalette_motion_trail_256x192_c3000",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.04)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 52016,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

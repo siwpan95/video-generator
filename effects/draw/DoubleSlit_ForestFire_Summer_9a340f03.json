@@ -1,0 +1,31 @@
+{
+  "name": "DoubleSlit_ForestFire_Summer_edge_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.25*sin(30*sqrt((x-0.3)**2 + (y-0.5)**2)) + 0.25*sin(30*sqrt((x-0.7)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 30451,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "激发之云",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.25*sin(30*sqrt((x-0.3)**2 + (y-0.5)**2)) + 0.25*sin(30*sqrt((x-0.7)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 22056,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

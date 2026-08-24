@@ -1,0 +1,31 @@
+{
+  "name": "Super_Voronoi_Super_Threshold_Super_DivergingFull_edge_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(amin([(x-p1)**2+(y-p2)**2, (x-p3)**2+(y-p4)**2, (x-p5)**2+(y-p6)**2, (x-p7)**2+(y-p8)**2], axis=0) < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "clip(c + f1*(avg_n - c) + f2*(0.5 - abs(c - 0.5)), 0, 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*(v - 0.5) + 0.5 if v > 0.5 else 0.5 - f2*(0.5 - v), 0, 1)",
+    "green": "clip(1 - f3*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(f4*(0.5 - v) + 0.5 if v < 0.5 else 0.5 - f5*(v - 0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 30094,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

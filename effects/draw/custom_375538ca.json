@@ -1,0 +1,28 @@
+{
+  "name": "分形噪声v2 × 混沌耦合映射 × 熔岩",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.2*(sin(x*18)+sin(y*22)+sin((x+y)*25)+sin((x-y)*28)+sin(x*38+y*15)+sin(x*12-y*42))/6"
+    }
+  },
+  "evolution": {
+    "rule": "3.95*c*(1-c) + 0.18*(avg_n-c) + 0.03*sin(c*22+t*0.12)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v*v*0.7",
+    "blue": "v*v*v*0.12"
+  },
+  "id": 47
+}

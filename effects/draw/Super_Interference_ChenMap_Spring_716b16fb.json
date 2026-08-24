@@ -1,0 +1,31 @@
+{
+  "name": "涌现图腾",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(f1*pi*sqrt((x-p1)**2+(y-p2)**2)) * sin(f2*pi*sqrt((x-p3)**2+(y-p4)**2)))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 21819,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

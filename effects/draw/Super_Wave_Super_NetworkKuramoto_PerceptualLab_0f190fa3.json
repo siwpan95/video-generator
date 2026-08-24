@@ -1,0 +1,31 @@
+{
+  "name": "Super_Wave_Super_NetworkKuramoto_PerceptualLab_vignette_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*(x*cos(p1)+y*sin(p1))*20 + w1)*cos(f2*(x*sin(p1)-y*cos(p1))*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*sin(2*pi*v*0.8), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v*0.8 + 2*pi/3), 0, 1)",
+    "blue": "clip(v**0.8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 30614,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

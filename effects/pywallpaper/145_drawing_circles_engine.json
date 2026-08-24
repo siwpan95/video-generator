@@ -1,0 +1,47 @@
+{
+  "id": "drawing_circles_engine",
+  "name": "自由绘制·引擎版",
+  "full_name": "145. 自由绘制·引擎版",
+  "category": "圆形",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "drawing",
+        "commands": [
+          {
+            "shape": "circle",
+            "x": "25%",
+            "y": "40%",
+            "radius": 50,
+            "color": null
+          },
+          {
+            "shape": "circle",
+            "x": "75%",
+            "y": "40%",
+            "radius": 50,
+            "color": null
+          },
+          {
+            "shape": "circle",
+            "x": "50%",
+            "y": "60%",
+            "radius": 60,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "25%",
+            "y1": "40%",
+            "x2": "75%",
+            "y2": "40%",
+            "color": null,
+            "width": 2
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "audio_strobe",
+  "name": "音频频闪",
+  "full_name": "087. 音频频闪",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 12,
+            "radius": 120,
+            "line": false,
+            "element_size": 8
+          },
+          {
+            "count": 12,
+            "radius": 200,
+            "line": false,
+            "element_size": 6
+          },
+          {
+            "count": 12,
+            "radius": 280,
+            "line": false,
+            "element_size": 4
+          }
+        ],
+        "rotation_speed": 1.5,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.3,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "rms",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            80
+          ],
+          "smoothing": 0.5
+        }
+      }
+    ]
+  }
+}

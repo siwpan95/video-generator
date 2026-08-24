@@ -1,0 +1,73 @@
+{
+  "id": "particle_trail_lines",
+  "name": "粒子轨迹线",
+  "full_name": "4598. 粒子轨迹线",
+  "category": "粒子系统",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [
+              0.5,
+              0.5
+            ],
+            "rate": 10,
+            "lifetime": [
+              1.5,
+              3.0
+            ],
+            "speed": [
+              100,
+              200
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              100,
+              255,
+              150
+            ],
+            "size": [
+              2,
+              5
+            ]
+          }
+        ],
+        "forces": [
+          {
+            "type": "wind",
+            "x": 50
+          },
+          {
+            "type": "gravity",
+            "y": -20
+          }
+        ],
+        "particle_type": "trail",
+        "max_particles": 800,
+        "audio_modulation": {
+          "rate": {
+            "source": "rms",
+            "scale": [
+              0.5,
+              2.0
+            ]
+          },
+          "color_hue": {
+            "source": "band_energy",
+            "scale": [
+              0,
+              0.3
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

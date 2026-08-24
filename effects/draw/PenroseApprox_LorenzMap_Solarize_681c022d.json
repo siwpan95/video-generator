@@ -1,0 +1,31 @@
+{
+  "name": "PenroseApprox_LorenzMap_Solarize_invert_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v if v > 0.5 else v",
+    "green": "1-v if v > 0.5 else v",
+    "blue": "1-v if v > 0.5 else v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 30561,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

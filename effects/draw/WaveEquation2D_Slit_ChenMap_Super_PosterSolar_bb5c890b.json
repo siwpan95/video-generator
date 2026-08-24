@@ -1,0 +1,28 @@
+{
+  "name": "迷雾之谜",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "sin(2*pi*10*(x-0.3)) * exp(-((y-0.5)**2)/0.01) * (abs(x-0.3) < 0.1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)",
+    "green": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)",
+    "blue": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 2972
+}

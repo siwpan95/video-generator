@@ -1,0 +1,31 @@
+{
+  "name": "SierpinskiTrigger_Super_Lorenz_DivergingBWR_edge_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*511*pi)*sin(y*511*pi) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(p1*(avg_n - c) - c*avg_n + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*2 if v < 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 20800,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

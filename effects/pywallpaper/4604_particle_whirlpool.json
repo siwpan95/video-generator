@@ -1,0 +1,77 @@
+{
+  "id": "particle_whirlpool",
+  "name": "粒子漩涡",
+  "full_name": "4604. 粒子漩涡",
+  "category": "粒子系统",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [
+              0.5,
+              0.3
+            ],
+            "rate": 20,
+            "lifetime": [
+              2.0,
+              4.0
+            ],
+            "speed": [
+              40,
+              80
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              50,
+              150,
+              255
+            ],
+            "size": [
+              1,
+              4
+            ]
+          }
+        ],
+        "forces": [
+          {
+            "type": "attract",
+            "position": [
+              0.5,
+              0.5
+            ],
+            "strength": 300
+          },
+          {
+            "type": "gravity",
+            "y": 50
+          }
+        ],
+        "particle_type": "circle",
+        "max_particles": 800,
+        "audio_modulation": {
+          "rate": {
+            "source": "rms",
+            "scale": [
+              0.5,
+              2.0
+            ]
+          },
+          "color_hue": {
+            "source": "band_energy",
+            "scale": [
+              0,
+              0.3
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

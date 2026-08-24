@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_GrayScott_Diffusion_Summer_vignette_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 50031,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

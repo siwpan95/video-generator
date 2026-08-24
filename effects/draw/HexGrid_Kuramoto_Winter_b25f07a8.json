@@ -1,0 +1,31 @@
+{
+  "name": "HexGrid_XYModel_Winter_edge_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*34.64) + sin(y*40) > 1.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0",
+    "green": "0.5+0.5*v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 31374,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

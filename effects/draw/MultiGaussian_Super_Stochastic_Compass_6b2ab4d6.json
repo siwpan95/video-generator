@@ -1,0 +1,31 @@
+{
+  "name": "MultiGaussian_Super_Stochastic_Compass_vignette_64x64_c5000",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.3)**2 + (y-0.3)**2) / 0.02) + exp(-((x-0.7)**2 + (y-0.7)**2) / 0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= f1 and random() < f2) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 51836,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "particle_vortex",
+  "name": "粒子漩涡",
+  "full_name": "094. 粒子漩涡",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "vortex",
+        "count": 200,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "radius": {
+          "min": 40,
+          "step": 4
+        },
+        "twist": 2.0,
+        "speed": 1.2,
+        "element_size": 4,
+        "size_scale": 6,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            0.5
+          ],
+          "speed": 0.12,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_scale",
+          "scale": [
+            1.0,
+            1.8
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

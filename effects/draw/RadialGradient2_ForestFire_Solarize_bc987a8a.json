@@ -1,0 +1,31 @@
+{
+  "name": "RadialGradient2_ForestFire_Solarize_edge_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1-v if v > 0.5 else v",
+    "green": "1-v if v > 0.5 else v",
+    "blue": "1-v if v > 0.5 else v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20860,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

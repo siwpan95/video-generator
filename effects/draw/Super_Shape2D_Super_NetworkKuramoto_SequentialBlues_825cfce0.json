@@ -1,0 +1,31 @@
+{
+  "name": "Super_Shape2D_Super_NetworkKuramoto_SequentialBlues_vignette_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31377,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

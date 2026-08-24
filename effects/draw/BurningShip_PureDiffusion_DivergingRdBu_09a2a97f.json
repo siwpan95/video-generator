@@ -1,0 +1,31 @@
+{
+  "name": "BurningShip_GrayScott_Diffusion_DivergingRdBu_motion_trail_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x*3-1.5) + abs(y*3-1.5) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip(v*2 if v < 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 50061,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

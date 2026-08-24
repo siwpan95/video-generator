@@ -1,0 +1,31 @@
+{
+  "name": "Checker3_Super_CML_IQ_Palette2_vignette_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*6) + int(y*6)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*clip(3.8*c*(1-c), 0, 1) + f1*clip(3.8*avg_n*(1-avg_n), 0, 1) + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v*(1-v)*4*v*(1-v)*4",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20050,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

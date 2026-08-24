@@ -1,0 +1,31 @@
+{
+  "name": "QuantumWalk_FitzHughNagumo_Super_PosterSolar_invert_240x180_c3000",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*3 + y*2)) * cos(2*pi*(x*2 - y*3))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)",
+    "green": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)",
+    "blue": "clip(int(v*f1)/f1, 0, 1) if v <= w1 else clip(v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 51752,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "幻境之梦_2",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1 + p1 if v < w1 else (v-1)*f2 + p2, 0, 1)",
+    "green": "clip(v*f3 + p3 if v < w1 else (v-1)*f4 + p4, 0, 1)",
+    "blue": "clip(v*f5 + p5 if v < w1 else (v-1)*f6 + p6, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31954,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

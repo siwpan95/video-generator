@@ -1,0 +1,31 @@
+{
+  "name": "Super_Shape2D_CahnHilliard_step_Grayscale_vignette_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c**3 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50870,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Gaussian_HenonTrajectory_Autumn",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.04)"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3579,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

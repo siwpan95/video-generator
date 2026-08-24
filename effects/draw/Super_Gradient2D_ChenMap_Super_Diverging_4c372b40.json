@@ -1,0 +1,31 @@
+{
+  "name": "反应之梦_1",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(p1 + w1*abs(x-p2) + w2*abs(y-p3), 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + f1*(v-0.5), 0, 1)",
+    "green": "clip(1 - f2*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(0.5 - f3*(v-0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 31715,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "JuliaSet_QuantumWalkEvo_PerceptualMono",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "0.5*c + 0.5*avg_n + 0.1*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 3517,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

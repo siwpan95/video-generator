@@ -1,0 +1,31 @@
+{
+  "name": "Lissajous_BZReaction_Super_Gradient_bloom_320x240_c1200",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(3*x*20)*sin(2*y*20) > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(a1 + b1*v, 0, 1)",
+    "green": "clip(a2 + b2*v, 0, 1)",
+    "blue": "clip(a3 + b3*v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 51834,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

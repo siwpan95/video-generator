@@ -1,0 +1,31 @@
+{
+  "name": "拓扑之旋",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(a1 + b1*v, 0, 1)",
+    "green": "clip(a2 + b2*v, 0, 1)",
+    "blue": "clip(a3 + b3*v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 52259,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

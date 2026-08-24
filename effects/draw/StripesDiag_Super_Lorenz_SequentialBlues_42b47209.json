@@ -1,0 +1,28 @@
+{
+  "name": "StripesDiag_Super_Lorenz_SequentialBlues_none_200x200_c100",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*30) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(p1*(avg_n - c) - c*avg_n + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 51850
+}

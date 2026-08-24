@@ -1,0 +1,30 @@
+{
+  "name": "Annulus_LogisticTrajectory_Super_Gradient_edge_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (0.2 < (x-0.5)**2 + (y-0.5)**2 < 0.25) else 0 + 0.01*random()"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(a1 + b1*v, 0, 1)",
+    "green": "clip(a2 + b2*v, 0, 1)",
+    "blue": "clip(a3 + b3*v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 31276,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

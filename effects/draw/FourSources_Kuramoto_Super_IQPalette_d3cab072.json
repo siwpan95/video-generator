@@ -1,0 +1,31 @@
+{
+  "name": "湍流余辉_2",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.25)**2+(y-0.25)**2<0.01 or (x-0.75)**2+(y-0.25)**2<0.01 or (x-0.25)**2+(y-0.75)**2<0.01 or (x-0.75)**2+(y-0.75)**2<0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*p1+d1))",
+    "green": "0.5+0.5*cos(2*pi*(v*p2+d2))",
+    "blue": "0.5+0.5*cos(2*pi*(v*p3+d3))"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 52281,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

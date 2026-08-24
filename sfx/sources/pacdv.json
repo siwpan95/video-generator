@@ -1,0 +1,19 @@
+{
+  "name": "PacDV",
+  "site": "pacdv.com",
+  "description": "Classic free sound effects library, no registration, direct mp3 links on category pages",
+  "base_url": "http://www.pacdv.com/sounds",
+  "categories": [
+    {"url": "ambience_sounds.html", "label": "Ambience"},
+    {"url": "domestic_sounds.html", "label": "Domestic"},
+    {"url": "interface_sounds.html", "label": "Interface"},
+    {"url": "machine_sounds.html", "label": "Machines"},
+    {"url": "mechanical_sounds.html", "label": "Mechanical"},
+    {"url": "miscellaneous_sounds.html", "label": "Miscellaneous"},
+    {"url": "people_sounds.html", "label": "People"},
+    {"url": "transportation_sounds.html", "label": "Transportation"},
+    {"url": "voices-1.html", "label": "Voices"},
+    {"url": "free-music.html", "label": "Music"},
+    {"url": "applause-sounds.html", "label": "Applause"}
+  ]
+}

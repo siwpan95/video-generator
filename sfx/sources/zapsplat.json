@@ -1,0 +1,33 @@
+{
+  "name": "Zapsplat",
+  "site": "zapsplat.com",
+  "description": "Free sound effects library, Playwright needed for listing pages, CDN direct download",
+  "base_url": "https://www.zapsplat.com",
+  "categories": [
+    "/sound-effect-categories/ambience/",
+    "/sound-effect-categories/animals/",
+    "/sound-effect-categories/cartoon/",
+    "/sound-effect-categories/domestic/",
+    "/sound-effect-categories/electronic/",
+    "/sound-effect-categories/emergency/",
+    "/sound-effect-categories/foley/",
+    "/sound-effect-categories/game-audio/",
+    "/sound-effect-categories/horror/",
+    "/sound-effect-categories/human/",
+    "/sound-effect-categories/impacts/",
+    "/sound-effect-categories/interface/",
+    "/sound-effect-categories/machines/",
+    "/sound-effect-categories/musical/",
+    "/sound-effect-categories/nature/",
+    "/sound-effect-categories/office/",
+    "/sound-effect-categories/sci-fi/",
+    "/sound-effect-categories/sports/",
+    "/sound-effect-categories/tools/",
+    "/sound-effect-categories/transport/",
+    "/sound-effect-categories/water/",
+    "/sound-effect-categories/weapons/",
+    "/sound-effect-categories/weather/"
+  ],
+  "max_pages": 5,
+  "cdn_template": "https://cdn.zapsplat.com/mp3/{id}/{id}.mp3"
+}

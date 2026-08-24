@@ -1,0 +1,31 @@
+{
+  "name": "分形余辉_1",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*25) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.1)*c + 0.1*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5 + 0.5*sin(2*pi*v*f1 + p1)",
+    "green": "0.5 + 0.5*sin(2*pi*v*f2 + p2)",
+    "blue": "0.5 + 0.5*cos(2*pi*v*f3 + p3)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 21730,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

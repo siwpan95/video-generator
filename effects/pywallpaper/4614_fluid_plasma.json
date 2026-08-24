@@ -1,0 +1,32 @@
+{
+  "id": "fluid_plasma",
+  "name": "等离子流体",
+  "full_name": "4614. 等离子流体",
+  "category": "流体模拟",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 1e-06,
+        "diffusion": 0.0001,
+        "force": 7.0,
+        "color_map": "rainbow",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

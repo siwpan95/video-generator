@@ -1,0 +1,30 @@
+{
+  "name": "Cateye_HeatEquation_Phase_bloom_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2/0.04 + (y-0.5)**2/0.01 < 1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v)",
+    "green": "0.5+0.5*cos(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 20675,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Gray-Scott_条纹",
+  "version": "1.0",
+  "description": "Gray-Scott反应扩散产生条纹图灵图案。较高扩散率，非线性项产生连续条纹",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.3 + 0.7*random() if random() > 0.9 else 0.01"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c) + 0.02*c*(1-c) - 0.015*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.2 + 0.8*v",
+    "green": "0.1 + 0.9*v*v",
+    "blue": "0.6 + 0.4*sin(v*18)"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 27
+}

@@ -1,0 +1,31 @@
+{
+  "name": "PinkNoise_Super_NetworkKuramoto_Super_Diverging_edge_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + f1*(v-0.5), 0, 1)",
+    "green": "clip(1 - f2*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(0.5 - f3*(v-0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30655,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

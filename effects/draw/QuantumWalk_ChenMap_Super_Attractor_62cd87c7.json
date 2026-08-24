@@ -1,0 +1,31 @@
+{
+  "name": "QuantumWalk_ChenMap_Super_Attractor_bloom_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*3 + y*2)) * cos(2*pi*(x*2 - y*3))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5 + 0.5*sin(2*pi*v*f1 + p1)",
+    "green": "0.5 + 0.5*sin(2*pi*v*f2 + p2)",
+    "blue": "0.5 + 0.5*cos(2*pi*v*f3 + p3)"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 20425,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

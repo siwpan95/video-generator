@@ -1,0 +1,28 @@
+{
+  "name": "幻境维度",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((sqrt((x-0.5)**2 + (y-0.5)**2) - 0.3)**2) / 0.01)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v*f1)*g1",
+    "green": "0.5+0.5*sin(2*pi*v*f2+pi/3)*g2",
+    "blue": "0.5+0.5*sin(2*pi*v*f3+2*pi/3)*g3"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31730
+}

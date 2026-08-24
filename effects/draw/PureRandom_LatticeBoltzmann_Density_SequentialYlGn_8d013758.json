@@ -1,0 +1,31 @@
+{
+  "name": "PureRandom_LatticeBoltzmann_Density_SequentialYlGn_bloom_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 50127,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "黑洞永恒_1",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*30)*cos(y*f2*30) + 0.3*sin(x*f1*60)*cos(y*f2*60)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*(v*p1+d1))",
+    "green": "0.5+0.5*cos(2*pi*(v*p2+d2))",
+    "blue": "0.5+0.5*cos(2*pi*(v*p3+d3))"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 32008,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Super_Gaussian_IsingGlauber_CyanWhiteMagenta_edge_180x180_c3000",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-p1)**2 + (y-p2)**2) / (0.1*(1+w1)))"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 52195,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "spiral_lissajous",
+  "name": "螺旋（利萨茹）",
+  "full_name": "115. 螺旋（利萨茹）",
+  "category": "圆形",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "vortex",
+        "count": 400,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "radius": {
+          "min": 20,
+          "step": 3
+        },
+        "twist": 3.0,
+        "speed": 1.0,
+        "element_size": 2,
+        "size_scale": 5,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.2,
+            0.9
+          ],
+          "speed": 0.15,
+          "sat": 0.7,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_scale",
+          "scale": [
+            1.0,
+            2.0
+          ],
+          "smoothing": 0.75
+        }
+      }
+    ]
+  }
+}

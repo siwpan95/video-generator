@@ -1,0 +1,31 @@
+{
+  "name": "RadialGradient2_GiererMeinhardt_Inh_Inverted_vignette_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 20167,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "湍流弦论",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(y*40) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip(v*2 if v < 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 52742
+}

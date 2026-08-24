@@ -1,0 +1,29 @@
+{
+  "name": "BZSeed_DuffingTrajectory_Compass_none_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(10*x)*sin(10*y) > 0.5 and random() > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 0.2*c + c**3) + 0.5*sin(t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/2)",
+    "blue": "0.5+0.5*sin(2*pi*v+pi)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 50661
+}

@@ -1,0 +1,28 @@
+{
+  "name": "QuantumWalk_ChenMap_Super_MultiGradient_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*3 + y*2)) * cos(2*pi*(x*2 - y*3))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1 + p1 if v < w1 else (v-1)*f2 + p2, 0, 1)",
+    "green": "clip(v*f3 + p3 if v < w1 else (v-1)*f4 + p4, 0, 1)",
+    "blue": "clip(v*f5 + p5 if v < w1 else (v-1)*f6 + p6, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 20426
+}

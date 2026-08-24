@@ -1,0 +1,31 @@
+{
+  "name": "虚空维度",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 2*c + avg_n - c) + 0.1*(c**2 + avg_n**2 - 1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(p1 + (1-p1)*int(v*f1)/f1, 0, 1)",
+    "green": "clip(p2 + (1-p2)*int(v*f1)/f1, 0, 1)",
+    "blue": "clip(p3 + (1-p3)*int(v*f1)/f1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 31974,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "bars_mirror_up_48_warm",
+  "name": "柱状图·镜像上·48柱·warm",
+  "full_name": "438. 柱状图·镜像上·48柱·warm",
+  "category": "频谱",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "bars",
+        "count": 48,
+        "direction": "up",
+        "position": {
+          "x": 0,
+          "y": "100%"
+        },
+        "size": {
+          "width": "100%",
+          "height": "70%"
+        },
+        "gap": 2,
+        "mirror": true,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "height",
+          "scale": [
+            0.02,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

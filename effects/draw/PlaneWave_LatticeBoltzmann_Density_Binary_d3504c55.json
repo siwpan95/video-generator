@@ -1,0 +1,31 @@
+{
+  "name": "PlaneWave_LatticeBoltzmann_Density_Binary_edge_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(2*pi*(x*cos(0.3) + y*sin(0.3)))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 31505,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_CahnHilliard_step_DivergingRdBu_motion_trail_100x100",
+  "grid": {
+    "width": 100,
+    "height": 100,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c**3 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip(v*2 if v < 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 50874,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

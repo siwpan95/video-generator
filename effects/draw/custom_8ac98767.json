@@ -1,0 +1,39 @@
+{
+  "name": "环形波 × Gray-Scott虫洞 × IQ粉彩",
+  "version": "1.0",
+  "description": "高斯包络环形波纹初始态 + Gray-Scott蠕虫/孔洞模式演化 + IQ柔和粉彩配色。环形波不稳定性产生蠕虫状移动孔洞，粉彩配色柔化视觉",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2+(y-0.5)**2)/0.02) * (0.5 + 0.5*sin(sqrt((x-0.5)**2+(y-0.5)**2)*40))"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.22*(avg_n - c) + 0.05*c*(1-c) - 0.032*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*cos(6.28318*(v+0.80))",
+    "green": "0.5 + 0.5*cos(6.28318*(0.5*v+0.90))",
+    "blue": "0.5 + 0.5*cos(6.28318*(0.5*v+0.30))"
+  },
+  "tick": {
+    "fps": 22,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 54
+}

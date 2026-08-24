@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_Super_SmoothLife2_JetSimple_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-f1*(avg_n - f2))) * (1 - c) + c * (1 - 1/(1+exp(-f1*(avg_n - f3))))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 31551,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

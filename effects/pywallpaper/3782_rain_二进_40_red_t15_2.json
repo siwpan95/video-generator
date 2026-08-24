@@ -1,0 +1,48 @@
+{
+  "id": "rain_二进_40_red_t15_2",
+  "name": "文字雨·二进·40列·red",
+  "full_name": "3782. 文字雨·二进·40列·red",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "chars": "01",
+        "count": 40,
+        "font_size": 12,
+        "speed": {
+          "min": 80,
+          "max": 200
+        },
+        "trail_length": 15,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "color": {
+          "type": "solid",
+          "value": [
+            240,
+            40,
+            40
+          ]
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "brightness",
+          "scale": [
+            0.3,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

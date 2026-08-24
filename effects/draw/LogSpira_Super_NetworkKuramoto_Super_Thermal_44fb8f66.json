@@ -1,0 +1,31 @@
+{
+  "name": "LogSpira_Super_NetworkKuramoto_Super_Thermal_edge_150x150_c500",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (log(sqrt((x-0.5)**2 + (y-0.5)**2) + 0.001) * atan2(y-0.5, x-0.5)) % 1 < 0.5 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52239,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

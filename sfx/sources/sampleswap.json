@@ -1,0 +1,18 @@
+{
+  "name": "Sampleswap",
+  "site": "sampleswap.org",
+  "description": "Free audio samples and loops, direct MP3 downloads from listing pages",
+  "base_url": "https://sampleswap.org",
+  "listing_pages": [
+    "https://sampleswap.org/browse.php?d=DRUM+LOOPS",
+    "https://sampleswap.org/browse.php?d=SYNTH+LOOPS",
+    "https://sampleswap.org/browse.php?d=BASS+LOOPS",
+    "https://sampleswap.org/browse.php?d=FX",
+    "https://sampleswap.org/browse.php?d=VOCALS",
+    "https://sampleswap.org/browse.php?d=GUITAR",
+    "https://sampleswap.org/browse.php?d=PIANO",
+    "https://sampleswap.org/browse.php?d=ORCHESTRAL",
+    "https://sampleswap.org/browse.php?d=PERCUSSION",
+    "https://sampleswap.org/browse.php?d=AMBIENT"
+  ]
+}

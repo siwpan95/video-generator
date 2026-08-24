@@ -1,0 +1,37 @@
+{
+  "id": "geom_grid_12x12_粉色网格",
+  "name": "12x12_粉色网格",
+  "full_name": "4644. 12x12_粉色网格",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "grid",
+        "cols": 12,
+        "rows": 12,
+        "cell_size": 30,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.85,
+            0.95
+          ],
+          "speed": 0.09,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

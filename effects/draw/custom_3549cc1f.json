@@ -1,0 +1,39 @@
+{
+  "name": "Schnakenberg_图灵斑图",
+  "version": "1.0",
+  "description": "Schnakenberg活化剂-抑制剂模型简化版。局域自催化 + 长程抑制，产生点状、条纹状图灵图案，参数调节可切换斑点/迷宮模式",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.3 + 0.2*(random()-0.5)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.12*(avg_n - c) + 0.08*c*c*(0.6 - c) - 0.04*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.8 + 0.2*cos(v*20)",
+    "green": "0.1 + 0.9*v*v",
+    "blue": "0.3 + 0.7*sin(v*12+3.14)"
+  },
+  "tick": {
+    "fps": 22,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 55
+}

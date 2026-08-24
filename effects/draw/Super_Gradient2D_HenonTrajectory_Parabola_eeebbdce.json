@@ -1,0 +1,28 @@
+{
+  "name": "Super_Gradient2D_HenonTrajectory_Parabola_none_128x128",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(p1 + w1*abs(x-p2) + w2*abs(y-p3), 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 50173
+}

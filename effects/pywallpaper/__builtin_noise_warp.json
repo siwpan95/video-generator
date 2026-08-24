@@ -1,0 +1,20 @@
+{
+  "id": "builtin_noise_warp",
+  "name": "Noise_Warp",
+  "category": "几何图形",
+  "tags": ["noise", "warp", "noise_warp", "domain", "fluid", "marble", "火焰"],
+  "params": {
+    "layers": [
+      {
+        "type": "noise",
+        "noise_type": "warp",
+        "scale": 8.0,
+        "octaves": 4,
+        "warp": 4.0,
+        "scroll": [0.6, 0.35],
+        "mode": "glow",
+        "color": {"type": "hsv_flow", "speed": 0.015, "hue": [0.0, 0.4]}
+      }
+    ]
+  }
+}

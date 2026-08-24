@@ -1,0 +1,112 @@
+{
+  "id": "combo3_bars_circle_map_pulse_cool",
+  "name": "三重组合·柱+环+脉冲·cool",
+  "full_name": "2294. 三重组合·柱+环+脉冲·cool",
+  "category": "组合",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "bars",
+        "count": 32,
+        "direction": "up",
+        "position": {
+          "x": 0,
+          "y": "100%"
+        },
+        "size": {
+          "width": "100%",
+          "height": "30%"
+        },
+        "gap": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "height",
+          "scale": [
+            0.02,
+            0.8
+          ],
+          "smoothing": 0.9
+        }
+      },
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 48,
+            "radius": 100,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            40
+          ],
+          "smoothing": 0.85
+        }
+      },
+      {
+        "type": "pulse",
+        "mode": "ripple",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "max_radius": 350,
+        "speed": 2.0,
+        "count": 1,
+        "trigger": "audio",
+        "trigger_threshold": 0.25,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.58,
+            0.88
+          ],
+          "speed": 0.12,
+          "sat": 0.95,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

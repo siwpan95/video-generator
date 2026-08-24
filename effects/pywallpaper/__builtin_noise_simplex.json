@@ -1,0 +1,19 @@
+{
+  "id": "builtin_noise_simplex",
+  "name": "Noise_Simplex",
+  "category": "几何图形",
+  "tags": ["noise", "simplex", "noise_simplex", "fluid", "纹理"],
+  "params": {
+    "layers": [
+      {
+        "type": "noise",
+        "noise_type": "simplex",
+        "scale": 10.0,
+        "octaves": 5,
+        "scroll": [0.6, 0.35],
+        "mode": "glow",
+        "color": {"type": "hsv_flow", "speed": 0.02, "hue": [0.1, 0.6]}
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "CircularWave_LorenzMap_Hot_none_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(20*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 30556
+}

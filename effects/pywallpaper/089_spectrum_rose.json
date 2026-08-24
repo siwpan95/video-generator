@@ -1,0 +1,39 @@
+{
+  "id": "spectrum_rose",
+  "name": "频谱玫瑰",
+  "full_name": "089. 频谱玫瑰",
+  "category": "圆形",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "curve",
+        "preset": "rose",
+        "steps": 200,
+        "scale": 120,
+        "layers": 2,
+        "line_width": 1,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.7,
+            1.0
+          ],
+          "speed": 0.08,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.7
+        }
+      }
+    ]
+  }
+}

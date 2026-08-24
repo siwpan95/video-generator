@@ -1,0 +1,31 @@
+{
+  "name": "NoiseFractal_Super_GiererMeinhardt_Rainbow",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*10)*sin(y*10)*sin(x*20)*sin(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*((avg_n**2)/(w1**2 + avg_n**2) - c + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*sin(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3479,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

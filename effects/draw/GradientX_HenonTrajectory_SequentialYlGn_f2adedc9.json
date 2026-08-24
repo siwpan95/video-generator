@@ -1,0 +1,31 @@
+{
+  "name": "GradientY_HenonTrajectory_SequentialYlGn_invert_512x384_c500",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "y"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52042,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

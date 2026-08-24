@@ -1,0 +1,43 @@
+{
+  "id": "spikes_32_中_cool_s0.5",
+  "name": "尖峰·32条·中半径·cool",
+  "full_name": "485. 尖峰·32条·中半径·cool",
+  "category": "圆形",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 32,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 40,
+        "outer_radius": 280,
+        "line_width": 2,
+        "rotation_speed": 0.5,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

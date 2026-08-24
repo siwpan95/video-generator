@@ -1,0 +1,30 @@
+{
+  "name": "GradientRadial_HeatEquation_Cool_bloom_600x400_c2000",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "avg_n",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 52138,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

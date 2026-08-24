@@ -1,0 +1,31 @@
+{
+  "name": "SierpinskiTrigger_Super_Lorenz_PerceptualMono_bloom_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*511*pi)*sin(y*511*pi) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(p1*(avg_n - c) - c*avg_n + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 20804,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

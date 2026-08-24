@@ -1,0 +1,31 @@
+{
+  "name": "纠缠之海",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(f1*pi*x)*sin(f2*pi*x)*sin(f3*pi*x) * sin(f1*pi*y)*sin(f2*pi*y)*sin(f3*pi*y)) > w1 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 0.4 and c < 0.5) else (c * 0.98)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1-v if v > 0.5 else v",
+    "green": "1-v if v > 0.5 else v",
+    "blue": "1-v if v > 0.5 else v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 22121,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

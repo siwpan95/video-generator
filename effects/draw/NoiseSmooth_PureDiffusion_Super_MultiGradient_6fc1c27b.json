@@ -1,0 +1,31 @@
+{
+  "name": "时光余辉_2",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1 + p1 if v < w1 else (v-1)*f2 + p2, 0, 1)",
+    "green": "clip(v*f3 + p3 if v < w1 else (v-1)*f4 + p4, 0, 1)",
+    "blue": "clip(v*f5 + p5 if v < w1 else (v-1)*f6 + p6, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31889,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

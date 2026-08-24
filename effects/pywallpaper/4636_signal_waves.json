@@ -1,0 +1,32 @@
+{
+  "id": "signal_waves",
+  "name": "信号波",
+  "full_name": "4636. 信号波",
+  "category": "信息",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "waveform",
+        "lines": 4,
+        "points": 200,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.6
+          ],
+          "speed": 0.1,
+          "sat": 0.8,
+          "val": 0.8
+        },
+        "audio": {
+          "source": "freq_data",
+          "target": "value",
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

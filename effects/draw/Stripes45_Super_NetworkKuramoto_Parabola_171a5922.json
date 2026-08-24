@@ -1,0 +1,31 @@
+{
+  "name": "Stripes45_Super_NetworkKuramoto_Parabola_bloom_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*25) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 51319,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

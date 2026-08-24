@@ -1,0 +1,31 @@
+{
+  "name": "Lissajous_FitzHughNagumo_RosslerPalette_vignette_512x384",
+  "grid": {
+    "width": 512,
+    "height": 384,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(3*x*20)*sin(2*y*20) > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 31434,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

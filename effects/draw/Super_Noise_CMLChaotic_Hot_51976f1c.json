@@ -1,0 +1,31 @@
+{
+  "name": "Super_Noise_CMLChaotic_Hot",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 1192,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "晶格之梦",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(complex(x*3-1.5, y*3-1.5)) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 3 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 21713,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

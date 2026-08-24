@@ -1,0 +1,39 @@
+{
+  "id": "heart",
+  "name": "跳动的心",
+  "full_name": "014. 跳动的心",
+  "category": "数学",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "curve",
+        "preset": "cardioid",
+        "steps": 100,
+        "scale": 60,
+        "layers": 3,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.95,
+            1.0
+          ],
+          "speed": 0.2,
+          "sat": 0.7,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.7
+        }
+      }
+    ]
+  }
+}

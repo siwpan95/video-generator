@@ -1,0 +1,31 @@
+{
+  "name": "Checker5_Oregonator_ToonShading_edge_80x80_c0",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*10) + int(y*10)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) + 0.5*c*(1 - c)*(c - 0.3)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.3 + 0.7*int(v*4)/4",
+    "green": "0.3 + 0.7*int(v*4)/4",
+    "blue": "0.3 + 0.7*int(v*4)/4"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 51993,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "反应之花",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x*3-1.5) + abs(y*3-1.5) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if sum_n >= 6 else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(p1 + (1-p1)*int(v*f1)/f1, 0, 1)",
+    "green": "clip(p2 + (1-p2)*int(v*f1)/f1, 0, 1)",
+    "blue": "clip(p3 + (1-p3)*int(v*f1)/f1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 3020,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "ExpDecay_Super_Schrodinger_Super_WarmCool_edge_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-10*x)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - 2*c + avg_n) + f2*(c**2 + avg_n**2 - w1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 31271,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

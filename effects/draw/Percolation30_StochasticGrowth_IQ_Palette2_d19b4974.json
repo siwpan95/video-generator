@@ -1,0 +1,31 @@
+{
+  "name": "电浆余辉_2",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.3 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 1 and random() < 0.4 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v*(1-v)*4*v*(1-v)*4",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 32133,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "gauge_dual_220_warm",
+  "name": "双仪表·半径220·warm",
+  "full_name": "2087. 双仪表·半径220·warm",
+  "category": "仪表",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "gauge",
+        "center": {
+          "x": "30%",
+          "y": "55%"
+        },
+        "radius": 220,
+        "arc": {
+          "start": 210,
+          "end": 330
+        },
+        "arc_width": 8,
+        "segments": [
+          {
+            "from": 0,
+            "to": 5,
+            "color": [
+              30,
+              200,
+              80
+            ]
+          },
+          {
+            "from": 5,
+            "to": 7,
+            "color": [
+              220,
+              200,
+              20
+            ]
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "color": [
+              220,
+              50,
+              30
+            ]
+          }
+        ],
+        "ticks": {
+          "step": 1,
+          "major_step": 2,
+          "length": 10,
+          "color": [
+            180,
+            180,
+            200
+          ],
+          "major_color": [
+            240,
+            240,
+            255
+          ],
+          "major_width": 2
+        },
+        "needle": {
+          "length_ratio": 0.78,
+          "width": 2,
+          "color": [
+            255,
+            60,
+            20
+          ]
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.82
+        },
+        "label": "L"
+      },
+      {
+        "type": "gauge",
+        "center": {
+          "x": "70%",
+          "y": "55%"
+        },
+        "radius": 220,
+        "arc": {
+          "start": 210,
+          "end": 330
+        },
+        "arc_width": 8,
+        "segments": [
+          {
+            "from": 0,
+            "to": 60,
+            "color": [
+              30,
+              200,
+              80
+            ]
+          },
+          {
+            "from": 60,
+            "to": 90,
+            "color": [
+              220,
+              200,
+              20
+            ]
+          },
+          {
+            "from": 90,
+            "to": 120,
+            "color": [
+              220,
+              50,
+              30
+            ]
+          }
+        ],
+        "ticks": {
+          "step": 10,
+          "major_step": 20,
+          "length": 10,
+          "color": [
+            180,
+            180,
+            200
+          ],
+          "major_color": [
+            240,
+            240,
+            255
+          ],
+          "major_width": 2
+        },
+        "needle": {
+          "length_ratio": 0.78,
+          "width": 2,
+          "color": [
+            255,
+            60,
+            20
+          ]
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.8
+        },
+        "label": "R"
+      }
+    ]
+  }
+}

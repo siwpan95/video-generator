@@ -1,0 +1,28 @@
+{
+  "name": "CrossHair_Super_PhaseSep_Super_Phase_none_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.01 or abs(y-0.5) < 0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) - f2*(c**3 - w1*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v*f1+p1)",
+    "green": "0.5+0.5*cos(2*pi*v*f2+p2)",
+    "blue": "0.5+0.5*cos(2*pi*v*f3+p3)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 30844
+}

@@ -1,0 +1,20 @@
+{
+  "id": "builtin_flow_field_curl",
+  "name": "FlowField_Curl",
+  "category": "流体模拟",
+  "tags": ["flow", "flow_field", "curl", "particle", "流体", "streamline"],
+  "params": {
+    "layers": [
+      {
+        "type": "flow_field",
+        "count": 1800,
+        "scale": 90.0,
+        "speed": 2.2,
+        "trail": 0.94,
+        "mode": "curl",
+        "gain": 1.0,
+        "color": {"type": "rainbow", "speed": 0.03}
+      }
+    ]
+  }
+}

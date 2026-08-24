@@ -1,0 +1,31 @@
+{
+  "name": "Super_Defect_Super_Lorenz_Inverted_vignette_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-p2, x-p1) / (2*pi) % 1 + w1*(x-p1) + w2*(y-p2)) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(p1*(avg_n - c) - c*avg_n + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 20815,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

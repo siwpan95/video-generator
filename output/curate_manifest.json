@@ -1,0 +1,44 @@
+[
+  {
+    "rank": 1,
+    "path": "G:\\ai\\video_generator\\output\\web_prompt_深海发光慢节奏冷色调_1_7.mp4",
+    "score": 0.4,
+    "kept": true,
+    "metrics": {
+      "brightness_mean": 123.94,
+      "brightness_std": 65.0,
+      "entropy": 5.513,
+      "color_var": 66.42,
+      "motion": 7.58,
+      "n_frames": 22
+    }
+  },
+  {
+    "rank": 2,
+    "path": "G:\\ai\\video_generator\\output\\web_prompt_深海发光慢节奏冷色调_3_9.mp4",
+    "score": 0.4,
+    "kept": true,
+    "metrics": {
+      "brightness_mean": 123.93,
+      "brightness_std": 65.0,
+      "entropy": 5.513,
+      "color_var": 66.42,
+      "motion": 7.58,
+      "n_frames": 22
+    }
+  },
+  {
+    "rank": 3,
+    "path": "G:\\ai\\video_generator\\output\\web_prompt_深海发光慢节奏冷色调_2_8.mp4",
+    "score": 0.0,
+    "kept": false,
+    "metrics": {
+      "brightness_mean": 123.93,
+      "brightness_std": 65.0,
+      "entropy": 5.513,
+      "color_var": 66.42,
+      "motion": 7.57,
+      "n_frames": 22
+    }
+  }
+]

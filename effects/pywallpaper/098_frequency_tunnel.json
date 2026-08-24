@@ -1,0 +1,115 @@
+{
+  "id": "frequency_tunnel",
+  "name": "频率隧道",
+  "full_name": "098. 频率隧道",
+  "category": "3D",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 36,
+            "radius": 40,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 65,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 90,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 115,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 140,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 165,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 190,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 215,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 240,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 265,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 290,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 315,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 340,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "rotation_speed": 0.8,
+        "color": {
+          "type": "rainbow",
+          "speed": 0.1,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            50
+          ],
+          "smoothing": 0.7
+        }
+      }
+    ]
+  }
+}

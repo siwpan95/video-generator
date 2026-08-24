@@ -1,0 +1,31 @@
+{
+  "name": "迷宫之山",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(((x-p1)/w1)**2 + ((y-p2)/w2)**2 < 1) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= f1 and random() < f2) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip(v*2 if v < 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 31703,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Myinstants",
+  "site": "myinstants.net",
+  "description": "Meme sound buttons, mp3 download via /AllSounds/{uuid}.mp3",
+  "base_url": "https://myinstants.net",
+  "listing_pages": [
+    "https://myinstants.net/",
+    "https://myinstants.net/en/most-popular/",
+    "https://myinstants.net/en/trending/",
+    "https://myinstants.net/en/latest/",
+    "https://myinstants.net/search/?q=lol",
+    "https://myinstants.net/search/?q=win",
+    "https://myinstants.net/search/?q=meme",
+    "https://myinstants.net/search/?q=funny",
+    "https://myinstants.net/search/?q=button",
+    "https://myinstants.net/search/?q=game",
+    "https://myinstants.net/search/?q=music",
+    "https://myinstants.net/search/?q=sound",
+    "https://myinstants.net/search/?q=anime",
+    "https://myinstants.net/search/?q=movie",
+    "https://myinstants.net/search/?q=vine",
+    "https://myinstants.net/search/?q=roblox"
+  ]
+}

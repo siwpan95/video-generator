@@ -1,0 +1,31 @@
+{
+  "name": "QuantumWalk_GiererMeinhardt_Inh_SequentialBlues_vignette_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*3 + y*2)) * cos(2*pi*(x*2 - y*3))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 20137,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

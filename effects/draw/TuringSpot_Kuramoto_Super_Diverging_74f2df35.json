@@ -1,0 +1,31 @@
+{
+  "name": "TuringSpot_XYModel_Super_Diverging_motion_trail_128x128_c500",
+  "grid": {
+    "width": 128,
+    "height": 128,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x)*sin(14*y) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*sin(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + f1*(v-0.5), 0, 1)",
+    "green": "clip(1 - f2*2*abs(v-0.5), 0, 1)",
+    "blue": "clip(0.5 - f3*(v-0.5), 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 52001,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

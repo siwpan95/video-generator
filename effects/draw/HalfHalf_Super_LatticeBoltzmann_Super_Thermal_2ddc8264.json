@@ -1,0 +1,32 @@
+{
+  "name": "HalfHalf_Super_LatticeBoltzmann_Super_Thermal_bloom_256x192_c1200",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() > 0.5 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 52226,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

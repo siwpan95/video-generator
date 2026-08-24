@@ -1,0 +1,31 @@
+{
+  "name": "LogisticSpace_Super_Excitable_Categorical8_bloom_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "3.8*x*(1-x)*3.8*y*(1-y)"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= w1 and sum_n > f1) else (c * (1 - f2) + p1)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(int(v*8)/8, 0, 1)",
+    "green": "clip(int(v*8 + 4)/8 % 1, 0, 1)",
+    "blue": "clip(1 - int(v*8)/8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 50419,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "sin_wave_combo",
+  "name": "正弦波组合",
+  "full_name": "4575. 正弦波组合",
+  "category": "数学",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "formula",
+        "formula": {
+          "x": "t-1",
+          "y": "sin(t*10)*0.5",
+          "t_min": -1,
+          "t_max": 1,
+          "t_step": 0.002
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.7
+          ],
+          "speed": 0.1,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "line_width": 2,
+        "close_threshold": 4,
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

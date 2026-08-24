@@ -1,0 +1,32 @@
+{
+  "name": "Cateye_DuffingTrajectory_SequentialYlGn_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x-0.5)**2/0.04 + (y-0.5)**2/0.01 < 1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 0.2*c + c**3) + 0.5*sin(t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 21203,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

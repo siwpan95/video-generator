@@ -1,0 +1,43 @@
+{
+  "id": "audio_sunburst",
+  "name": "音频旭日",
+  "full_name": "061. 音频旭日",
+  "category": "圆形",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 48,
+        "center": {
+          "x": "50%",
+          "y": "60%"
+        },
+        "inner_radius": 20,
+        "outer_radius": 300,
+        "line_width": 2,
+        "rotation_speed": 0.0,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.08,
+            0.25
+          ],
+          "speed": 0.05,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

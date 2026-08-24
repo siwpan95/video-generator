@@ -1,0 +1,30 @@
+{
+  "name": "逻辑斯蒂_梯度",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "x"
+    }
+  },
+  "evolution": {
+    "rule": "3.99 * c * (1 - c) + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v * 0.2",
+    "green": "v * 0.7",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 180
+}

@@ -1,0 +1,35 @@
+{
+  "id": "fluid_blooming_fire",
+  "name": "泛光火焰",
+  "full_name": "4624. 泛光火焰",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 3e-06,
+        "diffusion": 0.0001,
+        "force": 6.0,
+        "color_map": "fire",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        },
+        "postprocess": [
+          "bloom"
+        ]
+      }
+    ]
+  }
+}

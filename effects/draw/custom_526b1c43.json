@@ -1,0 +1,40 @@
+{
+  "name": "SIRS_流行病学",
+  "version": "1.0",
+  "description": "S→I→R→S循环连续近似。易感-感染-康复-再易感，产生感染波在空间中传播",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.9 if ((x-0.5)**2+(y-0.5)**2) < 0.01 else 0.0"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.05*c + 0.02*(1 - c) + 0.01*sin(6.283*t*0.01)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "0.8 - 0.8*v",
+    "blue": "0.1 + 0.3*v"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 57
+}

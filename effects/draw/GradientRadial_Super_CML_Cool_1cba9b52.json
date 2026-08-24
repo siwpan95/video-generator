@@ -1,0 +1,31 @@
+{
+  "name": "GradientRadial_Super_CML_Cool_edge_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "sqrt((x-0.5)**2 + (y-0.5)**2)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - f1)*clip(3.8*c*(1-c), 0, 1) + f1*clip(3.8*avg_n*(1-avg_n), 0, 1) + f2*sin(2*pi*c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "1"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 30304,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "CrossHair_SmoothLife_Categorical4_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.01 or abs(y-0.5) < 0.01) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-10*(avg_n - 0.3)))",
+    "variables": [
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v < 0.25 else (0 if v < 0.5 else (1 if v < 0.75 else 0.2))",
+    "green": "0.5 if v < 0.25 else (1 if v < 0.5 else (0.5 if v < 0.75 else 0))",
+    "blue": "0 if v < 0.25 else (0.5 if v < 0.5 else (1 if v < 0.75 else 1))"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 30777,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "雷暴之变",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*34.64) + sin(y*40) > 1.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*sin(c*20)/(1 + w1*abs(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3071,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

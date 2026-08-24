@@ -1,0 +1,31 @@
+{
+  "name": "Disclination_ExcitableThreshold_Hot_bloom_400x300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-0.5, x-0.5) / (2*pi) % 1 + 0.2*(x-0.5)) % 1 + 0.05*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.98) + 0.01*random()",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 50806,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

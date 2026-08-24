@@ -1,0 +1,31 @@
+{
+  "name": "Percolation50_RosslerMap_Super_Thermal_bloom_64x64_c200",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() < 0.5 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(-c - avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 51792,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

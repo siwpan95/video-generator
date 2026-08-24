@@ -1,0 +1,43 @@
+{
+  "id": "spikes_128_大_cool_s0.2",
+  "name": "尖峰·128条·大半径·cool",
+  "full_name": "505. 尖峰·128条·大半径·cool",
+  "category": "圆形",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 128,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 60,
+        "outer_radius": 320,
+        "line_width": 2,
+        "rotation_speed": 0.2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

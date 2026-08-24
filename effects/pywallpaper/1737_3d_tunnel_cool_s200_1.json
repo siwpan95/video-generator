@@ -1,0 +1,34 @@
+{
+  "id": "3d_tunnel_cool_s200_1",
+  "name": "3D·隧道·cool",
+  "full_name": "1737. 3D·隧道·cool",
+  "category": "3D",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "wireframe_3d",
+        "geometry": "tunnel",
+        "scale": 200,
+        "line_width": 1,
+        "rotation": {
+          "x_speed": 0.5,
+          "y_speed": 0.7,
+          "z_speed": 0.0
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        },
+        "ring_count": 21
+      }
+    ]
+  }
+}

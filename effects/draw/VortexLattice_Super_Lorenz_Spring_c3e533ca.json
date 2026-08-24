@@ -1,0 +1,31 @@
+{
+  "name": "迷雾图腾_1",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "atan2(sin(2*pi*4*y), sin(2*pi*4*x)) / (2*pi) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(p1*(avg_n - c) - c*avg_n + f2)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 31663,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

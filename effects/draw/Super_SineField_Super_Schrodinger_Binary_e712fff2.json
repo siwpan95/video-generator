@@ -1,0 +1,31 @@
+{
+  "name": "迷雾之花",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*f1*20)*cos(y*f2*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - 2*c + avg_n) + f2*(c**2 + avg_n**2 - w1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 3120,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Super_QuantumWalk_LifeWithoutDeath_SequentialYlGn_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*f1 + y*f2) + p1) * sin(2*pi*(x*f3 - y*f4) + p2)"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if sum_n >= 3 else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 20334
+}

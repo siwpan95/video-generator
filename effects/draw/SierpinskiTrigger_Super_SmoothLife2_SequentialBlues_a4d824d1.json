@@ -1,0 +1,31 @@
+{
+  "name": "SierpinskiTrigger_Super_SmoothLife2_SequentialBlues_invert_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(x*511*pi)*sin(y*511*pi) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-f1*(avg_n - f2))) * (1 - c) + c * (1 - 1/(1+exp(-f1*(avg_n - f3))))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + 0.8*(1-v)",
+    "green": "0.3 + 0.7*(1-v)",
+    "blue": "0.5 + 0.5*v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 31521,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

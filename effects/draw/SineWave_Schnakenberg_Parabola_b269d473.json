@@ -1,0 +1,31 @@
+{
+  "name": "混沌消散",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(p1 - c + f1*c**2*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v**2",
+    "green": "v**2",
+    "blue": "v**2"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 3354,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

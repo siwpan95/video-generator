@@ -1,0 +1,31 @@
+{
+  "name": "Super_Spiral_HenonTrajectory_Spring_bloom_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(f1*atan2(y-0.5, x-0.5) + f2*10*sqrt((x-0.5)**2 + (y-0.5)**2))"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 50185,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

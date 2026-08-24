@@ -1,0 +1,28 @@
+{
+  "name": "Super_Defect_IsingGlauber_NormalShading_none_150x150_c2000",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-p2, x-p1) / (2*pi) % 1 + w1*(x-p1) + w2*(y-p2)) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (sum_n > 2 and c <= 0.5) or (sum_n < 2 and c > 0.5) else c",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*cos(2*pi*v), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v), 0, 1)",
+    "blue": "clip(1 - v, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 52197
+}

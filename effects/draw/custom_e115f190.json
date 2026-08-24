@@ -1,0 +1,30 @@
+{
+  "name": "激发介质_螺旋波",
+  "version": "1.0",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.02*(avg_n - c) + 0.15*c*(c-0.1)*(1-c) - 0.03*(c-0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "min(v*3, 1.0)",
+    "green": "max(0, min((v-0.33)*3, 1.0))",
+    "blue": "max(0, (v-0.66)*3)"
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 130
+}

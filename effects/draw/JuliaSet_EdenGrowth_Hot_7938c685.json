@@ -1,0 +1,28 @@
+{
+  "name": "JuliaSet2_EdenGrowth_Hot_v156",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c if c > 0.5 else (1 if (sum_n >= 0.5 and random() < 0.3) else 0)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 3536
+}

@@ -1,0 +1,31 @@
+{
+  "name": "SineWave_Laplacian_Hot_invert_240x180_c300",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.5*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 51923,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

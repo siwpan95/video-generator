@@ -1,0 +1,27 @@
+{
+  "name": "中心脉冲 × 反应扩散（迷宫） × 极光",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.24*(avg_n - c) + 0.055*c*(1-c) - 0.038*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.1 + 0.5*sin(v*8)*v",
+    "green": "v*0.35 + 0.45*sin(v*6+2)*v",
+    "blue": "v*0.65 + 0.3*sin(v*5+4)*v"
+  },
+  "id": 51
+}

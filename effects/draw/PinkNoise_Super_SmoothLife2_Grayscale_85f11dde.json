@@ -1,0 +1,31 @@
+{
+  "name": "坍缩之花_1",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(random()*100)*sin(random()*100)"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-f1*(avg_n - f2))) * (1 - c) + c * (1 - 1/(1+exp(-f1*(avg_n - f3))))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 52638,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

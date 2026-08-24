@@ -1,0 +1,31 @@
+{
+  "name": "HalfHalf_NetworkDiffusion_Super_Perceptual_vignette_600x400_c500",
+  "grid": {
+    "width": 600,
+    "height": 400,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if random() > 0.5 else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 51869,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

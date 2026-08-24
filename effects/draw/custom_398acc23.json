@@ -1,0 +1,28 @@
+{
+  "name": "多公式_Perlin+斑点_init_CML+Logistic_evo_霓虹_color",
+  "version": "2.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.3*sin(x*20)*cos(y*20) + 0.3*exp(-((x-0.3)**2 + (y-0.3)**2)/0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "where(t < 200, (1-0.15)*c + 0.15*avg_n, 3.8*c*(1-c))",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.75 + 0.25*sin(v*9)*v",
+    "green": "v*0.1 + 0.22*sin(v*6+3)*v",
+    "blue": "v*0.85 + 0.15*sin(v*7+1)*v"
+  },
+  "id": 101
+}

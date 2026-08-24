@@ -1,0 +1,27 @@
+{
+  "name": "圆环_扩散_反色",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (0.2 < (x-0.5)**2 + (y-0.5)**2 < 0.25) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "id": 99
+}

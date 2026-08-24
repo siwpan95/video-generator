@@ -1,0 +1,31 @@
+{
+  "name": "Mandelbrot_NetworkDiffusion_LorenzPalette_bloom_160x160",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(complex(x*3-1.5, y*3-1.5)) < 2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(2*pi*v)",
+    "green": "0.5+0.5*sin(2*pi*v+pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v)"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 51601,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

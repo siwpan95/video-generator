@@ -1,0 +1,43 @@
+{
+  "id": "cassini_oval",
+  "name": "Cassini卵形线",
+  "full_name": "4583. Cassini卵形线",
+  "category": "公式",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "formula",
+        "formula": {
+          "x": "cos(t)*sqrt(1+0.8*sin(2*t))*0.7",
+          "y": "sin(t)*sqrt(1+0.8*sin(2*t))*0.7",
+          "t_min": 0,
+          "t_max": "2*pi",
+          "t_step": 0.005
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.7,
+            0.9
+          ],
+          "speed": 0.1,
+          "sat": 0.8,
+          "val": 0.8
+        },
+        "line_width": 2,
+        "close_threshold": 4,
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

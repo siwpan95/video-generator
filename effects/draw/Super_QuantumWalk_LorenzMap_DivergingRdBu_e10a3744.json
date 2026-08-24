@@ -1,0 +1,31 @@
+{
+  "name": "Super_QuantumWalk_LorenzMap_DivergingRdBu_motion_trail_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*cos(2*pi*(x*f1 + y*f2) + p1) * sin(2*pi*(x*f3 - y*f4) + p2)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip((1-v)*2 if v > 0.5 else 1, 0, 1)",
+    "green": "clip((0.5 - abs(v-0.5))*2, 0, 1)",
+    "blue": "clip(v*2 if v < 0.5 else 1, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30535,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

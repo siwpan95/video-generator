@@ -1,0 +1,30 @@
+{
+  "name": "StripesDiag_PottsModel_Super_Perceptual_motion_trail_160x160_c5000",
+  "grid": {
+    "width": 160,
+    "height": 160,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*30) > 0) else 0 + 0.01*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c if random() > 0.1 else (floor(random()*f1))",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "clip(v**abs(p1), 0, 1)",
+    "green": "clip(v**abs(p2), 0, 1)",
+    "blue": "clip(v**abs(p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 52021,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

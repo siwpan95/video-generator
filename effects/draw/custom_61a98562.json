@@ -1,0 +1,30 @@
+{
+  "name": "热扩散_脉冲",
+  "version": "1.0",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2 + (y-0.5)**2) / 0.02)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.2 * (avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v * 0.6",
+    "blue": "v * 0.1"
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 132
+}

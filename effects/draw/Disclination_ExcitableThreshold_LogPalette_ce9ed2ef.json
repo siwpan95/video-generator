@@ -1,0 +1,31 @@
+{
+  "name": "Disclination_ExcitableThreshold_LogPalette_invert_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-0.5, x-0.5) / (2*pi) % 1 + 0.2*(x-0.5)) % 1 + 0.05*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.98) + 0.01*random()",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 50805,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

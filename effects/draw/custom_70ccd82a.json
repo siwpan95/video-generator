@@ -1,0 +1,41 @@
+{
+  "name": "Swift-Hohenberg_简化",
+  "version": "1.0",
+  "description": "Swift-Hohenberg方程产生图案选择。在特定参数下产生六边形或条纹图案",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.01 + 0.01*random()"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.05*(0.2*c - (avg_n - c) - c*c*c + 0.01*sin(12.566*(x+y)))",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*v",
+    "green": "0.3 + 0.7*v*v",
+    "blue": "0.7 + 0.3*sin(v*20)"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 65
+}

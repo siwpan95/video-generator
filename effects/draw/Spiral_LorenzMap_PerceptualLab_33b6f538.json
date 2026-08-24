@@ -1,0 +1,31 @@
+{
+  "name": "Spiral_LorenzMap_PerceptualLab_bloom_150x150_c5000",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((atan2(y-0.5, x-0.5) / (2*pi) + sqrt((x-0.5)**2 + (y-0.5)**2) * 2) % 1 < 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(0.5 + 0.5*sin(2*pi*v*0.8), 0, 1)",
+    "green": "clip(0.5 + 0.5*sin(2*pi*v*0.8 + 2*pi/3), 0, 1)",
+    "blue": "clip(v**0.8, 0, 1)"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 51744,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

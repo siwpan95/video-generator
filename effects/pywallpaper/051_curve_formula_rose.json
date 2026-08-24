@@ -1,0 +1,32 @@
+{
+  "id": "curve_formula_rose",
+  "name": "玫瑰线（公式模式）",
+  "full_name": "051. 玫瑰线（公式模式）",
+  "category": "曲线",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "curve",
+        "preset": "formula",
+        "formula": {
+          "r": "cos(6*t)",
+          "x": "r * cos(t)",
+          "y": "r * sin(t)",
+          "t_min": 0,
+          "t_max": "2*pi",
+          "t_step": 0.02
+        },
+        "position": {"x": "50%", "y": "50%"},
+        "size": {"width": "70%", "height": "70%"},
+        "color": {
+          "type": "rainbow",
+          "speed": 0.1
+        },
+        "line_width": 2,
+        "layers": 3
+      }
+    ]
+  }
+}

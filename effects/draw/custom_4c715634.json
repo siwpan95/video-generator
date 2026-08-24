@@ -1,0 +1,32 @@
+{
+  "name": "各向异性_环纹",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5 * sin(sqrt((x-0.5)**2 + (y-0.5)**2) * 30)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.2*(avg_n - c) + 0.05*sin(x*10)*c*(1-c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v * (0.5 + 0.5*sin(x*15))",
+    "green": "v * (0.5 + 0.5*sin(y*15))",
+    "blue": "v * (0.5 + 0.5*sin((x+y)*15))"
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 94
+}

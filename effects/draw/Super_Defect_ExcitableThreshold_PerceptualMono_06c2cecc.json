@@ -1,0 +1,31 @@
+{
+  "name": "Super_Defect_ExcitableThreshold_PerceptualMono_invert_300x200",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-p2, x-p1) / (2*pi) % 1 + w1*(x-p1) + w2*(y-p2)) % 1 + 0.05*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.98) + 0.01*random()",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v**0.8, 0, 1)",
+    "green": "clip(v**0.9, 0, 1)",
+    "blue": "clip(v**1.2, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50790,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

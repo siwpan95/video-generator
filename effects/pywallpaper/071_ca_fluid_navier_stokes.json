@@ -1,0 +1,38 @@
+{
+  "name": "CA流体-Navier Stokes",
+  "description": "简化Navier-Stokes方程模拟流体速度场",
+  "version": "1.0",
+  "author": "draw集成",
+  "tags": [
+    "流体",
+    "物理",
+    "CA",
+    "NS"
+  ],
+  "primitive": {
+    "type": "ca",
+    "recipe_name": "NavierStokes_Simple",
+    "audio_modulated_params": [
+      "f1"
+    ]
+  },
+  "params": {
+    "width": 320,
+    "height": 180,
+    "wrap": true,
+    "init_mode": "noise",
+    "init_density": 0.5,
+    "f1": 0.1,
+    "color_map": "ocean",
+    "decay": 0.998
+  },
+  "formula": {
+    "enabled": true,
+    "variables": [
+      "c",
+      "avg_n"
+    ],
+    "expression": "c + 0.1*(avg_n - c) - f1*c*(avg_n - c)"
+  },
+  "category": "(无分类)"
+}

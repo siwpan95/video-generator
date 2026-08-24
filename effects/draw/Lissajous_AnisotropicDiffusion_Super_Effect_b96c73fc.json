@@ -1,0 +1,31 @@
+{
+  "name": "Lissajous_AnisotropicDiffusion_Super_Effect_bloom_300x200_c800",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin(3*x*20)*sin(2*y*20) > 0.5) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.15*((avg_n - c) if avg_n > c else (c - avg_n))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v + f1*sin(20*v*pi + p1), 0, 1)",
+    "green": "clip(v + f2*sin(20*v*pi + p2), 0, 1)",
+    "blue": "clip(v + f3*sin(20*v*pi + p3), 0, 1)"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 52087,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

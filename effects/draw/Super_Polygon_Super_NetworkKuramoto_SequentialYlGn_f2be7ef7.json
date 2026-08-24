@@ -1,0 +1,31 @@
+{
+  "name": "Super_Polygon_Super_NetworkKuramoto_SequentialYlGn_vignette_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "((x-p1)**2 + (y-p2)**2 < w1**2) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v*(1-v)*4",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 30574,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

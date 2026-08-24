@@ -1,0 +1,31 @@
+{
+  "name": "Voronoi4_ExcitableThreshold_Grayscale_invert_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (min(abs(x-0.2)+abs(y-0.2), abs(x-0.8)+abs(y-0.2), abs(x-0.2)+abs(y-0.8), abs(x-0.8)+abs(y-0.8)) < 0.1) else 0 + 0.05*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.98) + 0.01*random()",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 800
+  },
+  "id": 50747,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

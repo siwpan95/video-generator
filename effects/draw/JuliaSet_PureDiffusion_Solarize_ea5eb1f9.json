@@ -1,0 +1,31 @@
+{
+  "name": "JuliaSet_GrayScott_Diffusion_Solarize_bloom_200x200",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((x*3-1.5)**2 + (y*3-1.5)**2 < 4) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.20*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v if v > 0.5 else 1-v",
+    "green": "v if v > 0.5 else 1-v",
+    "blue": "v if v > 0.5 else 1-v"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 50065,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

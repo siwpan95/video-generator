@@ -1,0 +1,32 @@
+{
+  "id": "fluid_ocean_calm",
+  "name": "宁静海洋",
+  "full_name": "4608. 宁静海洋",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 2e-06,
+        "diffusion": 0.0001,
+        "force": 3.0,
+        "color_map": "ocean",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

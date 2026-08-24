@@ -1,0 +1,82 @@
+{
+  "album": "Neon Dreams",
+  "generated_at": "2026-08-23T15:13:10",
+  "track_count": 3,
+  "keep_top": null,
+  "tracks": [
+    {
+      "index": 2,
+      "title": "Track 02 — prompt_霓虹 赛博 快节奏",
+      "path": "G:\\ai\\video_generator\\output\\prompt_霓虹赛博快节奏_2_1787469188.mp4",
+      "theme": "empty",
+      "description": "prompt_霓虹 赛博 快节奏",
+      "width": 320,
+      "height": 240,
+      "fps": 25,
+      "duration": 2,
+      "seed": null,
+      "used_gl": false,
+      "score": 1.0,
+      "kept": true,
+      "metrics": {
+        "brightness_mean": 110.16,
+        "brightness_std": 61.44,
+        "entropy": 5.497,
+        "color_var": 92.13,
+        "motion": 10.89,
+        "n_frames": 22
+      },
+      "rank": 1
+    },
+    {
+      "index": 1,
+      "title": "Track 01 — prompt_霓虹 赛博 快节奏",
+      "path": "G:\\ai\\video_generator\\output\\prompt_霓虹赛博快节奏_1_1787469187.mp4",
+      "theme": "empty",
+      "description": "prompt_霓虹 赛博 快节奏",
+      "width": 320,
+      "height": 240,
+      "fps": 25,
+      "duration": 2,
+      "seed": null,
+      "used_gl": false,
+      "score": 0.191,
+      "kept": true,
+      "metrics": {
+        "brightness_mean": 148.43,
+        "brightness_std": 72.2,
+        "entropy": 3.631,
+        "color_var": 62.11,
+        "motion": 10.04,
+        "n_frames": 22
+      },
+      "rank": 2
+    },
+    {
+      "index": 3,
+      "title": "Track 03 — prompt_霓虹 赛博 快节奏",
+      "path": "G:\\ai\\video_generator\\output\\prompt_霓虹赛博快节奏_3_1787469189.mp4",
+      "theme": "empty",
+      "description": "prompt_霓虹 赛博 快节奏",
+      "width": 320,
+      "height": 240,
+      "fps": 25,
+      "duration": 2,
+      "seed": null,
+      "used_gl": false,
+      "score": 0.091,
+      "kept": true,
+      "metrics": {
+        "brightness_mean": 135.98,
+        "brightness_std": 64.48,
+        "entropy": 3.298,
+        "color_var": 73.08,
+        "motion": 9.59,
+        "n_frames": 22
+      },
+      "rank": 3
+    }
+  ],
+  "contact_sheet": "G:\\ai\\video_generator\\output\\contact_sheet.png",
+  "curate_manifest": "G:\\ai\\video_generator\\output\\curate_manifest.json"
+}

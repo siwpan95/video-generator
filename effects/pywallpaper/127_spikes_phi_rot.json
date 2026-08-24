@@ -1,0 +1,43 @@
+{
+  "id": "spikes_phi_rot",
+  "name": "尖峰（Phi旋转）",
+  "full_name": "127. 尖峰（Phi旋转）",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 55,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 40,
+        "outer_radius": 280,
+        "line_width": 2,
+        "rotation_speed": 1.2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.55,
+            0.9
+          ],
+          "speed": 0.2,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

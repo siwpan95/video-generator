@@ -1,0 +1,31 @@
+{
+  "name": "Super_Noise_CMLChaotic_JetSimple",
+  "grid": {
+    "width": 80,
+    "height": 60,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(w1*random() + p1, 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.2)*3.8*c*(1-c) + 0.2*3.8*avg_n*(1-avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 2329,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "SingleSlit_FitzHughNagumo_Inverted",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(pi*10*sqrt((x-0.5)**2 + (y-0.5)**2)) / (pi*10*sqrt((x-0.5)**2 + (y-0.5)**2) + 0.001))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(c - c**3/3 + avg_n + 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1-v",
+    "green": "1-v",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 750
+  },
+  "id": 2577,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "kanji_rain",
+  "name": "汉字雨",
+  "full_name": "4630. 汉字雨",
+  "category": "信息",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "chars": "天地玄黄宇宙洪荒日月盈昃辰宿列张寒来暑往秋收冬藏",
+        "font_size": 20,
+        "columns": 50,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.05,
+            0.15
+          ],
+          "speed": 0.04,
+          "sat": 0.6,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "beat",
+          "target": "speed",
+          "scale": [
+            0.5,
+            2.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

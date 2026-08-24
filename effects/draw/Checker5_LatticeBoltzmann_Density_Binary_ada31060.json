@@ -1,0 +1,31 @@
+{
+  "name": "Checker5_LatticeBoltzmann_Density_Binary_vignette_320x240",
+  "grid": {
+    "width": 320,
+    "height": 240,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*10) + int(y*10)) % 2 == 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1 if v > 0.5 else 0",
+    "green": "1 if v > 0.5 else 0",
+    "blue": "1 if v > 0.5 else 0"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 50153,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

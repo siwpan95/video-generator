@@ -1,0 +1,31 @@
+{
+  "name": "Diamond_LatticeBoltzmann_Density_RosslerPalette_invert_240x180",
+  "grid": {
+    "width": 240,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) + abs(y-0.5) < 0.2) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c) - 0.01*(c - 0.5)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0.5+0.5*sin(4*pi*v)",
+    "blue": "0.5+0.5*cos(4*pi*v)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 50120,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

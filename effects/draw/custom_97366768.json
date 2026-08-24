@@ -1,0 +1,33 @@
+{
+  "name": "湍流_彩虹噪声",
+  "version": "1.0",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5*(sin(x*30)+sin(y*35)+sin((x+y)*25)+sin((x-y)*28))/4 + 0.5"
+    }
+  },
+  "evolution": {
+    "rule": "(c + 0.5*avg_n + 0.1*sin(x*30+t*0.1)*sin(y*30+t*0.1)) / 2",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*12)",
+    "green": "0.5 + 0.5*sin(v*12 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*12 + 4.189)"
+  },
+  "cycle": {
+    "steps": 250
+  },
+  "id": 128
+}

@@ -1,0 +1,31 @@
+{
+  "name": "PlaneWave_HenonTrajectory_JetSimple_vignette_256x192",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(2*pi*(x*cos(0.3) + y*sin(0.3)))"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(4*v-1.5, 0, 1)",
+    "green": "clip(4*v-0.5, 0, 1)",
+    "blue": "clip(-4*v+2.5, 0, 1)"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 50155,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

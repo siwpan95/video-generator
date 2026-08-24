@@ -1,0 +1,30 @@
+{
+  "name": "光辉余辉",
+  "grid": {
+    "width": 80,
+    "height": 60,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if ((int(x*20) + int(y*20)) % 2 == 0) else 0 + 0.01*random()"
+    }
+  },
+  "evolution": {
+    "rule": "3.8*c*(1-c)",
+    "variables": [
+      "c"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 2937,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

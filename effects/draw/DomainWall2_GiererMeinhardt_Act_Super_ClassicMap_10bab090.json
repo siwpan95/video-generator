@@ -1,0 +1,31 @@
+{
+  "name": "DomainWall2_GiererMeinhardt_Act_Super_ClassicMap_invert_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*tanh(20*(x-0.5)) * tanh(20*(y-0.5))"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*((avg_n**2)/(w1**2 + avg_n**2) - c + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "clip(f1*v + p1, 0, 1)",
+    "green": "clip(f2*v*(1-v)*4 + p2, 0, 1)",
+    "blue": "clip(f3*(1-v) + p3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 20960,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

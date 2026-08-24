@@ -1,0 +1,31 @@
+{
+  "name": "NoiseSmooth2_CoupledMap_Autumn_edge_400x300_c1500",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "(1 - 0.1)*c + 0.1*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "v",
+    "blue": "0"
+  },
+  "cycle": {
+    "steps": 1500
+  },
+  "id": 52162,
+  "postprocess": {
+    "effect": "edge"
+  }
+}

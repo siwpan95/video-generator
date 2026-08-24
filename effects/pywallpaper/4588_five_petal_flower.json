@@ -1,0 +1,43 @@
+{
+  "id": "five_petal_flower",
+  "name": "五瓣花",
+  "full_name": "4588. 五瓣花",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "formula",
+        "formula": {
+          "x": "cos(5*t)*cos(t)*0.7",
+          "y": "cos(5*t)*sin(t)*0.7",
+          "t_min": 0,
+          "t_max": "2*pi",
+          "t_step": 0.003
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.7,
+            0.9
+          ],
+          "speed": 0.1,
+          "sat": 0.8,
+          "val": 0.8
+        },
+        "line_width": 2,
+        "close_threshold": 4,
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

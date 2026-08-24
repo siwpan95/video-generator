@@ -1,0 +1,32 @@
+{
+  "id": "fluid_ink_drop",
+  "name": "墨滴扩散",
+  "full_name": "4620. 墨滴扩散",
+  "category": "流体模拟",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 5e-05,
+        "diffusion": 3e-05,
+        "force": 1.5,
+        "color_map": "grayscale",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

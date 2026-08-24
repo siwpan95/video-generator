@@ -1,0 +1,31 @@
+{
+  "name": "VortexLattice_ExcitableThreshold_Super_MultiGradient_motion_trail_200x200_c0",
+  "grid": {
+    "width": 200,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "atan2(sin(2*pi*4*y), sin(2*pi*4*x)) / (2*pi) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.1 and sum_n > 0.5) else (c * 0.95)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1 + p1 if v < w1 else (v-1)*f2 + p2, 0, 1)",
+    "green": "clip(v*f3 + p3 if v < w1 else (v-1)*f4 + p4, 0, 1)",
+    "blue": "clip(v*f5 + p5 if v < w1 else (v-1)*f6 + p6, 0, 1)"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 51922,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

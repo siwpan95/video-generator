@@ -1,0 +1,39 @@
+{
+  "name": "Gray-Scott_斑点",
+  "version": "1.0",
+  "description": "Gray-Scott反应扩散产生斑点图灵图案。低扩散率比，非线性项产生孤立斑点",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random() if random() > 0.95 else 0.01"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.16*(avg_n - c) + 0.03*c*(1-c) - 0.01*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "0.3 + 0.7*v*v",
+    "blue": "0.8 + 0.2*sin(v*15)"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 26
+}

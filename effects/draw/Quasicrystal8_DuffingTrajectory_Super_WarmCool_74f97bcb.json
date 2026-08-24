@@ -1,0 +1,32 @@
+{
+  "name": "Quasicrystal8_DuffingTrajectory_Super_WarmCool_motion_trail_180x180",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(cos(8*atan2(y-0.5, x-0.5)) > 0.3) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 0.2*c + c**3) + 0.5*sin(t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*sin(v*pi*f1+d1)",
+    "green": "v",
+    "blue": "0.5+0.5*cos(v*pi*f2+d2)"
+  },
+  "cycle": {
+    "steps": 1200
+  },
+  "id": 50621,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "粒子-烟花",
+  "description": "烟花粒子效果，向上发射后受重力下落",
+  "version": "1.0",
+  "author": "particle 集成",
+  "tags": [
+    "粒子",
+    "烟花",
+    "庆祝"
+  ],
+  "primitive": {
+    "type": "particle",
+    "emitters": [
+      {
+        "position": [
+          0.5,
+          0.8
+        ],
+        "rate": 50,
+        "lifetime": [
+          1.0,
+          3.0
+        ],
+        "speed": [
+          100,
+          300
+        ],
+        "direction": [
+          260,
+          280
+        ],
+        "color": [
+          255,
+          200,
+          50
+        ],
+        "size": [
+          2,
+          5
+        ]
+      }
+    ],
+    "forces": [
+      {
+        "type": "gravity",
+        "y": 200
+      }
+    ],
+    "audio_modulation": {
+      "rate": "rms * 100 + 20",
+      "color_hue": "band_energy_0 * 360"
+    },
+    "particle_type": "circle",
+    "max_particles": 2000
+  },
+  "category": "(无分类)"
+}

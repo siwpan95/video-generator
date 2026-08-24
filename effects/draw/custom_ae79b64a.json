@@ -1,0 +1,39 @@
+{
+  "name": "准晶体_彭罗斯近似",
+  "version": "1.0",
+  "description": "准晶体图案生成。多方向正弦波叠加（5重/8重旋转对称），模拟准晶体衍射图案，结合扩散产生有序非周期结构",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.1*(cos(x*44.0)+cos((x*cos(1.257)+y*sin(1.257))*44.0)+cos((x*cos(2.513)+y*sin(2.513))*44.0)+cos((x*cos(3.770)+y*sin(3.770))*44.0)+cos((x*cos(5.027)+y*sin(5.027))*44.0))/5"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.04*(avg_n - c) + 0.06*sin(c*12.566)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.2 + 0.8*v",
+    "green": "v",
+    "blue": "0.5 + 0.5*sin(v*20)"
+  },
+  "tick": {
+    "fps": 15,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 79
+}

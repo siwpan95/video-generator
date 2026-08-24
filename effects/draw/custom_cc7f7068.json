@@ -1,0 +1,27 @@
+{
+  "name": "十字星 × SmoothLife双环 × 彩虹",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-(x-0.5)**2/0.0008) + exp(-(y-0.5)**2/0.0008)"
+    }
+  },
+  "evolution": {
+    "rule": "1/(1+exp(-18*(avg_n-0.22))) * 1/(1+exp(18*(avg_n-0.42))) + 0.8*c*1/(1+exp(-14*(avg_n-0.18)))*1/(1+exp(14*(avg_n-0.36)))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*12)",
+    "green": "0.5 + 0.5*sin(v*12 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*12 + 4.189)"
+  },
+  "id": 13
+}

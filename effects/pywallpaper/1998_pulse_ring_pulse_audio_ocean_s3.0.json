@@ -1,0 +1,45 @@
+{
+  "id": "pulse_ring_pulse_audio_ocean_s3.0",
+  "name": "脉冲·环形脉冲·音频触发·ocean",
+  "full_name": "1998. 脉冲·环形脉冲·音频触发·ocean",
+  "category": "涟漪",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "pulse",
+        "mode": "ring_pulse",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "max_radius": 400,
+        "speed": 3.0,
+        "count": 1,
+        "trigger": "audio",
+        "trigger_threshold": 0.3,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.52,
+            0.62
+          ],
+          "speed": 0.06,
+          "sat": 0.8,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

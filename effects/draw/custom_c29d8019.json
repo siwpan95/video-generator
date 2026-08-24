@@ -1,0 +1,41 @@
+{
+  "name": "瑞利-贝纳德_对流斑图",
+  "version": "1.0",
+  "description": "Rayleigh-Bénard对流简化模型。热对流产生六角形对流元胞（Bénard cell），结合扩散和浮力驱动项",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.05*(sin(x*18.85)*sin(y*18.85) + random()*0.02)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.12*(avg_n - c) + 0.04*c*(1-c)*(c-0.5) + 0.008*sin(x*18.85)*sin(y*18.85)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.3",
+    "green": "0.5 + 0.5*abs(v-0.5)*2",
+    "blue": "1.0 - v*0.7"
+  },
+  "tick": {
+    "fps": 22,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 134
+}

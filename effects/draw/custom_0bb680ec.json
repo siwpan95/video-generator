@@ -1,0 +1,30 @@
+{
+  "name": "莫尔条纹 × 对流湍流混合 × 秋叶",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.25 * (sin(sqrt((x-0.35)**2+(y-0.45)**2)*30) + sin(sqrt((x-0.65)**2+(y-0.55)**2)*28))"
+    }
+  },
+  "evolution": {
+    "rule": "(c + 0.35*avg_n + 0.1*sin(x*25+t*0.2)*cos(y*22-t*0.15)) / 2.15",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.95 + (1-v)*0.04",
+    "green": "v*0.32 + (1-v)*0.02",
+    "blue": "v*0.06 + (1-v)*0.01"
+  },
+  "id": 46
+}

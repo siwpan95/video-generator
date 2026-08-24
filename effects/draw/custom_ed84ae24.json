@@ -1,0 +1,39 @@
+{
+  "name": "反应扩散_豹纹",
+  "version": "1.0",
+  "description": "Gray-Scott反应扩散产生大斑点图案，类似豹纹。较低扩散率和衰减率产生大尺寸斑点",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.7 + 0.3*random() if random() > 0.93 else 0.01"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.12*(avg_n - c) + 0.02*c*(1-c) - 0.008*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.1 + 0.9*v",
+    "green": "0.05 + 0.5*v + 0.35*v*v",
+    "blue": "0.02 + 0.3*v"
+  },
+  "tick": {
+    "fps": 18,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 93
+}

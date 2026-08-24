@@ -1,0 +1,32 @@
+{
+  "id": "fluid_aurora_fluid",
+  "name": "极光流体",
+  "full_name": "4619. 极光流体",
+  "category": "流体模拟",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "fluid",
+        "grid_size": [
+          64,
+          64
+        ],
+        "viscosity": 5e-07,
+        "diffusion": 0.0002,
+        "force": 9.0,
+        "color_map": "rainbow",
+        "audio_modulation": {
+          "source": {
+            "source": "rms",
+            "scale": [
+              0,
+              2.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

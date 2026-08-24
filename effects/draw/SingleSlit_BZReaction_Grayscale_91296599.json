@@ -1,0 +1,27 @@
+{
+  "name": "单缝_BZ_Aurora",
+  "version": "1.0",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(pi*10*sqrt((x-0.5)**2 + (y-0.5)**2)) / (pi*10*sqrt((x-0.5)**2 + (y-0.5)**2) + 0.001))**2"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "id": 89
+}

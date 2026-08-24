@@ -1,0 +1,32 @@
+{
+  "id": "fractal",
+  "name": "分形",
+  "full_name": "010. 分形",
+  "category": "数学",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "texture",
+        "mode": "mandelbrot",
+        "cell_size": 10,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.1,
+          "sat": 0.9,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "rms",
+          "target": "value",
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

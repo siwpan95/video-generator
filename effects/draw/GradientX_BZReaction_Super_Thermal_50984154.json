@@ -1,0 +1,31 @@
+{
+  "name": "GradientX_BZReaction_Super_Thermal",
+  "grid": {
+    "width": 160,
+    "height": 120,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "x"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c > 0.5) else (0.5 if sum_n > 1 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "clip(v*f1, 0, 1)",
+    "green": "clip(v*(1-v)*f2*4, 0, 1)",
+    "blue": "clip((1-v)*f3, 0, 1)"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 1141,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

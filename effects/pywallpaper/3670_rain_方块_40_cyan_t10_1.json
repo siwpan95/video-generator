@@ -1,0 +1,48 @@
+{
+  "id": "rain_方块_40_cyan_t10_1",
+  "name": "文字雨·方块·40列·cyan",
+  "full_name": "3670. 文字雨·方块·40列·cyan",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "chars": "░▒▓█▄▀■□▪▫",
+        "count": 40,
+        "font_size": 22,
+        "speed": {
+          "min": 60,
+          "max": 150
+        },
+        "trail_length": 10,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "color": {
+          "type": "solid",
+          "value": [
+            0,
+            220,
+            220
+          ]
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "brightness",
+          "scale": [
+            0.3,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

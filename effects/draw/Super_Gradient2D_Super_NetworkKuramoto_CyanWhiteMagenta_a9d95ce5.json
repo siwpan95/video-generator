@@ -1,0 +1,31 @@
+{
+  "name": "Super_Gradient2D_Super_NetworkKuramoto_CyanWhiteMagenta_motion_trail_64x64",
+  "grid": {
+    "width": 64,
+    "height": 64,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "clip(p1 + w1*abs(x-p2) + w2*abs(y-p3), 0, 1)"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 2000
+  },
+  "id": 30591,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

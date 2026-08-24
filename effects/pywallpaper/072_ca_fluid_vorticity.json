@@ -1,0 +1,39 @@
+{
+  "name": "CA流体-涡度场",
+  "description": "Lattice Boltzmann涡度演化模拟流体旋转",
+  "version": "1.0",
+  "author": "draw集成",
+  "tags": [
+    "流体",
+    "物理",
+    "CA",
+    "涡度"
+  ],
+  "primitive": {
+    "type": "ca",
+    "recipe_name": "LatticeBoltzmann_Vorticity",
+    "audio_modulated_params": [
+      "f1"
+    ]
+  },
+  "params": {
+    "width": 320,
+    "height": 180,
+    "wrap": true,
+    "init_mode": "noise",
+    "init_density": 0.5,
+    "f1": 0.01,
+    "color_map": "twilight",
+    "decay": 0.997
+  },
+  "formula": {
+    "enabled": true,
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ],
+    "expression": "c + 0.1*(avg_n - c) + f1*(avg_n - c)*(sum_n - 4*c)"
+  },
+  "category": "(无分类)"
+}

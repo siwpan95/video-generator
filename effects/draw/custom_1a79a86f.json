@@ -1,0 +1,37 @@
+{
+  "name": "涡旋_旋转场",
+  "version": "1.0",
+  "description": "用时空正弦场模拟旋转涡旋图案。中心区旋转方向随t变化，产生动态涡旋",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(12.566*(x-0.5))*cos(12.566*(y-0.5))"
+    }
+  },
+  "evolution": {
+    "rule": "0.4*c + 0.6*(0.5 + 0.5*sin(12.566*(x-0.5)+t*0.15)*cos(12.566*(y-0.5)+t*0.15))",
+    "variables": [
+      "c",
+      "x",
+      "y",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*18)",
+    "green": "0.5 + 0.5*sin(v*18 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*18 + 4.189)"
+  },
+  "tick": {
+    "fps": 24,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 124
+}

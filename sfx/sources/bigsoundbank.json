@@ -1,0 +1,20 @@
+{
+  "name": "BigSoundBank",
+  "site": "bigsoundbank.com",
+  "description": "French free sound bank, CC0 license, no registration required, direct mp3/wav downloads",
+  "base_url": "https://bigsoundbank.com",
+  "category_ids": [
+    "AIR", "AERO", "ALRM", "AMB", "ANML", "BEEP", "BELL", "BIRD",
+    "BOAT", "BLLT", "TOON", "CERM", "CHAIN", "CHEM", "CLOCK", "CLOTH",
+    "COM", "CMPT", "CREA", "CRWD", "DSGN", "DESTR", "DIRT", "DOOR",
+    "DRWR", "ELEC", "EQUIP", "EXPL", "FART", "FGHT", "FIRE", "FRWK",
+    "FOLY", "FOOD", "FEET", "GAME", "GEO", "GLAS", "GORE", "GUN",
+    "HORN", "HMN", "ICE", "LASR", "LETHR", "LIQ", "MACH", "MAG",
+    "MECH", "METL", "MOTR", "MOVE", "MUSC", "NATD", "OBJ", "PAPR",
+    "PLAS", "RAIN", "ROBT", "ROCK", "ROPE", "RUBR", "SCI", "SNOW",
+    "SPRT", "SWSH", "TOOL", "TOY", "TRN", "UI", "VEGE", "VEH",
+    "VOX", "WATR", "WEAP", "WTHR", "WHST", "WIND", "WNDW", "WING",
+    "WOOD"
+  ],
+  "mp3_url_template": "https://bigsoundbank.com/UPLOAD/mp3/{id}.mp3"
+}

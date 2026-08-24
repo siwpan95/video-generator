@@ -1,0 +1,73 @@
+{
+  "id": "particle_galaxy_formation",
+  "name": "银河形成",
+  "full_name": "4601. 银河形成",
+  "category": "粒子系统",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [
+              0.5,
+              0.5
+            ],
+            "rate": 30,
+            "lifetime": [
+              1.5,
+              4.0
+            ],
+            "speed": [
+              30,
+              100
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              180,
+              200,
+              255
+            ],
+            "size": [
+              1,
+              3
+            ]
+          }
+        ],
+        "forces": [
+          {
+            "type": "attract",
+            "position": [
+              0.5,
+              0.5
+            ],
+            "strength": 500
+          }
+        ],
+        "particle_type": "point",
+        "max_particles": 800,
+        "audio_modulation": {
+          "rate": {
+            "source": "rms",
+            "scale": [
+              0.5,
+              2.0
+            ]
+          },
+          "color_hue": {
+            "source": "band_energy",
+            "scale": [
+              0,
+              0.3
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

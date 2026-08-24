@@ -1,0 +1,68 @@
+{
+  "id": "draw_eye_warm",
+  "name": "绘制·眼睛·warm",
+  "full_name": "2134. 绘制·眼睛·warm",
+  "category": "绘制",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "drawing",
+        "commands": [
+          {
+            "shape": "ellipse",
+            "x1": "20%",
+            "y1": "25%",
+            "x2": "50%",
+            "y2": "75%",
+            "color": null,
+            "fill": false
+          },
+          {
+            "shape": "ellipse",
+            "x1": "50%",
+            "y1": "25%",
+            "x2": "80%",
+            "y2": "75%",
+            "color": null,
+            "fill": false
+          },
+          {
+            "shape": "circle",
+            "x": "35%",
+            "y": "50%",
+            "radius": 15,
+            "color": null
+          },
+          {
+            "shape": "circle",
+            "x": "65%",
+            "y": "50%",
+            "radius": 15,
+            "color": null
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

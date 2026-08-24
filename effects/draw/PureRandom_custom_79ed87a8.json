@@ -1,0 +1,28 @@
+{
+  "name": "纯随机 × 混沌耦合映射 × 赛博朋克",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random()"
+    }
+  },
+  "evolution": {
+    "rule": "3.95*c*(1-c) + 0.18*(avg_n-c) + 0.03*sin(c*22+t*0.12)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.75 + 0.25*sin(v*9)*v",
+    "green": "v*0.1 + 0.22*sin(v*6+3)*v",
+    "blue": "v*0.85 + 0.15*sin(v*7+1)*v"
+  },
+  "id": 52
+}

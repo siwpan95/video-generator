@@ -1,0 +1,16 @@
+{
+  "name": "Mixkit",
+  "site": "mixkit.co",
+  "description": "Free sound effects with WAV full-quality downloads via /download/{id}/ pages",
+  "base_url": "https://mixkit.co",
+  "category_slugs": [
+    "transition", "nature", "technology", "funny", "notification", "animals", "transport", "human", "warfare", "instrument", "lifestyle", "game",
+    "ambience", "beach", "desert", "fire", "forest", "jungle", "morning", "mountain", "night", "rain", "rivers", "safari",
+    "scary-woods", "sea", "storm", "swell", "thunder", "volcano", "water", "waterfall", "waves", "wind", "wood", "splash", "ocean", "lightning",
+    "bleep", "alarm", "bass", "blow", "cinematic", "button", "click", "coin", "crack", "crash", "crowd", "ding",
+    "dog", "door", "explosion", "footstep", "game-over", "glass", "gun", "hit", "impact", "laugh", "metal",
+    "paper", "phone", "pop", "robot", "sci-fi", "shatter", "slide", "swoosh", "tap", "thud", "typewriter", "voice",
+    "water-drop", "whoosh", "wind-chime", "zap"
+  ],
+  "cdn_url_template": "https://assets.mixkit.co/active_storage/sfx/{id}/{id}.wav"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "particle_fireworks",
+  "name": "烟花粒子效果",
+  "full_name": "Particle. 烟花粒子效果",
+  "category": "粒子系统",
+  "background_theme": "深色",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [0.5, 0.8],
+            "rate": 50,
+            "lifetime": [1.0, 3.0],
+            "speed": [100, 300],
+            "direction": [180, 360],
+            "color": [255, 200, 50],
+            "size": [2, 6]
+          },
+          {
+            "position": [0.3, 0.7],
+            "rate": 30,
+            "lifetime": [0.8, 2.5],
+            "speed": [80, 250],
+            "direction": [150, 330],
+            "color": [255, 100, 50],
+            "size": [2, 5]
+          },
+          {
+            "position": [0.7, 0.75],
+            "rate": 40,
+            "lifetime": [1.2, 3.5],
+            "speed": [120, 350],
+            "direction": [200, 380],
+            "color": [255, 255, 100],
+            "size": [3, 7]
+          }
+        ],
+        "forces": [
+          {"type": "gravity", "y": 150}
+        ],
+        "particle_type": "circle",
+        "max_particles": 2000,
+        "position": {"x": 0, "y": 0},
+        "size": {"width": "100%", "height": "100%"}
+      }
+    ]
+  }
+}

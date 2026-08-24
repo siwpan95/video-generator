@@ -1,0 +1,27 @@
+{
+  "name": "Reaction-Diffusion",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "initial": {
+      "type": "formula",
+      "expression": "0.2 + 0.05*sin(x*20)*cos(y*20)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.16*(avg_n - c) + 0.045*c*(1-c) - 0.02*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.2 + v*0.8",
+    "green": "0.5 + 0.5*cos(v*12)",
+    "blue": "1.0 - v"
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 53
+}

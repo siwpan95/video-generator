@@ -1,0 +1,32 @@
+{
+  "name": "GradientX_Super_LatticeBoltzmann_Spring_bloom_180x180_c1000",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "x"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*(avg_n - c) + f2*(avg_n - c)*(sum_n - 4*c)",
+    "variables": [
+      "c",
+      "avg_n",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "1",
+    "green": "0.5+0.5*v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 52223,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "bars_right_48_cool",
+  "name": "柱状图·向右·48柱·cool",
+  "full_name": "310. 柱状图·向右·48柱·cool",
+  "category": "频谱",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "bars",
+        "count": 48,
+        "direction": "right",
+        "position": {
+          "x": 0,
+          "y": "100%"
+        },
+        "size": {
+          "width": "100%",
+          "height": "70%"
+        },
+        "gap": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "height",
+          "scale": [
+            0.02,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

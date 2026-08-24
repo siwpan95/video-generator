@@ -1,0 +1,120 @@
+{
+  "id": "particle_multi_color_burst",
+  "name": "多色粒子爆发",
+  "full_name": "4600. 多色粒子爆发",
+  "category": "粒子系统",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [
+              0.3,
+              0.4
+            ],
+            "rate": 12,
+            "lifetime": [
+              0.8,
+              2.0
+            ],
+            "speed": [
+              50,
+              180
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              255,
+              60,
+              60
+            ],
+            "size": [
+              2,
+              6
+            ]
+          },
+          {
+            "position": [
+              0.7,
+              0.4
+            ],
+            "rate": 12,
+            "lifetime": [
+              0.8,
+              2.0
+            ],
+            "speed": [
+              50,
+              180
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              60,
+              255,
+              60
+            ],
+            "size": [
+              2,
+              6
+            ]
+          },
+          {
+            "position": [
+              0.5,
+              0.7
+            ],
+            "rate": 12,
+            "lifetime": [
+              0.8,
+              2.0
+            ],
+            "speed": [
+              50,
+              180
+            ],
+            "direction": [
+              0,
+              360
+            ],
+            "color": [
+              60,
+              60,
+              255
+            ],
+            "size": [
+              2,
+              6
+            ]
+          }
+        ],
+        "forces": [],
+        "particle_type": "circle",
+        "max_particles": 800,
+        "audio_modulation": {
+          "rate": {
+            "source": "rms",
+            "scale": [
+              0.5,
+              2.0
+            ]
+          },
+          "color_hue": {
+            "source": "band_energy",
+            "scale": [
+              0,
+              0.3
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

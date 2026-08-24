@@ -1,0 +1,27 @@
+{
+  "name": "棋盘格 × 增长抑制竞争 × 日落",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(i + j) % 2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.22*(avg_n - c) * (1.0 - c*0.85)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.9 + (1-v)*0.05",
+    "green": "v*0.3 + (1-v)*0.05",
+    "blue": "v*0.1 + (1-v)*0.3"
+  },
+  "id": 11
+}

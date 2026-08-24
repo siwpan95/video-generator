@@ -1,0 +1,20 @@
+{
+  "id": "builtin_flow_field_angle",
+  "name": "FlowField_Angle",
+  "category": "流体模拟",
+  "tags": ["flow", "flow_field", "angle", "particle", "流体", "streamline"],
+  "params": {
+    "layers": [
+      {
+        "type": "flow_field",
+        "count": 1500,
+        "scale": 70.0,
+        "speed": 2.0,
+        "trail": 0.92,
+        "mode": "angle",
+        "gain": 1.0,
+        "color": {"type": "hsv_flow", "speed": 0.02, "hue": [0.55, 0.95]}
+      }
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "demo_crystal",
+  "name": "水晶球",
+  "full_name": "048. 水晶球",
+  "category": "粒子",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particles",
+        "count": 120,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "particle": {
+          "size": {
+            "min": 1,
+            "max": 4
+          },
+          "speed": {
+            "min": 5,
+            "max": 15
+          },
+          "lifetime": {
+            "min": 5,
+            "max": 20
+          },
+          "behavior": "orbit"
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.55,
+            0.75
+          ],
+          "speed": 0.03,
+          "sat": 0.5,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "particle_size",
+          "scale": [
+            0.5,
+            2.5
+          ],
+          "smoothing": 0.85
+        }
+      },
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 36,
+            "radius": 60,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 100,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.55,
+            0.65
+          ],
+          "speed": 0.05,
+          "sat": 0.3,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "rms",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            30
+          ],
+          "smoothing": 0.9
+        }
+      },
+      {
+        "type": "particles",
+        "count": 20,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "particle": {
+          "size": {
+            "min": 2,
+            "max": 6
+          },
+          "speed": {
+            "min": 3,
+            "max": 8
+          },
+          "lifetime": {
+            "min": 3,
+            "max": 8
+          },
+          "behavior": "drift"
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.55,
+            0.7
+          ],
+          "speed": 0.2,
+          "sat": 0.2,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "rms",
+          "target": "particle_size",
+          "scale": [
+            1.0,
+            5.0
+          ],
+          "smoothing": 0.5
+        }
+      }
+    ]
+  }
+}

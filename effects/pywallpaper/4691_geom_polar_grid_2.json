@@ -1,0 +1,37 @@
+{
+  "id": "geom_polar_grid_2",
+  "name": "极坐标网格2",
+  "full_name": "4691. 极坐标网格2",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "rings": 15,
+        "spacing": 25,
+        "radius": 40,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.7
+          ],
+          "speed": 0.1,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Lotka-Volterra_空间",
+  "version": "1.0",
+  "description": "空间版Lotka-Volterra捕食者-猎物模型。用极限环振荡模拟种群周期，邻域耦合产生空间图案",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.3 + 0.4*random()"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.08*(avg_n - c) + 0.1*c*(1 - c)*(c - 0.5) + 0.02*sin(6.283*x*y)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "0.5 + 0.5*sin(v*12)",
+    "blue": "1.0 - v"
+  },
+  "tick": {
+    "fps": 24,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 43
+}

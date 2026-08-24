@@ -1,0 +1,42 @@
+{
+  "id": "spikes",
+  "name": "尖峰",
+  "full_name": "002. 尖峰",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            0.7
+          ],
+          "speed": 0.1,
+          "sat": 0.8,
+          "val": 0.85
+        },
+        "count": 32,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 80,
+        "outer_radius": 300,
+        "line_width": 3,
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

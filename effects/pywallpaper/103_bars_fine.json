@@ -1,0 +1,45 @@
+{
+  "id": "bars_fine",
+  "name": "条形图（细密）",
+  "full_name": "103. 条形图（细密）",
+  "category": "频谱",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "bars",
+        "count": 96,
+        "direction": "up",
+        "position": {
+          "x": 0,
+          "y": "100%"
+        },
+        "size": {
+          "width": "100%",
+          "height": "70%"
+        },
+        "gap": 0,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.3,
+            0.7
+          ],
+          "speed": 0.08,
+          "sat": 0.7,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "height",
+          "scale": [
+            0.01,
+            0.5
+          ],
+          "smoothing": 0.9
+        }
+      }
+    ]
+  }
+}

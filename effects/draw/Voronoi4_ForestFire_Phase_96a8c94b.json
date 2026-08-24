@@ -1,0 +1,31 @@
+{
+  "name": "Voronoi4_ForestFire_Phase",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (min(abs(x-0.2)+abs(y-0.2), abs(x-0.8)+abs(y-0.2), abs(x-0.2)+abs(y-0.8), abs(x-0.8)+abs(y-0.8)) < 0.1) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if (c <= 0.5 and sum_n >= 0.5) else (0 if c > 0.5 else c)",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*cos(2*pi*v)",
+    "green": "0.5+0.5*cos(2*pi*v+2*pi/3)",
+    "blue": "0.5+0.5*cos(2*pi*v+4*pi/3)"
+  },
+  "cycle": {
+    "steps": 200
+  },
+  "id": 2353,
+  "postprocess": {
+    "effect": "vignette"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "三角形格子_几何",
+  "version": "1.0",
+  "description": "三角形格子（等边三角形）图案，用六角对称正弦叠加产生。类似超导涡旋Abrikosov格子",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(21.99*x)*sin(21.99*y) + 0.3*cos(21.99*(x+y)/2)*cos(21.99*(x-y)/2)"
+    }
+  },
+  "evolution": {
+    "rule": "0.55*c + 0.45*(0.5 + 0.5*sin(21.99*x)*sin(21.99*y) + 0.3*cos(21.99*(x+y)/2)*cos(21.99*(x-y)/2))",
+    "variables": [
+      "c",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.3 + 0.7*sin(v*30)",
+    "green": "0.3 + 0.7*sin(v*30 + 2.094)",
+    "blue": "0.3 + 0.7*sin(v*30 + 4.189)"
+  },
+  "tick": {
+    "fps": 15,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 75
+}

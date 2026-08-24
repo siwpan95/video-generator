@@ -1,0 +1,41 @@
+{
+  "name": "六边形_各向异性扩散",
+  "version": "1.0",
+  "description": "各向异性扩散近似六边形邻域效果。扩散系数随方向正弦调制，产生六角对称图案",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2+(y-0.5)**2)/0.01) + 0.05*sin(18.85*x)*sin(18.85*y)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + (0.1 + 0.03*sin(18.85*x)*sin(18.85*y))*(avg_n - c) + 0.005*sin(18.85*(x+y)/2)*sin(18.85*(x-y)/2)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.5 + 0.5*sin(v*20)",
+    "green": "0.5 + 0.5*sin(v*20 + 2.094)",
+    "blue": "0.5 + 0.5*sin(v*20 + 4.189)"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 350
+  },
+  "id": 78
+}

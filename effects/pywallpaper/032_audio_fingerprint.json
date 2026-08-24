@@ -1,0 +1,42 @@
+{
+  "id": "audio_fingerprint",
+  "name": "音频指纹",
+  "full_name": "032. 音频指纹",
+  "category": "圆形",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 64,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 50,
+        "outer_radius": 200,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            0.8
+          ],
+          "speed": 0.15,
+          "sat": 0.8,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

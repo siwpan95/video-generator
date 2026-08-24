@@ -1,0 +1,31 @@
+{
+  "name": "NoiseSmooth_HenonTrajectory_CyanWhiteMagenta_motion_trail_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*random()"
+    }
+  },
+  "evolution": {
+    "rule": "1 - 1.4*c**2 + 0.3*avg_n",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "1-v",
+    "blue": "0.5+0.5*v"
+  },
+  "cycle": {
+    "steps": 3000
+  },
+  "id": 31592,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

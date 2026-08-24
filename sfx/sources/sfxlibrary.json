@@ -1,0 +1,18 @@
+{
+  "name": "SFXLibrary",
+  "site": "sfxlibrary.com",
+  "description": "Royalty-free, public domain sound effects, no registration required",
+  "base_url": "https://www.sfxlibrary.com",
+  "listing_pages": [
+    "https://www.sfxlibrary.com/?page=1",
+    "https://www.sfxlibrary.com/?page=2",
+    "https://www.sfxlibrary.com/?page=3",
+    "https://www.sfxlibrary.com/?page=4",
+    "https://www.sfxlibrary.com/?page=5",
+    "https://www.sfxlibrary.com/?page=6",
+    "https://www.sfxlibrary.com/?page=7",
+    "https://www.sfxlibrary.com/?page=8",
+    "https://www.sfxlibrary.com/?page=9",
+    "https://www.sfxlibrary.com/?page=10"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "超级公式_棋盘反应热力",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(x*1.0*pi)*sin(y*1.0*pi)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 1.0*(avg_n - c) + 1.0*sin(c*20)/(1 + 0.5*abs(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "clip(v*1.0, 0, 1)",
+    "green": "clip(v*(1-v)*1.0*4, 0, 1)",
+    "blue": "clip((1-v)*1.0, 0, 1)"
+  },
+  "id": 153
+}

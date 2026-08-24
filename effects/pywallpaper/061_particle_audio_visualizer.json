@@ -1,0 +1,35 @@
+{
+  "id": "particle_audio_visualizer",
+  "name": "音频可视化粒子",
+  "full_name": "Particle. 音频可视化粒子",
+  "category": "粒子系统",
+  "background_theme": "深色",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [0.5, 0.5],
+            "rate": 10,
+            "lifetime": [0.5, 2.0],
+            "speed": [50, 200],
+            "direction": [0, 360],
+            "color": [100, 200, 255],
+            "size": [1, 4]
+          }
+        ],
+        "forces": [],
+        "particle_type": "trail",
+        "max_particles": 500,
+        "audio_modulation": {
+          "rate": "rms * 100 + 10",
+          "color_hue": "band_energy(0) * 360"
+        },
+        "position": {"x": 0, "y": 0},
+        "size": {"width": "100%", "height": "100%"}
+      }
+    ]
+  }
+}

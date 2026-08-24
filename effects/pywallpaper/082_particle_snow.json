@@ -1,0 +1,61 @@
+{
+  "name": "粒子-雪花",
+  "description": "雪花粒子效果，缓慢飘落",
+  "version": "1.0",
+  "author": "particle 集成",
+  "tags": [
+    "粒子",
+    "雪花",
+    "冬天"
+  ],
+  "primitive": {
+    "type": "particle",
+    "emitters": [
+      {
+        "position": [
+          0.5,
+          0.0
+        ],
+        "rate": 80,
+        "lifetime": [
+          3.0,
+          6.0
+        ],
+        "speed": [
+          20,
+          50
+        ],
+        "direction": [
+          240,
+          300
+        ],
+        "color": [
+          255,
+          255,
+          255
+        ],
+        "size": [
+          2,
+          6
+        ]
+      }
+    ],
+    "forces": [
+      {
+        "type": "gravity",
+        "y": 10
+      },
+      {
+        "type": "wind",
+        "x": 15
+      }
+    ],
+    "audio_modulation": {
+      "rate": "rms * 50 + 40",
+      "color_sat": "band_energy_1 * 0.5"
+    },
+    "particle_type": "circle",
+    "max_particles": 1500
+  },
+  "category": "(无分类)"
+}

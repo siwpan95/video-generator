@@ -1,0 +1,273 @@
+{
+  "description": "effects 配方分类清单 —— 按数学模型/物理系统/组合分类",
+  "version": "3.0",
+  "categories": {
+    "超级公式": {
+      "desc": "超级公式",
+      "files": [
+        "超级公式_Perlin反应正弦色.json",
+        "超级公式_Perlin耦合冷暖.json",
+        "超级公式_Perlin阈值IQ.json",
+        "超级公式_棋盘反应热力.json",
+        "超级公式_棋盘反应相位.json",
+        "超级公式_棋盘阈值IQ.json",
+        "超级公式_正弦_反应_超级渐变.json",
+        "超级公式_正弦场反应扩散IQ.json",
+        "超级公式_正弦场反应正弦色.json",
+        "超级公式_正弦场振荡相位.json",
+        "超级公式_正弦场耦合热力.json",
+        "超级公式_正弦场阈值冷暖.json",
+        "超级公式_波包反应IQ.json",
+        "超级公式_波包振荡对比.json",
+        "超级公式_波包耦合正弦色.json",
+        "超级公式_螺旋反应冷暖.json",
+        "超级公式_螺旋振荡热力.json",
+        "超级公式_螺旋耦合相位.json",
+        "超级公式_高斯_耦合_超级渐变.json",
+        "超级公式_高斯反应IQ.json",
+        "超级公式_高斯反应冷暖.json",
+        "超级公式_高斯耦合对比.json",
+        "超级公式_高斯阈值热力.json",
+        "超级公式全展示_正弦_振荡_热力.json"
+      ]
+    },
+    "多公式组合": {
+      "desc": "多公式组合",
+      "files": [
+        "多公式_Perlin+斑点_init_CML+Logistic_evo_霓虹_color.json",
+        "多公式_init_super_evol_super_color_三色混合.json",
+        "多公式_三init混合_正弦+高斯+Perlin_超级反应_超级色.json",
+        "多公式_四阶段演化_扩散_CA_反应_Logistic.json",
+        "多公式_扩散+CA+反应_三evol混合.json",
+        "多公式_棋盘+螺旋_init_GoL+扩散_evo_冷暖_color.json",
+        "多公式_正弦+高斯_init_扩散+反应_evo_IQ+热力_color.json"
+      ]
+    },
+    "反应扩散_图灵斑图": {
+      "desc": "反应扩散_图灵斑图",
+      "files": [
+        "Cahn-Hilliard_相分离.json",
+        "CahnHilliard_相分离_夕阳.json",
+        "Gray-Scott_斑点.json",
+        "Gray-Scott_条纹.json",
+        "Gray-Scott_迷宫.json",
+        "Schnakenberg_图灵斑图.json",
+        "Turing_Schnakenberg_超级相位.json",
+        "Turing_反应扩散_IQ.json",
+        "Turing_阈值生长_IQ.json",
+        "反应扩散_正弦种子.json",
+        "反应扩散_豹纹.json",
+        "对角条纹_Turing_IQ.json",
+        "畴壁_相分离_夕阳.json",
+        "超级Perlin_Turing_IQ.json",
+        "高斯_反应扩散_绿黑红.json",
+        "高斯环_反应扩散_IQ.json"
+      ]
+    },
+    "激发介质_振荡波": {
+      "desc": "激发介质_振荡波",
+      "files": [
+        "45度条纹_激发_相位.json",
+        "BZ反应_振荡波.json",
+        "BZ种子_BZ_Aurora.json",
+        "FHN_随机_Lorenz.json",
+        "Ginzburg-Landau_螺旋混沌.json",
+        "Swift-Hohenberg_简化.json",
+        "lightning_FHN.json",
+        "spiral_BZ_aurora.json",
+        "spiral_FHN_magma.json",
+        "单缝_BZ_Aurora.json",
+        "孤子状局部脉冲.json",
+        "横条纹_激发_彩虹.json",
+        "激发介质_螺旋波.json",
+        "猫眼_BZ_Aurora.json",
+        "神经激发_FHN.json",
+        "螺旋_BZ_Aurora.json",
+        "螺旋_BZ_浮雕.json",
+        "超级螺旋_BZ_Aurora.json",
+        "驻波_激发_相位.json"
+      ]
+    },
+    "经典生命游戏": {
+      "desc": "经典生命游戏",
+      "files": [
+        "Cantor_GoL_反色.json",
+        "Game of Life.json",
+        "GoL_单点_反色.json",
+        "GoL_随机_反色.json",
+        "Lenia_单点_赛博朋克.json",
+        "Lenia_简化.json",
+        "SmoothLife_棋盘.json",
+        "SmoothLife_棋盘_彩虹.json",
+        "life_smooth.json",
+        "半数_GoL_灰阶.json",
+        "单点_GoL_Summer.json",
+        "单点_GoL_三值化.json",
+        "单点_GoL_二值化.json",
+        "单点_GoL_曝光.json",
+        "菱形_Lenia_赛博.json",
+        "超级正弦_GoL_反色.json",
+        "超级波包_Lenia_超级热力.json"
+      ]
+    },
+    "流体力学_湍流": {
+      "desc": "流体力学_湍流",
+      "files": [
+        "Burgers_激波.json",
+        "圆波_湍流_彩虹.json",
+        "多次谐波_湍流.json",
+        "水面波纹.json",
+        "涡旋_Kuramoto_冰川.json",
+        "涡旋_旋转场.json",
+        "湍流_彩虹噪声.json",
+        "瑞利-贝纳德_对流斑图.json",
+        "驻波_正弦干涉.json"
+      ]
+    },
+    "生态_种群动力学": {
+      "desc": "生态_种群动力学",
+      "files": [
+        "Lotka-Volterra_空间.json",
+        "SIRS_流行病学.json",
+        "三态循环_竞争.json",
+        "捕食者猎物.json",
+        "竞争扩散_双斑点.json",
+        "趋化性_聚集.json"
+      ]
+    },
+    "相变_晶体生长": {
+      "desc": "相变_晶体生长",
+      "files": [
+        "DLA_扩散限制聚集.json",
+        "Voronoi_DLA_日落.json",
+        "Voronoi破裂.json",
+        "checker_DLA_sunset.json",
+        "四源_DLA_热力.json",
+        "固化_晶体生长.json",
+        "点源_DLA_热力.json",
+        "雪花_六角近似.json"
+      ]
+    },
+    "几何_结构图案": {
+      "desc": "几何_结构图案",
+      "files": [
+        "Kagome_几何.json",
+        "三角形格子_几何.json",
+        "六角_各向异性_位置.json",
+        "六边形_各向异性扩散.json",
+        "准晶体_彭罗斯近似.json",
+        "各向异性_环纹.json"
+      ]
+    },
+    "混沌_分形": {
+      "desc": "混沌_分形",
+      "files": [
+        "CML混沌_随机_冷色.json",
+        "Fisher-KPP_传播波.json",
+        "Kuramoto-Sivashinsky_混沌.json",
+        "Kuramoto_耦合振荡.json",
+        "Mandelbrot_三次迭代.json",
+        "Mandelbrot_超级反应_IQ.json",
+        "Pseudo-Mandelbrot.json",
+        "galaxy_FisherKPP_IQsun.json",
+        "分形_Mandelbrot.json",
+        "径向梯度_Kuramoto_相位.json",
+        "螺旋_Kuramoto_彩虹.json",
+        "角点梯度_Kuramoto_相位.json",
+        "超离散_max加代数.json"
+      ]
+    },
+    "神经动力学": {
+      "desc": "神经动力学",
+      "files": [
+        "Wilson-Cowan_神经场.json"
+      ]
+    },
+    "界面动力学": {
+      "desc": "界面动力学",
+      "files": [
+        "曲率驱动_界面流.json",
+        "相位场_界面传播.json"
+      ]
+    },
+    "波传播": {
+      "desc": "波传播",
+      "files": [
+        "Lissajous_波传播_彩虹.json",
+        "双缝_波传播_霓虹.json",
+        "竖条纹_波传播_相位.json"
+      ]
+    },
+    "渗流_生长": {
+      "desc": "渗流_生长",
+      "files": [
+        "渗流30_Eden_暖色.json",
+        "渗流50_有向_日落.json",
+        "渗流60_有向_日落.json",
+        "细胞噪声_Eden_暖色.json"
+      ]
+    },
+    "组合配方_精选": {
+      "desc": "组合配方_精选",
+      "files": [
+        "2x2_棋盘_绿黑红.json",
+        "3x3棋盘_2x2_绿黑红.json",
+        "5x5棋盘_Smooth_彩虹.json",
+        "DayNight_单点_霓虹.json",
+        "Duffing_单点_Lorenz.json",
+        "Game_of_Life_经典.json",
+        "HighLife_单点_热力.json",
+        "HighLife_随机_反色.json",
+        "Logistic_Logistic_分岔2.json",
+        "Perlin_CML_冷色.json",
+        "Reaction-Diffusion.json",
+        "Sierpinski_HighLife_彩虹.json",
+        "cross_smoothlife_rainbow.json",
+        "diamond_stripes.json",
+        "grid_twotemp_IQice.json",
+        "halfactive_maze_purple.json",
+        "hexagon_schnakenberg_isoline.json",
+        "moire_turbulence_autumn.json",
+        "noise_chaos_magma.json",
+        "pulse_lenia_cyberpunk.json",
+        "pulse_maze_aurora.json",
+        "random_chaos_cyber.json",
+        "ringworm_GSworms_IQpastel.json",
+        "spots_allencahn_gold.json",
+        "standingwave_fastdiff_biphase.json",
+        "stripes_spots_ocean.json",
+        "vortex_phase_glacier.json",
+        "worley_cyclechaos_IQgold.json",
+        "余弦_耦合_冷色.json",
+        "单点_12345生存_热力.json",
+        "单点_Henon_Lorenz.json",
+        "单点_超级反应_灰阶.json",
+        "双螺旋_超级振荡_热力.json",
+        "同心圆_超级耦合_彩虹.json",
+        "圆环_扩散_反色.json",
+        "对数螺旋_超级反应_相位.json",
+        "对角线_扩散_热力.json",
+        "平滑噪声2_耦合_冷色.json",
+        "平面波_传播_彩虹.json",
+        "指数衰减_CahnHilliard_热力.json",
+        "棋盘_超级阈值_反色.json",
+        "正切_Logistic_分岔2.json",
+        "正弦_超级振荡_相位.json",
+        "激光横模_Hermite-Gauss.json",
+        "热扩散_脉冲.json",
+        "粉红噪声_CML_IQ.json",
+        "网格_超级反应_IQ.json",
+        "超级棋盘_Smooth_彩虹.json",
+        "超级高斯_扩散_热力.json",
+        "逻辑斯蒂_梯度.json",
+        "随机_678生存_反色.json",
+        "随机_Ising_反色.json",
+        "随机_Logistic_海报化.json",
+        "随机_扩散_Jet.json",
+        "随机_扩散_对数.json",
+        "随机_拉普拉斯_灰阶.json"
+      ]
+    }
+  },
+  "next_id": 192
+}

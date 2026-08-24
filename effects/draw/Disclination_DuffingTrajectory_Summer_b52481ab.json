@@ -1,0 +1,32 @@
+{
+  "name": "Disclination_DuffingTrajectory_Summer",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(atan2(y-0.5, x-0.5) / (2*pi) % 1 + 0.2*(x-0.5)) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(avg_n - 0.2*c + c**3) + 0.5*sin(t*0.1)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 1634,
+  "postprocess": {
+    "effect": "invert"
+  }
+}

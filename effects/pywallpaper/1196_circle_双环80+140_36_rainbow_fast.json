@@ -1,0 +1,48 @@
+{
+  "id": "circle_双环80+140_36_rainbow_fast",
+  "name": "频谱环·双环80+140·36点·rainbow_fast",
+  "full_name": "1196. 频谱环·双环80+140·36点·rainbow_fast",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 36,
+            "radius": 80,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 36,
+            "radius": 140,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "color": {
+          "type": "rainbow",
+          "speed": 0.15,
+          "sat": 0.85,
+          "val": 0.95
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            60
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "雪花_六角近似",
+  "version": "1.0",
+  "description": "六角对称图案近似。用多方向正弦叠加模拟六角对称，中心脉冲向外生长产生雪花状分支",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "exp(-((x-0.5)**2+(y-0.5)**2)/0.003) + 0.05*sin(18.85*x)*sin(18.85*y)"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.08*(avg_n - c) + 0.01*sin(18.85*x)*sin(18.85*y) + 0.005*sin(18.85*(x+y)/2)*sin(18.85*(x-y)/2)",
+    "variables": [
+      "c",
+      "avg_n",
+      "x",
+      "y"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "0.8 + 0.2*sin(v*25)",
+    "green": "0.9 + 0.1*sin(v*25 + 2.094)",
+    "blue": "1.0"
+  },
+  "tick": {
+    "fps": 20,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 187
+}

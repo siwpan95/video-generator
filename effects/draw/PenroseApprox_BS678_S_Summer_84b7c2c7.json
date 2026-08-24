@@ -1,0 +1,31 @@
+{
+  "name": "PenroseApprox_BS678_S_Summer_bloom_180x180_c0",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(8*pi*x)*sin(8*pi*y) > 0) * 1.0"
+    }
+  },
+  "evolution": {
+    "rule": "1 if sum_n >= 6 else 0",
+    "variables": [
+      "c",
+      "sum_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 0
+  },
+  "id": 52172,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

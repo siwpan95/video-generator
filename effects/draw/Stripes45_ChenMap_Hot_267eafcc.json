@@ -1,0 +1,31 @@
+{
+  "name": "Stripes45_ChenMap_Hot_motion_trail_80x80_c1000",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (sin((x+y)*25) > 0) else 0"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) + f1*avg_n)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v**2",
+    "blue": "v**4"
+  },
+  "cycle": {
+    "steps": 1000
+  },
+  "id": 52008,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

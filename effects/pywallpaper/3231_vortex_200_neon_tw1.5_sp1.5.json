@@ -1,0 +1,47 @@
+{
+  "id": "vortex_200_neon_tw1.5_sp1.5",
+  "name": "漩涡·200粒·neon",
+  "full_name": "3231. 漩涡·200粒·neon",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "vortex",
+        "count": 200,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "radius": {
+          "min": 40,
+          "step": 5
+        },
+        "twist": 1.5,
+        "speed": 1.5,
+        "element_size": 3,
+        "size_scale": 5.0,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.58,
+            0.88
+          ],
+          "speed": 0.12,
+          "sat": 0.95,
+          "val": 1.0
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_scale",
+          "scale": [
+            1.0,
+            1.5
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

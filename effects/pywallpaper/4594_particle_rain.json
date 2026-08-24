@@ -1,0 +1,69 @@
+{
+  "id": "particle_rain",
+  "name": "粒子雨",
+  "full_name": "4594. 粒子雨",
+  "category": "粒子系统",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "particle",
+        "emitters": [
+          {
+            "position": [
+              0.5,
+              0.0
+            ],
+            "rate": 40,
+            "lifetime": [
+              0.5,
+              1.2
+            ],
+            "speed": [
+              300,
+              500
+            ],
+            "direction": [
+              85,
+              95
+            ],
+            "color": [
+              150,
+              200,
+              255
+            ],
+            "size": [
+              1,
+              2
+            ]
+          }
+        ],
+        "forces": [
+          {
+            "type": "gravity",
+            "y": 200
+          }
+        ],
+        "particle_type": "line",
+        "max_particles": 800,
+        "audio_modulation": {
+          "rate": {
+            "source": "rms",
+            "scale": [
+              0.5,
+              2.0
+            ]
+          },
+          "color_hue": {
+            "source": "band_energy",
+            "scale": [
+              0,
+              0.3
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

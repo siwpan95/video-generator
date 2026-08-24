@@ -1,0 +1,52 @@
+{
+  "id": "circle_双环80+140_48_warm",
+  "name": "频谱环·双环80+140·48点·warm",
+  "full_name": "3295. 频谱环·双环80+140·48点·warm",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 48,
+            "radius": 80,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 48,
+            "radius": 140,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            60
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

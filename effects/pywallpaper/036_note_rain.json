@@ -1,0 +1,50 @@
+{
+  "id": "note_rain",
+  "name": "音符雨",
+  "full_name": "036. 音符雨",
+  "category": "粒子",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "text_rain",
+        "chars": "♪♫♬♩",
+        "count": 30,
+        "font_size": 16,
+        "speed": {
+          "min": 30,
+          "max": 90
+        },
+        "trail_length": 8,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.1,
+          "sat": 0.6,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "brightness",
+          "scale": [
+            0.3,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

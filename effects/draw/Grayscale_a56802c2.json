@@ -1,0 +1,34 @@
+{
+  "name": "SmoothLife_棋盘",
+  "version": "1.0",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "(i + j) % 2"
+    }
+  },
+  "evolution": {
+    "rule": "1 / (1 + exp(-12 * (avg_n - 0.5)))",
+    "variables": [
+      "c",
+      "sum_n",
+      "avg_n",
+      "x",
+      "y",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 58
+}

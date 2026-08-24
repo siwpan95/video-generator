@@ -1,0 +1,31 @@
+{
+  "name": "CenterDot_GiererMeinhardt_Inh_LogPalette_motion_trail_400x300_c300",
+  "grid": {
+    "width": 400,
+    "height": 300,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "1 if (abs(x-0.5) < 0.03 and abs(y-0.5) < 0.03) else 0 + 0.01*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "log(1+v*9)/log(10)",
+    "green": "log(1+v*9)/log(10)",
+    "blue": "log(1+v*9)/log(10)"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 51898,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "TuringStripe_LorenzMap_GreenBlackRed_bloom_180x180_c300",
+  "grid": {
+    "width": 180,
+    "height": 180,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.5 + 0.5*sin(14*x) + 0.3*random()"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.01*(p1*(avg_n - c) - c*avg_n + f1)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "0",
+    "blue": "1-v"
+  },
+  "cycle": {
+    "steps": 300
+  },
+  "id": 52024,
+  "postprocess": {
+    "effect": "bloom"
+  }
+}

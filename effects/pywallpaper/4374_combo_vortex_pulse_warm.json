@@ -1,0 +1,80 @@
+{
+  "id": "combo_vortex_pulse_warm",
+  "name": "组合·漩涡+脉冲·warm",
+  "full_name": "4374. 组合·漩涡+脉冲·warm",
+  "category": "组合",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "vortex",
+        "count": 150,
+        "center": {
+          "x": "35%",
+          "y": "50%"
+        },
+        "radius": {
+          "min": 40,
+          "step": 4
+        },
+        "twist": 1.5,
+        "speed": 0.8,
+        "element_size": 2,
+        "size_scale": 3.0,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_scale",
+          "scale": [
+            1.0,
+            1.3
+          ],
+          "smoothing": 0.8
+        }
+      },
+      {
+        "type": "pulse",
+        "mode": "ripple",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "max_radius": 350,
+        "speed": 2.0,
+        "count": 1,
+        "trigger": "audio",
+        "trigger_threshold": 0.25,
+        "line_width": 2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "vortex_100_warm_tw0.5_sp0.5",
+  "name": "漩涡·100粒·warm",
+  "full_name": "3169. 漩涡·100粒·warm",
+  "category": "圆形",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "vortex",
+        "count": 100,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "radius": {
+          "min": 40,
+          "step": 5
+        },
+        "twist": 0.5,
+        "speed": 0.5,
+        "element_size": 3,
+        "size_scale": 5.0,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_scale",
+          "scale": [
+            1.0,
+            1.5
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

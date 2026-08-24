@@ -1,0 +1,43 @@
+{
+  "id": "spectral_lines",
+  "name": "光谱线",
+  "full_name": "066. 光谱线",
+  "category": "频谱",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 64,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 0,
+        "outer_radius": 300,
+        "line_width": 1,
+        "rotation_speed": 0.2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            0.5
+          ],
+          "speed": 0.1,
+          "sat": 0.5,
+          "val": 0.8
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

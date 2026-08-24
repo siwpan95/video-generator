@@ -1,0 +1,31 @@
+{
+  "name": "CircularGradient_Super_NetworkKuramoto_Summer_motion_trail_150x150",
+  "grid": {
+    "width": 150,
+    "height": 150,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "atan2(y-0.5, x-0.5) / (2*pi) % 1"
+    }
+  },
+  "evolution": {
+    "rule": "c + f1*sin(avg_n - c) + f2*sin(2*(avg_n - c))",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "0.5+0.5*v",
+    "green": "0.5+0.25*v",
+    "blue": "0.5*v"
+  },
+  "cycle": {
+    "steps": 100
+  },
+  "id": 30589,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

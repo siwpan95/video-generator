@@ -1,0 +1,65 @@
+{
+  "id": "mandala",
+  "name": "曼陀罗",
+  "full_name": "063. 曼陀罗",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 6,
+            "radius": 60,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 8,
+            "radius": 110,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 12,
+            "radius": 170,
+            "line": true,
+            "line_width": 2
+          },
+          {
+            "count": 16,
+            "radius": 250,
+            "line": true,
+            "line_width": 2
+          }
+        ],
+        "rotation_speed": 0.2,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.05,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            60
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

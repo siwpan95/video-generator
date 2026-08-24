@@ -1,0 +1,39 @@
+{
+  "name": "Fisher-KPP_传播波",
+  "version": "1.0",
+  "description": "Fisher-KPP方程简化。逻辑斯蒂增长 + 扩散，产生匀速传播的波前（入侵锋面），类似种群扩张",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.8 if x < 0.15 else 0.01"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.25*(avg_n - c) + 0.15*c*(1 - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.9",
+    "green": "1.0 - v*0.8",
+    "blue": "v*0.3"
+  },
+  "tick": {
+    "fps": 15,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 600
+  },
+  "id": 19
+}

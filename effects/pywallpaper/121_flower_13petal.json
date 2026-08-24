@@ -1,0 +1,38 @@
+{
+  "id": "flower_13petal",
+  "name": "花朵（13瓣）",
+  "full_name": "121. 花朵（13瓣）",
+  "category": "数学",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "curve",
+        "preset": "flower",
+        "scale": 20,
+        "layers": 1,
+        "line_width": 1,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.3,
+            0.8
+          ],
+          "speed": 0.1,
+          "sat": 0.7,
+          "val": 0.8
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "geom_grid_beat_40x40_4",
+  "name": "40x40_绿色节拍网格",
+  "full_name": "4656. 40x40_绿色节拍网格",
+  "category": "几何",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "grid",
+        "cols": 40,
+        "rows": 40,
+        "cell_size": 10,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.2,
+            0.4
+          ],
+          "speed": 0.06,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "beat",
+          "target": "value",
+          "scale": [
+            0,
+            1
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

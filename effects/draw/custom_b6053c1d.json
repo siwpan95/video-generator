@@ -1,0 +1,40 @@
+{
+  "name": "Wilson-Cowan_神经场",
+  "version": "1.0",
+  "description": "Wilson-Cowan神经场方程简化。兴奋-抑制双稳态 + 侧抑制（Mexican hat连接），产生活动泡泡（bubble）、行波和斑点图案。视觉皮层斑图启发",
+  "grid": {
+    "width": 256,
+    "height": 256,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "0.3 + 0.5*exp(-((x-0.5)**2+(y-0.5)**2)/0.02) + 0.05*random()"
+    }
+  },
+  "neighborhood": {
+    "type": "circle",
+    "radius": 3
+  },
+  "evolution": {
+    "rule": "c + 0.08*(avg_n - c) + 0.2*c*(1-c)*(c-0.35) + 0.04*(avg_n-0.5)*(1-c) + 0.015*sin(t*0.08)",
+    "variables": [
+      "c",
+      "avg_n",
+      "t"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v*0.8 + 0.1*sin(v*16)",
+    "green": "0.5 + 0.5*sin(v*12 - 1.0)",
+    "blue": "0.3 + 0.7*v*v"
+  },
+  "tick": {
+    "fps": 18,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 72
+}

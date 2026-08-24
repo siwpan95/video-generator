@@ -1,0 +1,38 @@
+{
+  "name": "Voronoi破裂 - 晶界生长",
+  "version": "1.0",
+  "grid": {
+    "width": 300,
+    "height": 200,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random() if random() > 0.95 else 0"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "max(c, avg_n) if c > 0 else 0",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "sin(v*50)*0.5+0.5",
+    "green": "sin(v*50+2.1)*0.5+0.5",
+    "blue": "sin(v*50+4.2)*0.5+0.5"
+  },
+  "tick": {
+    "fps": 10,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 70
+}

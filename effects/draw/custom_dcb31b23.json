@@ -1,0 +1,39 @@
+{
+  "name": "DLA_扩散限制聚集",
+  "version": "1.0",
+  "description": "扩散限制聚集（DLA）简化版。随机游走粒子被已有聚集体吸附，产生分形树枝状结构，与电沉积和雪花形成类似",
+  "grid": {
+    "width": 300,
+    "height": 300,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "0.8 if ((x-0.5)**2+(y-0.5)**2)<0.0001 else 0.01+0.02*random()"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1
+  },
+  "evolution": {
+    "rule": "c + 0.08*(avg_n - c) + 0.25*c*c*(1-c)*(1-c)*(avg_n - 0.3) - 0.01*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "v*0.5 + 0.3*sin(v*30)",
+    "blue": "v*0.2 + 0.5*sin(v*25+3)"
+  },
+  "tick": {
+    "fps": 12,
+    "steps_per_frame": 2
+  },
+  "cycle": {
+    "steps": 500
+  },
+  "id": 16
+}

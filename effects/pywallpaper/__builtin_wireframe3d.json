@@ -1,0 +1,19 @@
+{
+  "id": "builtin_wireframe3d",
+  "name": "Wireframe3D_Icosa",
+  "category": "3D线框",
+  "tags": ["wireframe", "wireframe_3d", "3d", "icosahedron", "line"],
+  "params": {
+    "layers": [
+      {
+        "type": "wireframe_3d",
+        "shape": "icosahedron",
+        "speed": [0.5, 0.7, 0.0],
+        "scale": 0.34,
+        "fov": 55.0,
+        "intensity": 0.95,
+        "color": {"type": "hsv_flow", "speed": 0.02, "hue": [0.5, 1.0]}
+      }
+    ]
+  }
+}

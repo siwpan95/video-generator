@@ -1,0 +1,47 @@
+{
+  "id": "curve_formula_心形参数_warm",
+  "name": "公式曲线·心形参数·warm",
+  "full_name": "4100. 公式曲线·心形参数·warm",
+  "category": "曲线",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "curve",
+        "preset": "formula",
+        "line_width": 2,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "formula": {
+          "x": "(1+cos(t))*cos(t)",
+          "y": "(1+cos(t))*sin(t)",
+          "t_min": 0,
+          "t_max": 6.28,
+          "t_step": 0.05
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.0,
+            0.12
+          ],
+          "speed": 0.08,
+          "sat": 0.9,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

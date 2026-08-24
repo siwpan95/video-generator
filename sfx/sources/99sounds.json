@@ -1,0 +1,14 @@
+{
+  "name": "99Sounds",
+  "site": "99sounds.org",
+  "description": "Free sample packs and sound effects, direct MP3/WAV downloads from pack pages",
+  "base_url": "https://99sounds.org",
+  "packs": [
+    "cinematic-sounds",
+    "dub-reggae-sounds",
+    "cinematic-textures",
+    "electromagnetic-sounds",
+    "cinematic-sound-effects",
+    "jumpscare-sound-effects"
+  ]
+}

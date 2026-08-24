@@ -1,0 +1,48 @@
+{
+  "id": "circle_dots_96_180_ocean",
+  "name": "圆点阵·96点·半径180·ocean",
+  "full_name": "3419. 圆点阵·96点·半径180·ocean",
+  "category": "圆形",
+  "background_theme": "极光",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "circle_map",
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "rings": [
+          {
+            "count": 96,
+            "radius": 180,
+            "line": false,
+            "fill": true
+          }
+        ],
+        "element_size": 3,
+        "rotation_speed": 0.3,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.52,
+            0.62
+          ],
+          "speed": 0.06,
+          "sat": 0.8,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "radius_offset",
+          "scale": [
+            0,
+            50
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

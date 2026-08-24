@@ -1,0 +1,31 @@
+{
+  "name": "StandingWave_GiererMeinhardt_Inh_Grayscale_motion_trail_80x80",
+  "grid": {
+    "width": 80,
+    "height": 80,
+    "wrap": false,
+    "initial": {
+      "type": "formula",
+      "expression": "(sin(2*pi*x*10))**2"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.1*(avg_n - c)",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "red": "v",
+    "green": "v",
+    "blue": "v"
+  },
+  "cycle": {
+    "steps": 5000
+  },
+  "id": 20122,
+  "postprocess": {
+    "effect": "motion_trail"
+  }
+}

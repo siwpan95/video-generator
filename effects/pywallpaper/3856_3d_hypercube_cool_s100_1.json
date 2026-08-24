@@ -1,0 +1,33 @@
+{
+  "id": "3d_hypercube_cool_s100_1",
+  "name": "3D·超立方体·cool",
+  "full_name": "3856. 3D·超立方体·cool",
+  "category": "3D",
+  "background_theme": "渐变",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "wireframe_3d",
+        "geometry": "hypercube",
+        "scale": 100,
+        "line_width": 2,
+        "rotation": {
+          "x_speed": 0.5,
+          "y_speed": 0.7,
+          "z_speed": 0.0
+        },
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.68
+          ],
+          "speed": 0.08,
+          "sat": 0.75,
+          "val": 0.9
+        }
+      }
+    ]
+  }
+}

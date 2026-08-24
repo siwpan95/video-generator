@@ -1,0 +1,32 @@
+{
+  "id": "data_stream_viz",
+  "name": "数据流",
+  "full_name": "4634. 数据流",
+  "category": "信息",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "waveform",
+        "lines": 8,
+        "points": 120,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.5,
+            0.7
+          ],
+          "speed": 0.08,
+          "sat": 0.7,
+          "val": 0.85
+        },
+        "audio": {
+          "source": "freq_data",
+          "target": "value",
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

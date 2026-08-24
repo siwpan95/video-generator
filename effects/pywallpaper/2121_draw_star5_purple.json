@@ -1,0 +1,126 @@
+{
+  "id": "draw_star5_purple",
+  "name": "绘制·五角星·purple",
+  "full_name": "2121. 绘制·五角星·purple",
+  "category": "绘制",
+  "background_theme": "星空",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "drawing",
+        "commands": [
+          {
+            "shape": "line",
+            "x1": "50%",
+            "y1": "15%",
+            "x2": "62%",
+            "y2": "47%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "62%",
+            "y1": "47%",
+            "x2": "98%",
+            "y2": "47%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "98%",
+            "y1": "47%",
+            "x2": "68%",
+            "y2": "65%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "68%",
+            "y1": "65%",
+            "x2": "80%",
+            "y2": "95%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "80%",
+            "y1": "95%",
+            "x2": "50%",
+            "y2": "77%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "50%",
+            "y1": "77%",
+            "x2": "20%",
+            "y2": "95%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "20%",
+            "y1": "95%",
+            "x2": "32%",
+            "y2": "65%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "32%",
+            "y1": "65%",
+            "x2": "2%",
+            "y2": "47%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "2%",
+            "y1": "47%",
+            "x2": "38%",
+            "y2": "47%",
+            "width": 2,
+            "color": null
+          },
+          {
+            "shape": "line",
+            "x1": "38%",
+            "y1": "47%",
+            "x2": "50%",
+            "y2": "15%",
+            "width": 2,
+            "color": null
+          }
+        ],
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0.68,
+            0.82
+          ],
+          "speed": 0.07,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "value",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.8
+        }
+      }
+    ]
+  }
+}

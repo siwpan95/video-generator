@@ -1,0 +1,25 @@
+{
+    "base_url": "https://www.findsounds.com",
+    "search_endpoint": "/ISAPI/search.dll",
+    "keywords": [
+        "beep", "alarm", "bell", "click", "ding", "buzz", "ring",
+        "beep beep", "warning", "siren", "horn", "whistle", "chime",
+        "laser", "explosion", "gunshot", "footstep", "door", "glass",
+        "water", "wind", "thunder", "rain", "bird", "dog", "cat",
+        "engine", "car", "phone", "button", "switch", "robot",
+        "electric", "metal", "wood", "paper", "machine", "typing",
+        "applause", "laugh", "scream", "crash", "bang", "boom",
+        "music", "guitar", "piano", "drum", "bass", "synth",
+        "ambient", "nature", "city", "crowd", "applause", "cheer",
+        "whoosh", "swoosh", "impact", "hit", "punch", "kick",
+        "magic", "spell", "sword", "bow", "arrow", "shield",
+        "monster", "zombie", "ghost", "horror", "creepy", "dark",
+        "coin", "score", "level up", "power up", "collect", "item",
+        "jump", "land", "slide", "bounce", "spring", "trampoline",
+        "fire", "burn", "flame", "smoke", "spark", "electricity",
+        "heartbeat", "breath", "gasp", "cough", "sneeze", "yawn",
+        "clock", "tick", "alarm clock", "timer", "countdown", "stopwatch",
+        "typewriter", "keyboard", "mouse click", "printer", "scanner", "fax",
+        "helicopter", "airplane", "train", "subway", "boat", "motorcycle"
+    ]
+}

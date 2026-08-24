@@ -1,0 +1,43 @@
+{
+  "id": "frequency_wheel",
+  "name": "频率轮盘",
+  "full_name": "055. 频率轮盘",
+  "category": "圆形",
+  "background_theme": "无",
+  "class": "EngineEffect",
+  "params": {
+    "layers": [
+      {
+        "type": "spikes",
+        "count": 64,
+        "center": {
+          "x": "50%",
+          "y": "50%"
+        },
+        "inner_radius": 30,
+        "outer_radius": 250,
+        "line_width": 2,
+        "rotation_speed": 0.5,
+        "color": {
+          "type": "hsv_flow",
+          "hue": [
+            0,
+            1
+          ],
+          "speed": 0.1,
+          "sat": 0.8,
+          "val": 0.9
+        },
+        "audio": {
+          "source": "band_energy",
+          "target": "length",
+          "scale": [
+            0,
+            1.0
+          ],
+          "smoothing": 0.85
+        }
+      }
+    ]
+  }
+}

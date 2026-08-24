@@ -1,0 +1,46 @@
+{
+  "name": "Smooth Life",
+  "version": "1.0",
+  "grid": {
+    "width": 200,
+    "height": 150,
+    "cell_type": "float",
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "random() * 0.1"
+    }
+  },
+  "neighborhood": {
+    "type": "moore",
+    "radius": 1,
+    "weights": null
+  },
+  "evolution": {
+    "rule": "1 / (1 + exp(-12 * (avg_n - 0.5)))",
+    "variables": [
+      "c",
+      "sum_n",
+      "avg_n",
+      "x",
+      "y",
+      "t",
+      "i",
+      "j"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v",
+    "green": "1 - v",
+    "blue": "0.5 + 0.5*sin(v*20 + x*6)"
+  },
+  "tick": {
+    "fps": 30,
+    "steps_per_frame": 1
+  },
+  "cycle": {
+    "steps": 400
+  },
+  "id": 39
+}

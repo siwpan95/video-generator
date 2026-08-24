@@ -1,0 +1,27 @@
+{
+  "name": "钻石格 × 反应扩散（条纹） × 绿紫双色",
+  "version": "1.0",
+  "grid": {
+    "width": 256,
+    "height": 192,
+    "wrap": true,
+    "initial": {
+      "type": "formula",
+      "expression": "abs(x-0.5) + abs(y-0.5)"
+    }
+  },
+  "evolution": {
+    "rule": "c + 0.2*(avg_n - c) + 0.048*c*(1-c) - 0.028*c",
+    "variables": [
+      "c",
+      "avg_n"
+    ]
+  },
+  "color": {
+    "mode": "per_channel",
+    "red": "v * 0.8",
+    "green": "1.0 - v * 0.7",
+    "blue": "v * 0.9"
+  },
+  "id": 15
+}
