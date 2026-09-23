@@ -1,5 +1,14 @@
-"""fix_syntax.py — 修复 video_generator.py 中的 f-string 语法错误"""
-with open('D:/allin/right/video_generator/video_generator.py', 'r', encoding='utf-8') as f:
+"""fix_syntax.py — 修复 video_generator.py 中的 f-string 语法错误（用法：python fix_syntax.py [目标文件]）"""
+# 2026-09-23 去本地化：目标文件改由 命令行参数 → 本脚本同级目录 推导
+# （原 D:/allin/right/video_generator/video_generator.py 所在的 D:\allin 已不存在）
+import sys
+from pathlib import Path
+
+TARGET = Path(sys.argv[1]) if len(sys.argv) > 1 else (Path(__file__).resolve().parent / "video_generator.py")
+if not TARGET.is_file():
+    raise SystemExit(f"[错误] 找不到目标文件：{TARGET}\n  用法：python fix_syntax.py [video_generator.py 路径]")
+
+with open(TARGET, 'r', encoding='utf-8') as f:
     lines = f.readlines()
 
 # 找到所有包含 print(f" 的行，检查是否有未终止的 f-string
@@ -26,7 +35,7 @@ while i < len(lines):
     i += 1
 
 if fixed > 0:
-    with open('D:/allin/right/video_generator/video_generator.py', 'w', encoding='utf-8') as f:
+    with open(TARGET, 'w', encoding='utf-8') as f:
         f.writelines(lines)
     print(f'OK: 修复了 {fixed} 处 f-string 语法错误')
 else:
