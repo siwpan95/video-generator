@@ -1,5 +1,8 @@
 # 随机视频生成器
 
+> 仓库：<https://gitee.com/siwpan/video-generator> ｜ 许可：MIT（见 [LICENSE](LICENSE)）
+> 注：文中 <PATH> 为路径占位符，请替换为你本机实际的目录 / 可执行文件路径。
+
 结合 `draw/effects/` 和 `pywallpaper/effects/` 两个项目的共计 **9685 个效果预设**，构建全新的随机视频生成器。
 
 ## 功能特性
@@ -78,8 +81,8 @@ python video_generator.py --codec hevc
 python video_generator.py --audio beat.wav --audio-hue-shift
 
 # 端到端样例（不指定 FFMPEG_BIN 时自动用 bundled essentials build；
-# 也可手动指向任意 ffmpeg，例如雷电云 LD-Yun 自带的 F:/ldyun/ffmpeg.exe）
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe
+# 也可手动指向任意 ffmpeg，例如雷电云 LD-Yun 自带的 <PATH>）
+set FFMPEG_BIN=<PATH>
 python gen_sample.py
 
 # 分辨率预设（覆盖 --width/--height）：4k / 1080p / 720p
