@@ -31,7 +31,7 @@ def _find_ffmpeg() -> str:
     env = os.environ.get("FFMPEG_BIN", "").strip()
     if env:
         return env
-    for c in ("ffmpeg", "C:/ffmpeg/bin/ffmpeg.exe"):
+    for c in ("ffmpeg",):   # 2026-09-23 去本地化：删除已失效的 C:/ffmpeg/bin/ffmpeg.exe 候选
         try:
             subprocess.run([c, "-version"], capture_output=True, timeout=5)
             return c

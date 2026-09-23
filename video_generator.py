@@ -442,7 +442,8 @@ class FFmpegWriter:
             os.path.dirname(os.path.abspath(__file__)),
             "ffmpeg-2026-06-08-git-6028720d70-essentials_build", "bin", "ffmpeg.exe")
         # 3) 默认候选路径
-        for cand in [bundled, "ffmpeg", "C:/ffmpeg/bin/ffmpeg.exe"]:
+# 2026-09-23 去本地化：删除已失效的 C:/ffmpeg/bin/ffmpeg.exe 候选（PATH 由 "ffmpeg" 覆盖）
+        for cand in [bundled, "ffmpeg"]:
             if not cand:
                 continue
             try:
@@ -637,9 +638,9 @@ def find_ffprobe() -> str:
         if os.path.isfile(cand):
             return cand
     # 3) 常见位置
+    # 2026-09-23 去本地化：删除已失效的 C:/ffmpeg/bin/ffprobe.exe 候选
     for cand in (
         "ffprobe",
-        "C:/ffmpeg/bin/ffprobe.exe",
         os.path.join(os.environ.get("PROGRAMFILES", ""), "ffmpeg", "bin", "ffprobe.exe"),
     ):
         if not cand:
