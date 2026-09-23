@@ -1,6 +1,6 @@
 ---
 name: video-generator
-description: Maintain the video_generator project (G:/ai/video_generator). Procedural audio-reactive video generator with GL/CPU renderers, diffusion base and task log.
+description: Maintain the video_generator project (本 SKILL.md 所在仓库根). Procedural audio-reactive video generator with GL/CPU renderers, diffusion base and task log.
 agent_created: true
 ---
 
