@@ -17,7 +17,7 @@ except ImportError:
 
 CONFIG_FILE = os.path.expanduser("~/.musicplayer_config.json")
 # 2026-09-23 去本地化：音效目录改由 环境变量 SOUNDS_DIR → 本脚本同级 sounds/ 推导
-# （原 D:\allin\t0l\sfx\sounds 已不存在）
+# （原路径已不存在）
 SOUNDS_DIR = os.environ.get("SOUNDS_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "sounds")
 TEMP_DIR = os.path.join(tempfile.gettempdir(), "sound_preview_converted")
 AUDIO_EXTENSIONS = (

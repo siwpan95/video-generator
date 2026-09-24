@@ -1,6 +1,6 @@
 """fix_syntax.py — 修复 video_generator.py 中的 f-string 语法错误（用法：python fix_syntax.py [目标文件]）"""
 # 2026-09-23 去本地化：目标文件改由 命令行参数 → 本脚本同级目录 推导
-# （原 D:/allin/right/video_generator/video_generator.py 所在的 D:\allin 已不存在）
+# （原路径 所在的 原路径已不存在）
 import sys
 from pathlib import Path
 

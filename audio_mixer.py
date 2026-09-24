@@ -33,7 +33,7 @@ def find_ffmpeg() -> str:
         os.path.dirname(os.path.abspath(__file__)),
         "ffmpeg-2026-06-08-git-6028720d70-essentials_build", "bin", "ffmpeg.exe")
     # 2) 常见位置
-    # 2026-09-23 去本地化：删除已失效的 C:/ffmpeg/bin/ffmpeg.exe 硬编码候选；
+    # 2026-09-23 去本地化：删除已失效的 原硬编码候选；
     # PATH 上的 ffmpeg（含 pip 安装的 imageio-ffmpeg shim）由 "ffmpeg" 候选覆盖。
     candidates = [
         bundled,
