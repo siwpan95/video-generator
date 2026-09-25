@@ -34,13 +34,16 @@ _BUDDY_CLOUD = os.path.join(
     "buddy-multimodal-generation", "scripts", "buddy-cloud.py"
 )
 if not os.path.isfile(_BUDDY_CLOUD):
-    # fallback: 原硬编码路径（兼容非标准安装）
-    _BUDDY_CLOUD = (
-        "C:/Users/13122/AppData/Local/Programs/"
-        "WorkBuddy/resources/app.asar.unpacked/"
-        "resources/builtin-skills/"
-        "buddy-multimodal-generation/scripts/buddy-cloud.py"
-    )
+    # 兼容非标准安装：允许用环境变量显式指定，而不是回退到某台机器的绝对路径
+    _override = os.environ.get("WORKBUDDY_CLOUD_SCRIPT", "")
+    if _override and os.path.isfile(_override):
+        _BUDDY_CLOUD = _override
+    else:
+        raise FileNotFoundError(
+            "找不到 WorkBuddy 的 buddy-cloud.py。\n"
+            "已尝试默认安装位置：%s\n"
+            "如需自定义，请设置环境变量 WORKBUDDY_CLOUD_SCRIPT 指向该脚本。" % _BUDDY_CLOUD
+        )
 _OUTPUT_DIR = os.path.join(_SCRIPT_DIR, "output")
 _TIMEOUT = 600  # 10 分钟超时
 
