@@ -1,4 +1,4 @@
-"""回合3 真实验证脚本（F:/Python314，numpy/scipy/librosa 可用）。"""
+"""回合3 真实验证脚本（主解释器，去符盘 /Python314；numpy/scipy/librosa 可用）。"""
 import sys, os, time, wave, struct, math
 import numpy as np
 
