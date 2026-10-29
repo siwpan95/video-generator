@@ -10,8 +10,8 @@ gen_sample.py — 端到端样例视频生成器（全面增强验证用）
 
 用法：
   # 指定 ffmpeg 二进制（不指定时自动用本项目 bundled 的 essentials build；
-  # 也可用本机任意 ffmpeg，如雷电云 LD-Yun 自带的 F:/ldyun/ffmpeg.exe）
-  set FFMPEG_BIN=F:/ldyun/ffmpeg.exe
+  # 也可用本机任意 ffmpeg，如雷电云 LD-Yun 自带的 D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe）
+  set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe
   python gen_sample.py
 """
 import os

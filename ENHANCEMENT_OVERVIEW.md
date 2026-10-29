@@ -5,7 +5,7 @@
 > 验证环境：
 > - `default`（numpy 2.5.1 / scipy 1.18 / asteval 1.0.9 / Pillow 12.3）— asteval + scipy 路径
 > - `numba-verify`（numpy 2.4.6 / numba 0.66 / scipy 1.18 / Pillow 12.3 / asteval 1.0.9）— Numba JIT 路径
-> - ffmpeg：ffmpeg 缺省用项目 bundled essentials build（G:/ai/video_generator/ffmpeg-...-essentials_build）；验证时曾用雷电云 LD-Yun 自带的 `F:/ldyun/ffmpeg.exe` 作为外部 ffmpeg
+> - ffmpeg：ffmpeg 缺省用项目 bundled essentials build（G:/ai/video_generator/ffmpeg-...-essentials_build）；验证时曾用雷电云 LD-Yun 自带的 `D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe` 作为外部 ffmpeg
 
 ---
 
@@ -108,7 +108,7 @@ wave njit vs scipy max diff = 0.00e+00
 | **7 个合成特效 JSON** | 注册进随机合成与关键词检索：`__builtin_flow_field_curl` / `__builtin_flow_field_angle`（flow_field）、`__builtin_noise_simplex` / `__builtin_noise_worley` / `__builtin_noise_warp`（noise）、`__builtin_wireframe3d`（wireframe_3d 二十面体）、`__builtin_text_rain`（text_rain）。标签含原语类型名 | `--keywords flow_field/noise_simplex/warp/text_rain/wireframe_3d` 命中 ✓ |
 
 ### 端到端真实验证（本回合）
-**环境**：`F:\Python314`（numpy 2.4.6 / scipy 1.18.0 / librosa 0.11.0）；ffmpeg 曾用雷电云 LD-Yun 自带的 `F:/ldyun/ffmpeg.exe`（版本未实测，不杜撰）。
+**环境**：`/Python314`（numpy 2.4.6 / scipy 1.18.0 / librosa 0.11.0）；ffmpeg 曾用雷电云 LD-Yun 自带的 `D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe`（版本未实测，不杜撰）。
 
 单元测试 `_verify_r3.py` **ALL GREEN**（turbo LUT、simplex/worley/warp 场、flow curl+haromny、audio centroid/flux/bpm 双路径）。
 
@@ -135,11 +135,11 @@ e2e_warp.mp4   --keywords noise_warp --audio random --audio-hue-shift
 
 ### 复现命令（回合 3）
 ```bash
-# 单元测试（F:\Python314，需 numpy；scipy/librosa 可选）
+# 单元测试（/Python314，需 numpy；scipy/librosa 可选）
 python _verify_r3.py
 
 # 端到端：流场 + 音频色温
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 python video_generator.py --keywords flow_field --audio random --audio-balance --duration 2 --fps 30 --width 480 --height 270 --output e2e_flow.mp4
 
 # 端到端：域扭曲 + 音频色相
@@ -163,7 +163,7 @@ ys,xs=np.mgrid[0:64,0:64]/63.0
 print(eval_grid_expr('1 if (0.2<(x-0.5)**2+(y-0.5)**2<0.25) else 0',xs,ys).shape)"
 
 # 端到端样例
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 python gen_sample.py
 ```
 
@@ -195,7 +195,7 @@ python gen_sample.py
 |------|------|------|
 | `pw_renderer.py` | `SimpleTextRain` 对 pywallpaper JSON 的 `{min,max}` 范围式 `speed`/`color` 直接 `float()`/`int()` 崩溃，导致 text_rain 图层被静默跳过（"表面工程"式缺陷） | 新增 `_num()` 容错 range→均值；`color` 为 dict 时回退默认绿。text_rain 现可正常渲染 |
 
-### 端到端真实验证（`.venv`，FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
+### 端到端真实验证（`.venv`，FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
 - **语义映射单测**：`深海发光 慢节奏 冷色调`→fps24/dur15/pp=vignette+glow/pal=Turbo,Cool；`快节奏 霓虹 赛博 粒子`→fps60/pal=Neon,Cyberpunk；`火焰 熔岩 激烈`→fps60/pal=Hot；`森林 植物 舒缓 自然`→fps24/pal=gradient_4。Critic 对非法 spec 夹紧 fps→120、调色板回退白名单。
 - **单段生成**：`--prompt "深海发光 慢节奏 冷色调" --duration 2` → `output/e2e_prompt.mp4`（480x270@30fps，3 图层，vignette+glow），8.5 fps。
 - **定向修复验证**：`--keywords text_rain` → `output/e2e_textrain.mp4`（480x270@30fps 2s，h264，不再跳过）。
@@ -227,7 +227,7 @@ python gen_sample.py
 - `_apply_global_postprocess_numpy`：`stems_drive_beat=True` 时跳过整曲 beat 冲击（改由 drums 分轨接管，避免双冲）；末尾调用 `apply_stem_modulation` 叠加四条分轨的专属调制。
 - CLI：`--audio-stems`（`pip install demucs` 缺失则自动降级整曲混合驱动）。
 
-### 真实验证（`.venv`，FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
+### 真实验证（`.venv`，FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
 - **单元 + 集成单测**（`_verify_stems.py`）：四个视觉通道辅助函数均确实变换画面；`from_paths` 正常构造、drums 合成鼓点检出节拍（beats=[10,15,21,24,31,34,41,44]）、落拍帧 `apply_stem_modulation` 改变画面而非落拍帧保持不变；`DemucsUnavailable` 对「缺文件」与「demucs 禁用」均正确抛出。✅ 全部通过。
 - **端到端降级**：`--audio-stems --audio sfx/sounds/1\ (1\).mp3 --duration 3` → 打印 `[Audio] Demucs 不可用，降级为整曲混合驱动` → 正常产出 `output/e2e_stems_fallback.mp4`（含音频混入），无崩溃。✅
 
@@ -269,7 +269,7 @@ python gen_sample.py
 | `gl_renderer.py` + `video_generator.py` | `video_generator` 以 `GLRenderer.family_for_theme(...)`（classmethod）调用，但该 API 仅存在于模块级函数 → `AttributeError` → GL 全程降级 CPU | 在 `GLRenderer` 补 `family_for_theme` / `palette_for_theme` classmethod 包装，委托模块级同名函数 |
 | `gl_renderer.py` + `video_generator.py` | GL 上下文在主线程建好后被主线程一直占用，worker 线程 `make_context_current` 认领失败 → `NullFunctionError: glUseProgram` | 新增 `release_context()`，主线程建完释放；worker `make_current()` 认领 |
 
-### 端到端真实验证（`.venv`，FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
+### 端到端真实验证（`.venv`，FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
 - **单测 `_verify_gl.py`**：6 家族均产出非平凡帧（noise 932 / flow 538 / plasma 1455 / aurora 1082 / ca 890 唯一色，mean>1；starfield 稀疏星点 11 色 mean 11.9 属正常）；主题映射正确；60 帧@320×240 仅渲染 **0.173s ≈ 347 fps**（GPU，不含编码）。✅ `GL_OK`
 - **真实端到端**：`--gl --duration 4 --width 320 --height 240 --fps 25 --output output/e2e_gl.mp4` → 日志 `[GL] ✓ GPU 渲染后端已启用` → 渲染 **~50 fps（CPU 管线同参数仅 ~20 fps，提速约 2.5×）** → 产出 `output/e2e_gl.mp4`，ffprobe 校验：**h264 High / yuv420p / 320×240 / 25fps / 4.00s**，解码无误。✅
 - **降级验证**：`glfw`/`PyOpenGL` 缺失或上下文失败路径抛 `GLUnavailable`，主流程打印降级提示并走 CPU 管线，无崩溃（代码路径，未强制卸载验证）。
@@ -284,7 +284,7 @@ python gen_sample.py
 .venv/Scripts/python.exe _verify_gl.py
 
 # 真实端到端 GPU 渲染
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 .venv/Scripts/python.exe video_generator.py --gl --duration 4 --width 320 --height 240 --fps 25 --output output/e2e_gl.mp4
 ```
 
@@ -317,7 +317,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 | `LSystemPrimitive` | 默认分形植物在 320×240 下 `width=1` 细线 + 单色乘 2.2 → 仅 2 唯一色、mean<1，被非平凡断言判失败 | 线宽随分辨率提至 2；沿枝条推进做**色相渐变**（尖端偏暖）让唯一色>5；加性 1.6x 提亮 |
 | `DLACluster` | 原发射环固定 `0.48·S`，簇生长后游走粒子难以触及 → 仅黏附 ~13 点，末帧 nz=27 | 改用**跟踪簇当前最大半径的收缩发射环**（标准 DLA），预计算稳定达到 `max_points`（350）；同时 `draw_to_array` 改向量化整数坐标批量叠加，并加半径色相渐变（唯一色 5→91）；网格 `cell` 160→120 使一次性预计算 5.3s→~2.5s |
 
-### 端到端真实验证（`.venv`，FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
+### 端到端真实验证（`.venv`，FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
 - **直测 `_verify_primitives.py`**：四原语均非黑、唯一色>5、帧间有差异（动画推进）；DLA 半径 0~0.34、350 点；L-system 360 段。✅ `PRIMITIVES_OK`
 - **集成**：`PWEffecRenderer.load_config` 用手写 4 图层 effect 构建 4/4、跳过 0；合成帧 nz=230400、uniq=4666、mean 71.2。✅
 - **真实编码**：raymarch 30 帧经 `FFmpegWriter`（libx264）→ `output/e2e_primitives.mp4`，ffprobe 校验：**h264 High / yuv420p / 320×240 / 25fps / 1.20s**，解码无误。✅
@@ -325,7 +325,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 ### 复现命令（P1-2）
 ```bash
 # 四原语直测 + 集成 + 真实编码
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 .venv/Scripts/python.exe _verify_primitives.py
 ```
 
@@ -343,7 +343,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
   - 按评分排序赋予 `rank`；记录 `generated_at` / `track_count` / `keep_top` / 连镜表与 curate manifest 路径。
 - 修复：本文件此前漏 `import json` → 首次写 album manifest 抛 `NameError`；补 `import json`。
 
-### 端到端真实验证（`.venv`，FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
+### 端到端真实验证（`.venv`，FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
 - `--album "Neon Dreams" --prompt "霓虹 赛博 快节奏" --batch 3 --duration 2 --fps 25 --width 320 --height 240`：
   - 3 首均正常生成（CPU 管线 ~46fps）；curator 评分 1.000 / 0.191 / 0.091，排序有效。
   - 写 `output/Neon Dreams/album_manifest.json`（3 首，kept=3，字段完整含 metrics）。
@@ -352,7 +352,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 
 ### 复现命令（P1-3）
 ```bash
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 # 专辑模式（默认 8 首，--batch 可改数量；--keep-top K 触发挑优标记）
 .venv/Scripts/python.exe video_generator.py --album "Neon Dreams" --prompt "霓虹 赛博 快节奏" --batch 3 --duration 2 --width 320 --height 240
 ```
@@ -380,7 +380,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
   - 顺势把"GL 初始化 + 图层初始化"也抽成 **`_prepare_renderers()`**（原在 `generate()` 内联），`__init__` 末尾置 `self.gl = None`，`generate()` 与单帧测试共用，消除重复。
 - **语义不变**：关闭 GL 时行为完全不变（仍走 CPU 全量管线）；开启 GL 时 = shader 基底 + pw 图层叠加 + 统一后处理，三类内容都在。
 
-### 端到端真实验证（`.venv`，FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
+### 端到端真实验证（`.venv`，FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build））
 - **circle_map 直测**（`_verify_primitives.py` 已扩展）：53 唯一色、非黑、帧间有差；集成 5/5 图层构建、跳过 0、合成帧 uniq=4129。✅ `PRIMITIVES_OK`
 - **GL 叠加验证**（`_verify_gl_layers.py` 新增）：用真实含 circle_map 的 effect「频谱环」构造组合，
   - CPU 帧非黑=176972 / GL 帧非黑=228756 / CPU·GL 帧均差=143.70 / 中心环带非黑=132036 → 证明 GL 基底之上 circle_map 环已正确叠加（非纯 shader）。✅ `GL_LAYERS_OK`
@@ -389,7 +389,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 
 ### 复现命令（P2）
 ```bash
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 # circle_map 注册 + 四原语回归
 .venv/Scripts/python.exe _verify_primitives.py
 # GL 模式叠加 pw 图层（含 circle_map）验证 + 真实编码
@@ -402,7 +402,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 - **P1-1 GPU GLSL 渲染后端**（回合 6）：glfw+PyOpenGL 替代 ModernGL（本机无编译器）；6 家族着色器 + IQ 余弦调色板；多线程上下文转移修复；~2.5× 提速。`gl_renderer.py` + `_verify_gl.py` + `output/e2e_gl.mp4`。
 - **P1-2 新程序化原语**（回合 7）：`primitives_pro.py` 四原语（raymarch SDF / metaballs / lsystem / dla），注册进 `pw_renderer.PRIMITIVE_MAP`；`_verify_primitives.py` + `output/e2e_primitives.mp4`。
 - **P1-3 专辑批量模式 + manifest**（回合 8）：`--album` 编排统一主题批次 + `album_manifest.json`（元数据/美学评分/keep）。
-- 全部经 `.venv` + `FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）` 真实验证，遵循项目优雅降级铁律（无硬依赖、不崩溃）。P1 阶段完成。
+- 全部经 `.venv` + `FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）` 真实验证，遵循项目优雅降级铁律（无硬依赖、不崩溃）。P1 阶段完成。
 
 
 
@@ -412,7 +412,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 
 ## 回合 10（阶段 3 P2：新增能力落地 — 扩散基础层 / Web UI / 导出增强）
 
-> 落地 ENHANCEMENT_PROPOSAL_2026.md 的 P2 三项新增能力，全部经 `.venv` + `FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）` 真实验证（RTX 3050 6GB 本机）。
+> 落地 ENHANCEMENT_PROPOSAL_2026.md 的 P2 三项新增能力，全部经 `.venv` + `FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）` 真实验证（RTX 3050 6GB 本机）。
 > 遵循项目"优雅降级"铁律：重依赖（gradio/扩散模型）缺省或失败一律回退，绝不崩溃。
 
 ### P2-1 · 扩散模型基础层（`diffusion_base.py` + `video_generator.py` 集成）
@@ -445,7 +445,7 @@ set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时�
 
 ### 复现命令（P2 新增能力）
 ```bash
-set FFMPEG_BIN=F:/ldyun/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
+set FFMPEG_BIN=D:/projects/repos/video-generator/ffmpeg-2026-06-08-git-6028720d70-essentials_build/bin/ffmpeg.exe（雷电云 LD-Yun 自带，仅为验证时使用的外部 ffmpeg；不设置则自动用项目 bundled essentials build）
 # P2-1 扩散基础层（程序化兜底 + 视频底片）
 .venv/Scripts/python.exe _verify_diffusion.py
 # P2-2 Web UI（需 gradio；先装：.venv/Scripts/python.exe -m pip install gradio）
