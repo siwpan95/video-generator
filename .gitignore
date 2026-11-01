@@ -3,3 +3,8 @@
 # 未跟踪产物/输出治理（2026-08-28）
 __pycache__/
 release/
+
+# 卫生债务批次 2026-11-01（H3x72+H4x44）：产物/大二进制不入库
+output/
+sfx/sounds/
+ffmpeg-*/
