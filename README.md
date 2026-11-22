@@ -226,3 +226,25 @@ video_generator/
 - [x] P2：扩散基础层（`--diffusion {auto,video,cloud,local,procedural}`，底片 + 程序化叠加，四源优雅降级）
 - [x] P2：交互式 Web UI（`web_ui.py`，Gradio 本地服务，prompt/滑杆/社媒比例/批量连镜表）
 - [x] P2：导出增强（`--container mp4|webm|gif`、`--bit-depth 8|10` 10bit HDR、`--aspect 9:16|1:1|16:9|4:3` 竖屏）
+
+## OpenFilm 反哺：帧确定性契约 / 节拍时间轴
+
+`film_contract.py` 补上两件原生成器缺的“可验证接口”（借鉴 OpenFilm `frame(t)` 与
+`one-prompt/assets/data/audio.json`，未复制其代码）：
+
+- **`assert_deterministic(frame, times)`**：同一 `t` 渲染两次逐字节 SHA-256 比对，
+  不一致就抛 `DeterminismError`。`--seed` 只保证随机组合可复现，不等于任意时刻的帧可复现；
+  这道门禁把后者变成可跑检查，不依赖 ffmpeg，也不渲染整段视频。
+- **`BeatMap`**：直接读 one-prompt 风格 `audio.json`（`beats` / `downbeats` /
+  `sections` / `fps` / `rms` / `low` / `mid` / `high` / `onsets`），提供
+  `band_at(name,t)` / `nearest_beat(t)` / `onset_strength(kind,t)` / `section_at(t)`。
+  与现有 `audio_reactive` 并存：一个读现成时间轴，一个从音频现算特征。
+
+```bash
+python film_contract.py --selfcheck        # 合成样例自检
+python film_contract.py <audio.json>       # 校验真实节拍时间轴并打印摘要
+python -m pytest tests/test_film_contract.py -q
+```
+
+实测：6/6 测试通过；用 `one-prompt` 的原始 `audio.json` 解析成功
+（89.051s / 122 BPM / 33.5s 落在 `chorus1`）。
